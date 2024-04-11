@@ -1,7 +1,7 @@
 .footer {
   background-color: rgb(11, 11, 11);
   color: #fff;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -95,7 +95,7 @@ body {
 .content-container {
   margin: 15px;
 }
-.container {
+.containerNavbar {
   display: flex;
   margin: 15px;
 }
@@ -138,7 +138,7 @@ a {
 a:hover {
   color: inherit;
 }
-css body {
+body {
   background-color: rgb(11, 11, 11);
   font: 20px/20px pingfang SC, Microsoft YaHei, "\5FAE\8F6F\96C5\9ED1",
     helvetica, arial, verdana, tahoma, sans-serif;
@@ -151,9 +151,9 @@ css body {
   color: white;
 }
 .navbar-nav .nav-link:hover {
-  color: lightskyblue; /* Màu sẽ thay đổi khi di chuột qua */
+  color: lightskyblue;
 }
-.container {
+.containerNavbar {
   width: 124px;
   height: 20px;
 }
@@ -161,13 +161,14 @@ css body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1030; /* Đảm bảo navbar luôn nằm trên cùng */
+  z-index: 1030;
 }
 
 .carousel-item {
-  height: 500px; /* Đặt chiều cao cho carousel */
+  height: 500px;
   background-size: cover;
   background-position: center;
+  line-height: 500px;
 }
 .carousel-caption {
   position: absolute;
@@ -177,4 +178,7 @@ css body {
 }
 .iconlogin {
   width: 40px;
+}
+.containerNavbar-fluid {
+  display: contents;
 }
