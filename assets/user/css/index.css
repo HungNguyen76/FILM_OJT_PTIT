@@ -1,20 +1,40 @@
 body {
   background-color: rgb(11, 11, 11);
+  font: 20px/20px pingfang SC, Microsoft YaHei, "\5FAE\8F6F\96C5\9ED1",
+    helvetica, arial, verdana, tahoma, sans-serif;
 }
+
 .navbar-nav .nav-link,
 .navbar-brand,
 .form-control,
 .btn {
   color: white;
 }
-/* .navbar-nav .nav-link,
-.navbar-brand,
-.form-control,
-.btn :hover {
-  color: rgb(0, 170, 255);
-} */
-
+.navbar-nav .nav-link:hover {
+  color: lightskyblue; /* Màu sẽ thay đổi khi di chuột qua */
+}
 .container {
   width: 124px;
   height: 20px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030; /* Đảm bảo navbar luôn nằm trên cùng */
+}
+
+.carousel-item {
+  height: 500px; /* Đặt chiều cao cho carousel */
+  background-size: cover;
+  background-position: center;
+}
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.iconlogin {
+  width: 40px;
 }
