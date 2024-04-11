@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/FILM_OJT_PTIT/assets/user/css/register.css">
+</head>
+
+<body>
+   <form class="wrapper" id="form-logout" method="POST">
+        <h2>Đăng ký</h2>
+        <div class="box">
+            <label for="username">Tên người dùng</label><br>
+            <input type="text" id="username" name="username" class="form-control"><br>
+            <span class="form-message"></span>
+        </div>
+        
+        <div class="box">
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="text" placeholder="Vui lòng nhập email" class="form-control"><br>
+            <span class="form-message"></span>
+        </div>
+        <div class="box">
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Nhập tối thiểu 6 ký tự"class="form-control"><br>
+            <span class="form-message"></span>
+        </div>
+        <div class="box">
+            <label for="password_confirmation">Confirm Password</label><br>
+            <input type="password" id="password_confirmation" name="password_confirmation" type="text"
+                class="form-control"><br>
+            <span class="form-message"></span>
+        </div>
+        <button type="submit" class="btn" >Đăng ký</button>
+    </form>
+
+    <div id="toast"></div>
+    <script src="/FILM_OJT_PTIT/assets/user/js/Register.js"></script>
+    <script src="/FILM_OJT_PTIT/assets/user/js/validator.js"></script>
+    <script src="/FILM_OJT_PTIT/assets/user/js/login.js"></script>
+</body>
+
+</html>
+
