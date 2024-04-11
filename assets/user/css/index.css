@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(11, 11, 11);
+}
+.navbar-nav .nav-link,
+.navbar-brand,
+.form-control,
+.btn {
+  color: white;
+}
+/* .navbar-nav .nav-link,
+.navbar-brand,
+.form-control,
+.btn :hover {
+  color: rgb(0, 170, 255);
+} */
+
+.container {
+  width: 124px;
+  height: 20px;
+}
