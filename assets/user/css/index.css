@@ -1,0 +1,147 @@
+.Footer {
+  background-color: rgb(11, 11, 11);
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+.Footer1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo {
+  height: 15px;
+  width: 25px;
+}
+.word {
+  width: 61px;
+  height: 15px;
+}
+
+.des p {
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+.des1 {
+  padding: 45px;
+  margin-left: 25px;
+}
+.des1 p {
+  color: rgb(186, 186, 186);
+  font-size: 10px;
+}
+
+.des2 {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: nowrap;
+  margin-right: 30px;
+  align-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.des2 div {
+  width: 30%;
+  margin-left: 80px;
+}
+
+.des2 h3 {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+.des2 p {
+  color: rgb(186, 186, 186);
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+.des2_col2 {
+  padding: 0px 60px;
+}
+.Footer2 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 10px;
+}
+.Footer2 p {
+  color: rgb(186, 186, 186);
+  margin-left: -140px;
+}
+.Footer2 .Footer2_blue {
+  color: rgb(35, 128, 251);
+}
+.Footer2 .Footer2_blue span {
+  color: red;
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-container {
+  margin: 15px;
+}
+.container {
+  display: flex;
+  margin: 15px;
+}
+.left {
+  margin: 15px;
+}
+
+.total-price {
+  margin-top: 50px;
+}
+
+.left img {
+  width: 400px;
+  height: 500px;
+  margin-right: 100px;
+}
+
+.cart ul li img {
+  width: 400px;
+  height: 500px;
+  margin-right: 100px;
+}
+
+.cart li {
+  display: flex;
+  padding: 50px;
+  margin-left: -100px;
+}
+
+.cart-container {
+  display: flex;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
