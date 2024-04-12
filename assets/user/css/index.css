@@ -165,7 +165,7 @@ body {
 }
 
 .carousel-item {
-  height: 500px;
+  height: 600px;
   background-size: cover;
   background-position: center;
   line-height: 500px;
@@ -195,4 +195,17 @@ body {
 }
 .bot p {
   font-size: 15px;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Đảm bảo nút tìm kiếm và ô nhập liệu hiển thị đúng trên thanh điều hướng */
+.navbar-nav .form-control {
+  margin: 0 auto; /* Đưa ô nhập liệu về giữa */
+  width: auto; /* Cho phép ô nhập liệu co dãn theo nội dung */
+  max-width: 300px; /* Đặt chiều rộng tối đa */
 }
