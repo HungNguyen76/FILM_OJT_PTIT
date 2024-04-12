@@ -1,5 +1,5 @@
 .footer {
-  background-color: rgb(11, 11, 11);
+  background-color: rgb(21, 21, 21);
   color: #fff;
   position: fixed;
   bottom: 0;
@@ -137,4 +137,62 @@ a {
 
 a:hover {
   color: inherit;
+}
+body {
+  background-color: rgb(11, 11, 11);
+  font: 20px/20px pingfang SC, Microsoft YaHei, "\5FAE\8F6F\96C5\9ED1",
+    helvetica, arial, verdana, tahoma, sans-serif;
+}
+
+.navbar-nav .nav-link,
+.navbar-brand,
+.form-control,
+.btn {
+  color: white;
+}
+.navbar-nav .nav-link:hover {
+  color: lightskyblue;
+}
+.containerNavbar {
+  width: 124px;
+  height: 20px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+.carousel-item {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  line-height: 500px;
+}
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.iconlogin {
+  width: 40px;
+}
+.containerNavbar-fluid {
+  display: contents;
+}
+.card {
+  background-color: rgb(11, 11, 11);
+  color: #fff;
+  /* height: 50px;
+  width: 40px; */
+}
+.bot {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.bot p {
+  font-size: 15px;
 }
