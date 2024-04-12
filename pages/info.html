@@ -78,7 +78,7 @@
             </div>
             <hr>
             <div class="container-left__person" onclick="Favorite()">
-                <div>Bộ sưu tập của tôi</div>
+                <div id="favorite">Bộ sưu tập của tôi</div>
                 <i class="fa-regular fa-heart" style="color: #ffffff;"></i>
             </div>
             <hr>
@@ -88,31 +88,78 @@
 
         <section class="container-right">
             <h2>Cài đặt cá nhân</h2>
-            <div class="abc">
-                <p class="container-right-title">Tên người dùng</p>
-                <div class="container-right-render">
-                    <p class="container-right-render__info" id="username">lhbtran2003</p>
-                    <p class="container-right-render__change">Change</p>
+            <div class="form">
+                <div class="abc">
+                    <p class="container-right-title">Tên người dùng</p>
+                    <div class="container-right-render">
+                        <p class="container-right-render__info" id="username"></p>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <div class="abc">
-                <p class="container-right-title">Email</p>
-                <div class="container-right-render">
-                    <p class="container-right-render__info" id="email">lhbtran2003@gmail.com</p>
-                    <p class="container-right-render__change">Change</p>
+                <hr>
+                <div class="abc">
+                    <p class="container-right-title">Email</p>
+                    <div class="container-right-render">
+                        <p class="container-right-render__info" id="email"></p>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <div class="abc">
-                <p class="container-right-render__title">Mật khẩu</p>
-                <div class="container-right-render">
-                    <p class="container-right-render__info" id="passwork"></p>
-                    <p class="container-right-render__change">Change</p>
+                <hr>
+                <div class="abc">
+                    <p class="container-right-title">Mật khẩu</p>
+                    <div class="container-right-render">
+                        <p class="container-right-render__info" id="passwork"></p>
+                        <p class="container-right-render__change" onclick="changePassword()">Change</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer1">
+            <div class="des1">
+                <img class="logo" src="/assets/user/img/logo.jpg" alt="" />
+                <span>KANT</span>
+                <p>
+                    A good film is a film that reflects your life,
+                    <br />watching it and try to find yourself. <br />Let ask yoursefl
+                    who you are.
+                </p>
+                <div class="icon2">
+                    <div class="fa fa-facebook"></div>
+                    <div id="icon" class="fa fa-twitter"></div>
+                    <div id="icon" class="fa fa-github"></div>
+                    <div class="fa fa-instagram"></div>
+                </div>
+            </div>
+            <div class="des2">
+                <div class="des2_col1">
+                    <h3>Company</h3>
+                    <p><a href="/FILM_OJT_PTIT/pages/index.html">Home</a></p>
+                    <p>About</p>
+                    <p>services</p>
+                </div>
+                <div class="des2_col2">
+                    <h3>Information</h3>
+                    <p>Resume</p>
+                    <p>Client Say</p>
+                    <p>Projects</p>
+                </div>
+                <div class="des2_col3">
+                    <h3>More info</h3>
+                    <p>
+                        <a href="https://www.facebook.com/tamanh.huynh.5851">Facebook</a>
+                    </p>
+                    <p><a href="https://www.instagram.com/shinne_05/">Instagram</a></p>
+                    <p><a href="https://github.com/HuynhTamAnh">Github</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer2">
+            <p>© 2024 Kant. Created with ❤️ by four lovely people</p>
+            <p class="footer2_blue">- Terms & condition <span>*</span></p>
+        </div>
+    </footer>
 
     <script src="/FILM_OJT_PTIT/assets/user/js/info.js"></script>
 </body>
