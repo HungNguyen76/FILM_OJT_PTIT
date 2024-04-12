@@ -143,6 +143,14 @@ Validator.isRequired = function (selector, message) {
         }
     };
 }
+Validator.userName = function (selector, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            return value ? undefined : message || 'khong dc de trong'
+        }
+    };
+}
 
 Validator.isEmail = function (selector, message) {
     return {
