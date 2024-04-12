@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="/FILM_OJT_PTIT/assets/user/css/info.css">
+    <link rel="stylesheet" href="/assets/user/css/info.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="/FILM_OJT_PTIT/assets/img/logo.jpg" alt="Bootstrap" width="111" height="22" />
+                <img src="/assets/img/logo.jpg" alt="Bootstrap" width="111" height="22" />
             </a>
         </div>
         <div class="container-fluid">
@@ -73,12 +73,12 @@
     <main>
         <section class="container-left">
             <div class="container-left__person">
-                <img src="/FILM_OJT_PTIT/assets/img/profile-none.png">
+                <img src="/assets/img/profile-none.png">
                 <div id="username">lhbtran2003</div>
             </div>
             <hr>
             <div class="container-left__person" onclick="Favorite()">
-                <div>Bộ sưu tập của tôi</div>
+                <div id="favorite">Bộ sưu tập của tôi</div>
                 <i class="fa-regular fa-heart" style="color: #ffffff;"></i>
             </div>
             <hr>
@@ -88,33 +88,80 @@
 
         <section class="container-right">
             <h2>Cài đặt cá nhân</h2>
-            <div class="abc">
-                <p class="container-right-title">Tên người dùng</p>
-                <div class="container-right-render">
-                    <p class="container-right-render__info" id="username">lhbtran2003</p>
-                    <p class="container-right-render__change">Change</p>
+            <div class="form">
+                <div class="abc">
+                    <p class="container-right-title">Tên người dùng</p>
+                    <div class="container-right-render">
+                        <p class="container-right-render__info" id="username"></p>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <div class="abc">
-                <p class="container-right-title">Email</p>
-                <div class="container-right-render">
-                    <p class="container-right-render__info" id="email">lhbtran2003@gmail.com</p>
-                    <p class="container-right-render__change">Change</p>
+                <hr>
+                <div class="abc">
+                    <p class="container-right-title">Email</p>
+                    <div class="container-right-render">
+                        <p class="container-right-render__info" id="email"></p>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <div class="abc">
-                <p class="container-right-render__title">Mật khẩu</p>
-                <div class="container-right-render">
-                    <p class="container-right-render__info" id="passwork"></p>
-                    <p class="container-right-render__change">Change</p>
+                <hr>
+                <div class="abc">
+                    <p class="container-right-title">Mật khẩu</p>
+                    <div class="container-right-render">
+                        <p class="container-right-render__info" id="passwork"></p>
+                        <p class="container-right-render__change" onclick="changePassword()">Change</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <script src="/FILM_OJT_PTIT/assets/user/js/info.js"></script>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer1">
+            <div class="des1">
+                <img class="logo" src="/assets/user/img/logo.jpg" alt="" />
+                <span>KANT</span>
+                <p>
+                    A good film is a film that reflects your life,
+                    <br />watching it and try to find yourself. <br />Let ask yoursefl
+                    who you are.
+                </p>
+                <div class="icon2">
+                    <div class="fa fa-facebook"></div>
+                    <div id="icon" class="fa fa-twitter"></div>
+                    <div id="icon" class="fa fa-github"></div>
+                    <div class="fa fa-instagram"></div>
+                </div>
+            </div>
+            <div class="des2">
+                <div class="des2_col1">
+                    <h3>Company</h3>
+                    <p><a href="/pages/index.html">Home</a></p>
+                    <p>About</p>
+                    <p>services</p>
+                </div>
+                <div class="des2_col2">
+                    <h3>Information</h3>
+                    <p>Resume</p>
+                    <p>Client Say</p>
+                    <p>Projects</p>
+                </div>
+                <div class="des2_col3">
+                    <h3>More info</h3>
+                    <p>
+                        <a href="https://www.facebook.com/tamanh.huynh.5851">Facebook</a>
+                    </p>
+                    <p><a href="https://www.instagram.com/shinne_05/">Instagram</a></p>
+                    <p><a href="https://github.com/HuynhTamAnh">Github</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer2">
+            <p>© 2024 Kant. Created with ❤️ by four lovely people</p>
+            <p class="footer2_blue">- Terms & condition <span>*</span></p>
+        </div>
+    </footer>
+
+    <script src="/assets/user/js/info.js"></script>
 </body>
 
 </html>
