@@ -1,28 +1,28 @@
 const films = [
   {
     id: "film1",
-    img1: "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/435060907_1840794256417687_8370453157257839946_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=PGqj-ZdgPEYAb6g3i4A&_nc_ht=scontent.fhan14-2.fna&oh=00_AfAxuIkI_jT3h3sc9VMTeMdhM_mdqtORYQPg9RnCLAXORA&oe=661E6853",
+    img1: "https://m.ykimg.com/0584000065E0849D2027901CB107BD2F?x-oss-process=image/resize,w_385/interlace,1/quality,Q_80",
     name: "Everyone Loves Me",
     type: "hiện-đại",
   },
 
   {
     id: "film2",
-    img1: "https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/428614020_751991567028012_4120608894771198293_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oXcmtf08p04Ab4vm57F&_nc_ht=scontent.fhan14-3.fna&oh=00_AfCRGvuLiL7WyXswmXc7kayhmFvm4KBoUkTXLcgvHIWSYQ&oe=661E5461",
+    img1: "https://m.ykimg.com/05840000636109B813EBC6095DF70CE8?x-oss-process=image/resize,w_385/interlace,1/quality,Q_80",
     name: "Ligher and Princess",
     type: "hiện-đại",
   },
 
   {
     id: "film3",
-    img1: "https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/428610800_751992663694569_2932013795946587864_n.jpg?stp=dst-jpg_p960x960&_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=mc7G5MirkusAb6NZJnH&_nc_ht=scontent.fhan14-3.fna&oh=00_AfAqlMC1hKrecd-55thPkzprTXbjMmDFRIUCgkz5TvsjWg&oe=661E544F",
+    img1: "https://m.ykimg.com/0584000063A7FAF813EB6609A0ED1448?x-oss-process=image/resize,w_385/interlace,1/quality,Q_80",
     name: "The Blood of Youth",
     type: "tiên-hiệp",
   },
 
   {
     id: "film4",
-    img1: "https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/428611957_751990247028144_2820066405430481948_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gk4oj5qaiQsAb6Na9fr&_nc_ht=scontent.fhan14-5.fna&oh=00_AfD6Bg_lg04hHr42ZJ71WRyXfi1xdUthHt2Wn7MQiNW-jg&oe=661E7225",
+    img1: "http://m.ykimg.com/0583000064AEA41F13EB660C1CEEDC4A?x-oss-process=image/resize,w_640/crop,x_0,y_0,w_640,h_360",
     name: "In Blossom",
     type: "tiên-hiệp",
   },
@@ -31,7 +31,6 @@ localStorage.setItem("listAll", JSON.stringify(films));
 
 window.onload = function () {
   load();
-  renderHienDai();
   renderTienHiep();
 };
 
