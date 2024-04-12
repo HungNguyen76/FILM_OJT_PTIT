@@ -26,6 +26,12 @@ const films = [
     name: "In Blossom",
     type: "tiên-hiệp",
   },
+  {
+    id: "film5",
+    img1: "https://m.ykimg.com/0584000064AEA42F13EB660C1C02AF4B?x-oss-process=image/resize,w_385/interlace,1/quality,Q_80",
+    name: "The Legend of Anle",
+    type: "tiên-hiệp",
+  },
 ];
 localStorage.setItem("listAll", JSON.stringify(films));
 
