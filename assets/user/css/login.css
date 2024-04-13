@@ -9,7 +9,7 @@ body {
   background-position: center;
 }
 
-.wrapper {
+.register-form {
   width: 420px;
   /* background: transparent; */
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -24,18 +24,18 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.wrapper h1 {
+.register-form h2 {
   font-size: 36px;
   text-align: center;
 }
-.wrapper .box {
+.form-group {
   position: relative;
   width: 100%;
   height: 50px;
   margin: 30px 0;
 }
 
-.box input {
+.form-group input {
   width: 100%;
   height: 100%;
   background: transparent;
@@ -47,35 +47,19 @@ body {
   color: #fff;
   padding: 20px 45px 20px 20px;
 }
-.box input::placeholder {
+.form-group input::placeholder {
   color: #fff;
 }
-.box i {
+.form-group i {
   position: absolute;
   right: 20px;
-  top: 50%;
+  top: 85%;
   transform: translateY(-50%);
   font-size: 20px;
   color: #000000;
 }
-.wrapper .remember-forgot {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14.5px;
-  margin: -15px 0 15px;
-}
-.remember-forgot label input {
-  accent-color: #fff;
-  margin-right: 3px;
-}
-.remember-forgot a {
-  color: #fff;
-  text-decoration: none;
-}
-.remember-forgot a:hover {
-  text-decoration: underline;
-}
-.wrapper .btn {
+
+.register-form .form-submit {
   width: 100%;
   height: 45px;
   background: #000000;
@@ -88,24 +72,23 @@ body {
   color: #beb4b4;
   font-weight: 600;
 }
-.wrapper .btn:hover {
+.register-form .form-submit:hover {
   cursor: pointer;
   background-color: #393f4a;
 }
-.wrapper .register-link {
+.register-form .register-link {
   font-size: 14.5px;
   text-align: center;
   margin: 20px 0 15px;
 }
-.register-link p a {
-  color: #fff;
+.register-link {
+  color: #070707;
   text-decoration: none;
-  font-weight: 600;
+  margin-top: 50px;
+
 }
-.register-link p a:hover {
-  text-decoration: underline;
-}
-.btn a {
+.form-submit a {
   text-decoration: none;
   color: #d8c7c7;
+  margin-top: 15px;
 }
