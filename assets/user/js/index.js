@@ -1,55 +1,48 @@
-// dropdow đăng icon đăng nhập nha
-var icon = document.querySelector(".icon");
-var dropdownContent = document.querySelector(".dropdown-content");
-
-icon.onclick = function () {
-  dropdownContent.style.display =
-    dropdownContent.style.display === "block" ? "none" : "block";
-};
-
-window.onclick = function (event) {
-  if (!event.target.matches(".icon")) {
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    }
-  }
-};
-//---------------------------------------------------------------------
-
 const films = [
   {
     id: "film1",
-    img1: "https://m.ykimg.com/0584000065E0849D2027901CB107BD2F?x-oss-process=image/resize,w_385/interlace,1/quality,Q_80",
-    name: "Everyone Loves Me",
-    type: "hiện-đại",
+    img1: "https://phimmoiiii.net/wp-content/uploads/2023/04/Bua-Hinh-Nhan.jpg",
+    name: "Bùa Hình Nhân",
+    type: "kinhdi",
   },
 
   {
     id: "film2",
-    img1: "https://m.ykimg.com/05840000636109B813EBC6095DF70CE8?x-oss-process=image/resize,w_385/interlace,1/quality,Q_80",
-    name: "Ligher and Princess",
-    type: "hiện-đại",
+    img1: "https://phimmoiiii.net/wp-content/uploads/2022/11/ma-so-truc-quy.jpg",
+    name: "Ma Sơ Trục Quỷ",
+    type: "kinhdi",
   },
 
   {
     id: "film3",
-    img1: "https://m.ykimg.com/0584000063A7FAF813EB6609A0ED1448?x-oss-process=image/resize,w_385/interlace,1/quality,Q_80",
-    name: "The Blood of Youth",
-    type: "tiên-hiệp",
+    img1: "https://phimmoiiii.net/wp-content/uploads/2023/04/ta-chu-cam.jpg",
+    name: "Tà Chú Cấm",
+    type: "kinhdi",
   },
 
   {
     id: "film4",
-    img1: "http://m.ykimg.com/0583000064AEA41F13EB660C1CEEDC4A?x-oss-process=image/resize,w_640/crop,x_0,y_0,w_640,h_360",
-    name: "In Blossom",
-    type: "tiên-hiệp",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/thumb/b/b7/5_centimet_tr%C3%AAn_gi%C3%A2y.jpg/275px-5_centimet_tr%C3%AAn_gi%C3%A2y.jpg",
+    name: "5 Centimet trên giây",
+    type: "anime",
+  },
+  {
+    id: "film5",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/f/f6/Kotono_no_Niwa_poster.jpg",
+    name: "Khu vườn ngôn từ",
+    type: "anime",
+
+    id: "film5",
+    img1: "https://kenh14cdn.com/thumb_w/650/2017/anh-9-1484260065293.jpg",
+    name: "Your name",
+    type: "anime",
   },
 ];
+
 localStorage.setItem("listAll", JSON.stringify(films));
 
 window.onload = function () {
   load();
-  renderTienHiep();
 };
 
 function load() {
@@ -58,7 +51,7 @@ function load() {
   for (let i = 0; i < filmALL.length; i++) {
     out += `<div class="col-md-3 mb-4 d-flex justify-content-center">
       <div class="card rounded-lg" style="width: 18rem;">
-        <img src="${filmALL[i].img1}" class="card-img-top" alt="Product Image" style="height: 300px;">
+        <img src="${filmALL[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
         <div class="card-body">
           <h5 class="card-title">${filmALL[i].name}</h5>
         </div>
@@ -73,7 +66,7 @@ function loadFilms(filmList, containerId) {
   for (let i = 0; i < filmList.length; i++) {
     out += `<div class="col-md-3 mb-4 d-flex justify-content-center">
       <div class="card rounded-lg" style="width: 18rem;">
-        <img src="${filmList[i].img1}" class="card-img-top" alt="Product Image" style="height: 300px;">
+        <img src="${filmList[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
         <div class="card-body">
           <h5 class="card-title">${filmList[i].name}</h5>
         </div>
@@ -82,35 +75,35 @@ function loadFilms(filmList, containerId) {
   }
   document.getElementById(containerId).innerHTML = out;
 }
-function locHienDai() {
-  let hienDai = JSON.parse(localStorage.getItem("listAll"));
-  const listHienDai = [];
-  for (let i = 0; i < hienDai.length; i++) {
-    if (hienDai[i].type == "hiện-đại") {
-      listHienDai.push(hienDai[i]);
+function locKinhDi() {
+  let kinhDi = JSON.parse(localStorage.getItem("listAll"));
+  const listKinhdi = [];
+  for (let i = 0; i < kinhDi.length; i++) {
+    if (kinhDi[i].type == "kinhdi") {
+      listKinhdi.push(kinhDi[i]);
     }
   }
-  localStorage.setItem("listHienDai", JSON.stringify(listHienDai));
+  localStorage.setItem("listKinhDi", JSON.stringify(listKinhdi));
 }
 
-function locTienHiep() {
-  let tienHiep = JSON.parse(localStorage.getItem("listAll"));
-  const listTienHiep = [];
-  for (let i = 0; i < tienHiep.length; i++) {
-    if (tienHiep[i].type == "tiên-hiệp") {
-      listTienHiep.push(tienHiep[i]);
+function locAnime() {
+  let anime = JSON.parse(localStorage.getItem("listAll"));
+  const listAnime = [];
+  for (let i = 0; i < anime.length; i++) {
+    if (anime[i].type == "anime") {
+      listAnime.push(anime[i]);
     }
   }
-  localStorage.setItem("listTienHiep", JSON.stringify(listTienHiep));
+  localStorage.setItem("listAnime", JSON.stringify(listAnime));
 }
-function renderHienDai() {
-  locHienDai();
-  let listHienDai = JSON.parse(localStorage.getItem("listHienDai")) || []; // Lấy dữ liệu từ local storage
-  loadFilms(listHienDai, "loadH");
+function renderKinhDi() {
+  locKinhDi();
+  let listKinhDi = JSON.parse(localStorage.getItem("listKinhDi")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listKinhDi, "loadH");
 }
 
-function renderTienHiep() {
-  locTienHiep();
-  let listTienHiep = JSON.parse(localStorage.getItem("listTienHiep")) || []; // Lấy dữ liệu từ local storage
-  loadFilms(listTienHiep, "loadT");
+function renderAnime() {
+  locAnime();
+  let listAnime = JSON.parse(localStorage.getItem("listAnime")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listAnime, "loadT");
 }
