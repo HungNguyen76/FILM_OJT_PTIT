@@ -1,3 +1,20 @@
+var icon = document.querySelector(".icon");
+var dropdownContent = document.querySelector(".dropdown-content");
+
+// Toggle the dropdown content on click
+icon.onclick = function () {
+  dropdownContent.style.display =
+    dropdownContent.style.display === "block" ? "none" : "block";
+};
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+  if (!event.target.matches(".icon")) {
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    }
+  }
+};
 const films = [
   {
     id: "film1",

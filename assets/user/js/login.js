@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Đăng nhập thành công");
             window.location.href = userFound.isAdmin
               ? "/pages/admin/admin.html"
-              : "/pages/index.html";
+              : "/pages/trangchulogout.html";
           }
         }
       } else {
