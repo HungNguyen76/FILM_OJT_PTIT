@@ -1,3 +1,21 @@
+// dropdow đăng icon đăng nhập nha
+var icon = document.querySelector(".icon");
+var dropdownContent = document.querySelector(".dropdown-content");
+
+icon.onclick = function () {
+  dropdownContent.style.display =
+    dropdownContent.style.display === "block" ? "none" : "block";
+};
+
+window.onclick = function (event) {
+  if (!event.target.matches(".icon")) {
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    }
+  }
+};
+//---------------------------------------------------------------------
+
 const films = [
   {
     id: "film1",

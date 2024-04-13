@@ -177,6 +177,8 @@ body {
   transform: translateX(-50%);
 }
 .iconlogin {
+  margin-right: 40px;
+  margin-left: 140px;
   width: 40px;
 }
 .containerNavbar-fluid {
@@ -203,9 +205,37 @@ body {
   align-items: center;
 }
 
-/* Đảm bảo nút tìm kiếm và ô nhập liệu hiển thị đúng trên thanh điều hướng */
-.navbar-nav .form-control {
-  margin: 0 auto; /* Đưa ô nhập liệu về giữa */
-  width: auto; /* Cho phép ô nhập liệu co dãn theo nội dung */
-  max-width: 300px; /* Đặt chiều rộng tối đa */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #262424; /* Black background */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-size: 10px;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.5s ease; /* Smooth background transition */
+}
+
+.dropdown-content a:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: none;
+}
+.icon {
+  cursor: pointer;
+  /* Add your icon styling here */
 }
