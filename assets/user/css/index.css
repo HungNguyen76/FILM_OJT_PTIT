@@ -244,3 +244,15 @@ hr {
 h3 {
   color: #fff;
 }
+
+main {
+  background-image: url("https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg");
+}
+.title {
+  margin-top: 10px;
+}
+
+h2 a {
+  display: flex;
+  justify-content: flex-end;
+}
