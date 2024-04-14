@@ -157,43 +157,36 @@ function renderAnime() {
 }
 // Hàm xử lý tìm kiếm
 function searchMovies() {
- 
   var searchQuery = document.querySelector(".form-control").value.toLowerCase();
 
- 
   var allMovies = JSON.parse(localStorage.getItem("listAll")) || [];
 
-
   var filteredMovies = allMovies.filter(function (movie) {
-   
     return movie.name.toLowerCase().includes(searchQuery);
   });
 
- 
   loadFilms(filteredMovies, "load");
 
- 
   if (filteredMovies.length === 0) {
     document.getElementById("load").innerHTML = "<p>Không tìm thấy phim</p>";
   }
 }
 
-
 document.querySelector("form").addEventListener("submit", function (event) {
-  event.preventDefault(); 
-  searchMovies(); 
+  event.preventDefault();
+  searchMovies();
 });
-
 
 function showAllMovies() {
   var allMovies = JSON.parse(localStorage.getItem("listAll")) || [];
   loadFilms(allMovies, "load");
 }
 
-
 document.getElementById("clearSearch").addEventListener("click", function () {
-  document.querySelector(".form-control").value = ""; 
-  showAllMovies(); 
+  document.querySelector(".form-control").value = "";
+  showAllMovies();
 });
 
-
+function logout() {
+  localStorage.removeItem("checkLogin");
+}
