@@ -267,8 +267,27 @@ document.getElementById("clearSearch").addEventListener("click", function () {
 
 function logout() {
   localStorage.removeItem("checkLogin");
+  localStorage.removeItem("favoriteFilms");
 }
+// Sau khi người dùng đăng nhập thành công
+localStorage.setItem("checkLogin", "true");
+
+function checkLoggedIn() {
+  const userEmail = localStorage.getItem("checkLogin");
+  if (userEmail) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function favoriteMovie(btn) {
+  var isLoggedIn = checkLoggedIn();
+  if (!isLoggedIn) {
+    alert("Vui lòng đăng nhập để thêm phim vào danh sách yêu thích.");
+    return;
+  }
+
   var filmId = btn.closest(".film").getAttribute("data-id");
   console.log("Yêu thích phim với id: ", filmId);
   var selectedFilm = films.find((film) => film.id === filmId);
