@@ -12,10 +12,15 @@ function searchMovies() {
     return movie.name.toLowerCase().includes(searchQuery);
   });
 
-  loadFilms(filteredMovies, "loadH");
+  // Hiển thị tiêu đề "Phim mà bạn tìm"
 
-  if (filteredMovies.length === 0) {
-    document.getElementById("loadH").innerHTML = "<p>Không tìm thấy phim</p>";
+  if (filteredMovies.length > 0) {
+    // Nếu có kết quả tìm kiếm, cập nhật danh sách phim tìm kiếm
+    loadFilms(filteredMovies, "loadTK");
+  } else {
+    // Nếu không có kết quả tìm kiếm, hiển thị thông báo "Không tìm thấy phim"
+    document.getElementById("loadTK").innerHTML =
+      " <hr /> <p>Không tìm thấy phim</p>";
   }
 }
 
@@ -25,8 +30,12 @@ document.querySelector("form").addEventListener("submit", function (event) {
 });
 
 function showAllMovies() {
+  // Lấy danh sách tất cả các bộ phim từ localStorage, nếu không có thì trả về một mảng rỗng
   var allMovies = JSON.parse(localStorage.getItem("listKinhDi")) || [];
-  loadFilms(allMovies, "loadH");
+  // Hiển thị tiêu đề danh sách phim
+
+  // Hiển thị tất cả các bộ phim
+  loadFilms(allMovies, "loadTK");
 }
 
 document.getElementById("clearSearch").addEventListener("click", function () {

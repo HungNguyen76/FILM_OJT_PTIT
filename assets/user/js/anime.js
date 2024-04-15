@@ -12,10 +12,10 @@ function searchMovies() {
     return movie.name.toLowerCase().includes(searchQuery);
   });
 
-  loadFilms(filteredMovies, "loadT");
+  loadFilms(filteredMovies, "loadTK");
 
   if (filteredMovies.length === 0) {
-    document.getElementById("loadT").innerHTML = "<p>Không tìm thấy phim</p>";
+    document.getElementById("loadTK").innerHTML = "<p>Không tìm thấy phim</p>";
   }
 }
 document.querySelector("form").addEventListener("submit", function (event) {
@@ -25,7 +25,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
 function showAllMovies() {
   var allMovies = JSON.parse(localStorage.getItem("listAnime")) || [];
-  loadFilms(allMovies, "loadT");
+  loadFilms(allMovies, "loadTK");
 }
 
 document.getElementById("clearSearch").addEventListener("click", function () {
