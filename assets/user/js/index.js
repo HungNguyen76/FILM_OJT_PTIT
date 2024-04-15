@@ -268,3 +268,17 @@ document.getElementById("clearSearch").addEventListener("click", function () {
 function logout() {
   localStorage.removeItem("checkLogin");
 }
+function favoriteMovie(btn) {
+  var filmId = btn.closest(".film").getAttribute("data-id");
+  console.log("Yêu thích phim với id: ", filmId);
+  var selectedFilm = films.find((film) => film.id === filmId);
+  var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
+  var isFilmInFavorites = favoriteFilms.some((film) => film.id === filmId);
+  if (!isFilmInFavorites) {
+    favoriteFilms.push(selectedFilm);
+    localStorage.setItem("favoriteFilms", JSON.stringify(favoriteFilms));
+    alert("Đã thêm phim vào danh sách yêu thích.");
+  } else {
+    alert("Phim đã có trong danh sách yêu thích.");
+  }
+}
