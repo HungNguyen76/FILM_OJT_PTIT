@@ -1,13 +1,20 @@
+window.addEventListener("scroll", function () {
+  var navbar = document.querySelector(".navbar");
+  var scrolled = window.scrollY > 550;
+  if (scrolled) {
+    navbar.classList.add("navbar-scrolled");
+  } else {
+    navbar.classList.remove("navbar-scrolled");
+  }
+});
 var icon = document.querySelector(".icon");
 var dropdownContent = document.querySelector(".dropdown-content");
 
-// Toggle the dropdown content on click
 icon.onclick = function () {
   dropdownContent.style.display =
     dropdownContent.style.display === "block" ? "none" : "block";
 };
 
-// Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
   if (!event.target.matches(".icon")) {
     if (dropdownContent.style.display === "block") {
@@ -267,8 +274,27 @@ document.getElementById("clearSearch").addEventListener("click", function () {
 
 function logout() {
   localStorage.removeItem("checkLogin");
+  localStorage.removeItem("favoriteFilms");
 }
+// Sau khi người dùng đăng nhập thành công
+localStorage.setItem("checkLogin", "true");
+
+function checkLoggedIn() {
+  const userEmail = localStorage.getItem("checkLogin");
+  if (userEmail) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function favoriteMovie(btn) {
+  var isLoggedIn = checkLoggedIn();
+  if (!isLoggedIn) {
+    alert("Vui lòng đăng nhập để thêm phim vào danh sách yêu thích.");
+    return;
+  }
+
   var filmId = btn.closest(".film").getAttribute("data-id");
   console.log("Yêu thích phim với id: ", filmId);
   var selectedFilm = films.find((film) => film.id === filmId);
