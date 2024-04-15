@@ -98,6 +98,11 @@ body {
 .containerNavbar {
   display: flex;
   margin: 15px;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+.navbar-scrolled {
+  background-color: rgb(46, 45, 45);
 }
 .left {
   margin: 15px;

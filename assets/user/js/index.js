@@ -1,3 +1,13 @@
+window.addEventListener("scroll", function () {
+  var navbar = document.querySelector(".navbar");
+  var scrolled = window.scrollY > 50; // Thay đổi giá trị này nếu bạn muốn thanh navbar chuyển màu sau một khoảng cách khác
+
+  if (scrolled) {
+    navbar.classList.add("navbar-scrolled");
+  } else {
+    navbar.classList.remove("navbar-scrolled");
+  }
+});
 var icon = document.querySelector(".icon");
 var dropdownContent = document.querySelector(".dropdown-content");
 
