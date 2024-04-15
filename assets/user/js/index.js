@@ -103,37 +103,105 @@ localStorage.setItem("listAll", JSON.stringify(films));
 window.onload = function () {
   load();
 };
-
 function load() {
   var out = "";
   let filmALL = JSON.parse(localStorage.getItem("listAll")) || [];
   for (let i = 0; i < filmALL.length; i++) {
-    out += `<div class="col-md-3 mb-4 d-flex justify-content-center">
-      <div class="card rounded-lg" style="width: 18rem;">
-        <img src="${filmALL[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
-        <div class="card-body">
-          <h5 class="card-title">${filmALL[i].name}</h5>
-        </div>
+    out += `
+      <div class="film col-md-3 mb-4 d-flex justify-content-center" data-id="${filmALL[i].id}">
+    <div class="card rounded-lg" style="width: 18rem;">
+      <img src="${filmALL[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
+      <div class="card-body">
+        <h5 class="card-title">${filmALL[i].name}</h5>
       </div>
-    </div>`;
+      <!-- Container chứa nút yêu thích và xem thông tin -->
+      <div class="film-actions">
+        <button class="btn btn-outline-primary favorite-btn">Yêu thích</button>
+        <button class="btn btn-outline-info info-btn">Xem thông tin</button>
+      </div>
+    </div>
+  </div>`;
   }
-  document.getElementById("load").innerHTML = out;
+  document.getElementById("load").innerHTML = `<div class="row">${out}</div>`;
+
+  // Gắn sự kiện cho các nút
+  var favoriteBtns = document.querySelectorAll(".favorite-btn");
+  var infoBtns = document.querySelectorAll(".info-btn");
+
+  favoriteBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (event) {
+      // Xử lý khi người dùng click vào nút Yêu thích
+      // Ví dụ: Thêm phim vào danh sách yêu thích
+      var filmId = event.target.closest(".film").dataset.id; // Lấy id của phim
+      // Thực hiện xử lý thêm phim vào danh sách yêu thích ở đây
+      console.log("Yêu thích phim với id: ", filmId);
+    });
+  });
+
+  infoBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (event) {
+      // Xử lý khi người dùng click vào nút Xem thông tin
+      // Ví dụ: Hiển thị thông tin chi tiết của phim
+      var filmId = event.target.closest(".film").dataset.id; // Lấy id của phim
+      // Thực hiện xử lý hiển thị thông tin chi tiết của phim ở đây
+      console.log("Xem thông tin của phim với id: ", filmId);
+    });
+  });
 }
 
+// function load() {
+//   var out = "";
+//   let filmALL = JSON.parse(localStorage.getItem("listAll")) || [];
+//   for (let i = 0; i < filmALL.length; i++) {
+//     out += `<div class="col-md-3 mb-4 d-flex justify-content-center">
+//       <div class="card rounded-lg" style="width: 18rem;">
+//         <img src="${filmALL[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
+//         <div class="card-body">
+//           <h5 class="card-title">${filmALL[i].name}</h5>
+//         </div>
+//       </div>
+//     </div>`;
+//   }
+//   document.getElementById("load").innerHTML = out;
+// }
+
+// function loadFilms(filmList, containerId) {
+//   var out = "";
+//   for (let i = 0; i < filmList.length; i++) {
+//     out += `<div class="col-md-3 mb-4 d-flex justify-content-center">
+//       <div class="card rounded-lg" style="width: 18rem;">
+//         <img src="${filmList[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
+//         <div class="card-body">
+//           <h5 class="card-title">${filmList[i].name}</h5>
+//         </div>
+//       </div>
+//     </div>`;
+//   }
+//   document.getElementById(containerId).innerHTML = out;
+// }
 function loadFilms(filmList, containerId) {
   var out = "";
   for (let i = 0; i < filmList.length; i++) {
-    out += `<div class="col-md-3 mb-4 d-flex justify-content-center">
-      <div class="card rounded-lg" style="width: 18rem;">
-        <img src="${filmList[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
-        <div class="card-body">
-          <h5 class="card-title">${filmList[i].name}</h5>
+    out += `
+      <div class="film col-md-3 mb-4 d-flex justify-content-center">
+        <div class="card rounded-lg" style="width: 18rem;">
+          <img src="${filmList[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
+          <div class="card-body">
+            <h5 class="card-title">${filmList[i].name}</h5>
+          </div>
+          <!-- Container chứa nút yêu thích và xem thông tin -->
+          <div class="film-actions">
+            <button class="btn btn-outline-primary">Yêu thích</button>
+            <button class="btn btn-outline-info">Xem thông tin</button>
+          </div>
         </div>
-      </div>
-    </div>`;
+      </div>`;
   }
-  document.getElementById(containerId).innerHTML = out;
+  document.getElementById(
+    containerId
+  ).innerHTML = `<div class="row">${out}</div>`;
 }
+
 function locKinhDi() {
   let kinhDi = JSON.parse(localStorage.getItem("listAll"));
   const listKinhdi = [];

@@ -256,3 +256,13 @@ h2 a {
   display: flex;
   justify-content: flex-end;
 }
+
+/* CSS để ẩn nút yêu thích và xem thông tin */
+.film-actions {
+  display: none;
+}
+
+/* Hiển thị nút yêu thích và xem thông tin khi hover vào film */
+.film:hover .film-actions {
+  display: flex;
+}
