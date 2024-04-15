@@ -1,7 +1,6 @@
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector(".navbar");
-  var scrolled = window.scrollY > 50; // Thay đổi giá trị này nếu bạn muốn thanh navbar chuyển màu sau một khoảng cách khác
-
+  var scrolled = window.scrollY > 550;
   if (scrolled) {
     navbar.classList.add("navbar-scrolled");
   } else {
@@ -11,13 +10,11 @@ window.addEventListener("scroll", function () {
 var icon = document.querySelector(".icon");
 var dropdownContent = document.querySelector(".dropdown-content");
 
-// Toggle the dropdown content on click
 icon.onclick = function () {
   dropdownContent.style.display =
     dropdownContent.style.display === "block" ? "none" : "block";
 };
 
-// Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
   if (!event.target.matches(".icon")) {
     if (dropdownContent.style.display === "block") {
