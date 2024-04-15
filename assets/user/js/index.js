@@ -25,8 +25,16 @@ window.onclick = function (event) {
 const films = [
   {
     id: "film1",
-    img1: "https://cdn.moveek.com/storage/media/cache/tall/64632cfada23e592561053.jpeg",
+    img1: "https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/437876857_1007098554112821_2529601479420935111_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=eR8xzzfrD3cAb7-7X50&_nc_ht=scontent.fsgn2-10.fna&oh=00_AfB-X703l_JV5Kof7eDb3fRANG4xISlh0u4YFCscOHWaCA&oe=6622F660",
     name: "Bùa Hình Nhân",
+    quocgia: "my",
+    nam: "2022",
+    daodien: "ta",
+    time: "1 tiếng 30p",
+    noidung:
+      "Hoon Payon: Bùa Hình Nhân Hoon Payon 2023 Tham đi một đoạn đường dài để gặp anh trai của mình, Tee, người là một vị sư. Tại chùa trên đảo Koh Donsingtham, anh gặp Jate, một nhà điêu khắc sử dụng phép thuật cho những con búp bê payon của mình. Tham đã nghe đồn rằng sư trưởng Tee đã bỏ trốn sau khi giết chết vị trưởng lão trước đó, nhưng Tham không tin rằng anh trai mình có thể giết ai đó. Anh cũng nghi ngờ lòng tin tôn giáo của người dân trong Búp bê của Ông Cụ Singtham. Anh coi đó là mù quáng mê tín chứ không phải là sự bảo vệ tâm linh. Sau đó, một loạt sự kiện tàn ác gieo rắc nỗi kinh hoàng cho làng. Một người phụ nữ mất tích. Xác chết chồng chất. Nghiêm trọng hơn, Bùa Hình Nhân của Ông Cụ Singtham bị phá hủy. Người dân trong làng tức giận và chuẩn bị một nghi thức để nguyền rủa và truy tìm tội phạm cầm dao.",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
     type: "kinhdi",
     rate: "normal",
   },
@@ -54,14 +62,14 @@ const films = [
     rate: "best",
   },
   {
-    id: "film4",
+    id: "film5",
     img1: "https://m.media-amazon.com/images/M/MV5BZjU5OWVlN2EtODNlYy00MjhhLWI0MDUtMTA3MmQ5MGMwYTZmXkEyXkFqcGdeQXVyNjE5MTM4MzY@._V1_.jpg",
     name: "The Conjuring 2 - Experience Enfield (2016)",
     type: "kinhdi",
     rate: "normal",
   },
   {
-    id: "film4",
+    id: "film6",
     img1: "https://ss-images.saostar.vn/wp700/2019/10/18/6268864/the-conjuring-3.jpg",
     name: "The Conjuring 3: The Devil Made Me Do It (2021)",
     type: "kinhdi",
@@ -69,35 +77,36 @@ const films = [
   },
 
   {
-    id: "film4",
+    id: "film7",
     img1: "https://upload.wikimedia.org/wikipedia/vi/thumb/b/b7/5_centimet_tr%C3%AAn_gi%C3%A2y.jpg/275px-5_centimet_tr%C3%AAn_gi%C3%A2y.jpg",
     name: "5 Centimet trên giây",
     type: "anime",
     rate: "normal",
   },
   {
-    id: "film5",
+    id: "film8",
     img1: "https://kenh14cdn.com/thumb_w/650/2017/anh-9-1484260065293.jpg",
     name: "Your name",
     type: "anime",
     rate: "normal",
   },
   {
-    id: "film6",
+    id: "film9",
     img1: "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
     name: "Naruto Shippuden",
+
     type: "anime",
     rate: "normal",
   },
   {
-    id: "film7",
+    id: "film10",
     img1: "https://m.media-amazon.com/images/M/MV5BNGY4MTg3NzgtMmFkZi00NTg5LWExMmEtMWI3YzI1ODdmMWQ1XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg",
     name: "Jujutsu Kaisen",
     type: "anime",
     rate: "best",
   },
   {
-    id: "film8",
+    id: "film11",
     img1: "https://resize.cdn.otakumode.com/full/u/30e154b109b744939ce2ac9b3c31d524.jpg",
     name: "Haikyuu: To the top",
     type: "anime",
@@ -132,15 +141,6 @@ function load() {
   </div>`;
   }
   document.getElementById("load").innerHTML = `<div class="row">${out}</div>`;
-}
-function favoriteMovie(btn) {
-  var filmId = btn.closest(".film").getAttribute("data-id");
-  console.log("Yêu thích phim với id: ", filmId);
-}
-
-function viewDetails(btn) {
-  var filmId = btn.closest(".film").getAttribute("data-id");
-  console.log("Xem thông tin của phim với id: ", filmId);
 }
 
 function loadFilms(filmList, containerId) {
@@ -306,5 +306,17 @@ function favoriteMovie(btn) {
     alert("Đã thêm phim vào danh sách yêu thích.");
   } else {
     alert("Phim đã có trong danh sách yêu thích.");
+  }
+}
+function viewDetails(btn) {
+  const isLoggedIn = localStorage.getItem("checkLogin");
+  if (!isLoggedIn) {
+    var filmId = btn.closest(".film").getAttribute("data-id");
+    localStorage.setItem("selectedFilmId", filmId);
+    window.location.href = "/pages/pageLogin/thongtin.html";
+  } else {
+    var filmId = btn.closest(".film").getAttribute("data-id");
+    localStorage.setItem("selectedFilmId", filmId);
+    window.location.href = "/pages/pageOut/thongtin.html";
   }
 }

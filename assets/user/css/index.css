@@ -140,9 +140,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: inherit;
-}
 body {
   background-color: rgb(11, 11, 11);
   font: 20px/20px pingfang SC, Microsoft YaHei, "\5FAE\8F6F\96C5\9ED1",
@@ -228,11 +225,12 @@ body {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  transition: background-color 0.5s ease; /* Smooth background transition */
+  transition: background-color 0.5s ease;
 }
 
 .dropdown-content a:hover {
-  background-color: #555; /* Darker background on hover */
+  text-decoration: none;
+  background-color: #555;
 }
 
 .dropdown:hover .dropdown-content {
