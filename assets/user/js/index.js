@@ -204,7 +204,7 @@ function loadFilms(filmList, containerId) {
           <div class="card-body">
             <h5 class="card-title">${filmList[i].name}</h5>
           </div>
-          <!-- Container chứa nút yêu thích và xem thông tin -->
+          
           <div class="film-actions">
             <button class="btn btn-outline-primary favorite-btn" onclick="favoriteMovie(this)">Yêu thích</button>
 
