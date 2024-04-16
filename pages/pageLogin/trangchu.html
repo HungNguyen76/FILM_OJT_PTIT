@@ -21,16 +21,6 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="/assets/user/css/index.css" />
-    <style>
-      /* CSS tùy chỉnh */
-      .login-form {
-        display: none;
-      }
-
-      .user-info {
-        display: none;
-      }
-    </style>
   </head>
   <body>
     <!-- navbar -->
@@ -60,16 +50,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/pages/pageLogin/trangchu.html"
+                >Trang chủ</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="/pages/pageLogin/kinhdi.html"
+                >Kinh Dị</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="/pages/pageLogin/anime.html">Anime</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="/pages/pageLogin/hanhdong.html"
+                >Hành Động</a
+              >
             </li>
             <li class="nav-item dropdown">
               <a
@@ -79,35 +78,63 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                Quốc Gia
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a
+                    class="dropdown-item"
+                    href="/pages/pageLogin/quocgia/nhatban.html"
+                    >Nhật Bản</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/pages/pageLogin/quocgia/usa.html"
+                    >USA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/pages/pageLogin/quocgia/thai.html"
+                    >Thái</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/pages/pageLogin/quocgia/tbn.html"
+                    >Tây Ban Nha</a
+                  >
                 </li>
               </ul>
             </li>
           </ul>
-
-          <img
-            class="usercenter_avatar_img iconlogin"
-            src="https://img.alicdn.com/imgextra/i2/O1CN01lr1KAH1eIQrB1u9ZK_!!6000000003848-2-tps-138-138.png"
-            title=""
-            alt=""
-            data-spm-anchor-id="a2hja.14919748_WEBHOME_JINGXUAN.d_avatar.i0"
-          />
-          <!-- Hiển thị form đăng nhập -->
-          <div class="login-form">
-            <!-- Form đăng nhập -->
-            <!-- Thêm form đăng nhập ở đây -->
-          </div>
-          <!-- Hiển thị thông tin cá nhân -->
-          <div class="user-info">
-            <!-- Thông tin cá nhân -->
-            <!-- Thêm thông tin cá nhân ở đây -->
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="dropdown">
+            <img
+              class="usercenter_avatar_img iconlogin icon"
+              src="https://img.alicdn.com/imgextra/i2/O1CN01lr1KAH1eIQrB1u9ZK_!!6000000003848-2-tps-138-138.png"
+              title=""
+              alt=""
+              data-spm-anchor-id="a2hja.14919748_WEBHOME_JINGXUAN.d_avatar.i0"
+            /><!-- Replace with your icon -->
+            <div class="dropdown-content">
+              <a href="/pages/login.html">Đăng Nhập</a>
+              <a href="/pages/info.html">Thông tin cá nhân</a>
+            </div>
           </div>
         </div>
       </div>
@@ -160,18 +187,30 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <br />
     <main>
       <!-- render sp -->
       <div class="container mt-1">
-        <h3>ALL</h3>
+        <div class="title">
+          <h3 style="color: #fff">Top lượt xem</h3>
+          <hr />
+        </div>
+
         <div class="row" id="load" style="width: 100%"></div>
       </div>
+      <br />
+
+      <!-- <div class="container mt-5">
+        <h3>Kinh dị</h3>
+        <div class="row" id="loadH" style="width: 100%"></div>
+      </div> -->
+
+      <!-- <div class="container mt-5">
+        <h3>Tiên Hiệp</h3>
+        <div class="row" id="loadT" style="width: 100%"></div>
+      </div> -->
     </main>
 
-    <div class="container mt-1">
-      <h3>SEX</h3>
-      <div class="row" id="loadS" style="width: 100%"></div>
-    </div>
     <footer class="footer">
       <div class="footer1">
         <div class="des1">
@@ -192,7 +231,7 @@
         <div class="des2">
           <div class="des2_col1">
             <h3>Company</h3>
-            <p><a href="/FILM_OJT_PTIT/pages/index.html">Home</a></p>
+            <p><a href="/pages/index.html">Home</a></p>
             <p>About</p>
             <p>services</p>
           </div>
@@ -224,18 +263,5 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const iconLogin = document.querySelector(".iconlogin");
-        const loginForm = document.querySelector(".login-form");
-        const userInfo = document.querySelector(".user-info");
-
-        iconLogin.addEventListener("click", function () {
-          // Toggle hiển thị form đăng nhập và thông tin cá nhân
-          loginForm.classList.toggle("active");
-          userInfo.classList.toggle("active");
-        });
-      });
-    </script>
   </body>
 </html>
