@@ -28,10 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
           if (userFound.isLocked) {
             alert("Tài khoản của bạn đã bị khóa và không thể đăng nhập.");
           } else {
-            alert("Đăng nhập thành công");
-            window.location.href = userFound.isAdmin
-              ? "/pages/admin/admin.html"
-              : "/pages/pageOut/trangchulogout.html";
+            setTimeout(function() {
+              window.location.href = userFound.isAdmin
+                ? "/pages/admin/admin.html"
+                : "/pages/pageOut/trangchulogout.html";
+            }, 1000); // 1000 milliseconds = 1 second
           }
         }
       } else {
