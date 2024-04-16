@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
           data.password === adminData.pass
         ) {
           alert("Đăng nhập thành công với quyền admin");
-          window.location.href = "/pages/admin/admin.html";
+          window.location.href = "/pages/admin/film.html";
         } else {
           if (userFound.isLocked) {
             alert("Tài khoản của bạn đã bị khóa và không thể đăng nhập.");
           } else {
-            setTimeout(function() {
+            setTimeout(function () {
               window.location.href = userFound.isAdmin
-                ? "/pages/admin/admin.html"
+                ? "/pages/admin/film.html"
                 : "/pages/pageOut/trangchulogout.html";
             }, 1000); // 1000 milliseconds = 1 second
           }

@@ -27,7 +27,7 @@ const films = [
     id: "film1",
     img1: "https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/437876857_1007098554112821_2529601479420935111_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=eR8xzzfrD3cAb7-7X50&_nc_ht=scontent.fsgn2-10.fna&oh=00_AfB-X703l_JV5Kof7eDb3fRANG4xISlh0u4YFCscOHWaCA&oe=6622F660",
     name: "Bùa Hình Nhân",
-    quocgia: "my",
+    nation: "my",
     nam: "2022",
     daodien: "ta",
     time: "1 tiếng 30p",

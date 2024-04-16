@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>List Movie</title>
-    <link rel="stylesheet" href="/assets/admin/css/film.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="/assets/admin/css/film.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body onload="renderFavoriteFilms()">
+    <button onclick="logout()"></button>
     <div class="container">
-        <div class="side-bar">
-            <ul>
-                <li class="category"><a href="/assets/admin/js/film.js"><i class="fa-solid fa-list"></i>Quản lí danh mục</a></li>
-                <li class="film"><a href="#"><i class="fa-solid fa-list"></i>Quản lí phim</a></li>
-                <li class="account"><a href="/pages/admin/account.html"><i class="fa-solid fa-list"></i>Quản lí tài
-                    khoản</a></li>
-                <li class="country"><a href="/pages/admin/country.html"><i class="fa-solid fa-list"></i>Quản lí quốc
-                    gia</a></li>            </ul>
+      <div class="side-bar">
+        <ul>
+          <li class="category">
+            <a href="/assets/admin/js/film.js"
+              ><i class="fa-solid fa-list"></i>Quản lí danh mục</a
+            >
+          </li>
+          <li class="film">
+            <a href="#"><i class="fa-solid fa-list"></i>Quản lí phim</a>
+          </li>
+          <li class="account">
+            <a href="/pages/admin/account.html"
+              ><i class="fa-solid fa-list"></i>Quản lí tài khoản</a
+            >
+          </li>
+          <li class="country">
+            <a href="/pages/admin/country.html"
+              ><i class="fa-solid fa-list"></i>Quản lí quốc gia</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="body">
+        <div class="nav-bar"></div>
+        <div class="content">
+          <div id="admin"></div>
+          <hr />
+          <div>a</div>
         </div>
-        <div class="body">
-            <div class="nav-bar"></div>
-            <div class="content">
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-               <div>hello</div>
-
-            </div>
-        </div>
+      </div>
     </div>
-</body>
-<script src="/assets/admin/js/film.js"></script>
+  </body>
+  <script src="/assets/admin/js/film.js"></script>
 </html>
