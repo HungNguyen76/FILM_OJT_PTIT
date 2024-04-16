@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.search-box {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 25px;
+  transition: width 0.5s ease-in-out;
+}
+.search-box.active {
+  width: 200px;
+}
+.search-box input[type="text"] {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 10px;
+  padding-left: 40px;
+  font-size: 16px;
+  border-radius: 25px;
+  outline: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.search-box.active input[type="text"] {
+  opacity: 1;
+}
+.search-box i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 20px;
+}
+.search-box button[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background-color: blue;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: width 0.5s ease-in-out;
+}
+
+.search-box.active button[type="submit"] {
+  width: 50px; /* Điều chỉnh chiều rộng tùy ý */
+}
+
+.search-box button[type="submit"] i {
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+}

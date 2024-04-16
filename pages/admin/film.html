@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>List Movie</title>
     <link rel="stylesheet" href="/assets/admin/css/film.css" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/user/css/search.css" />
   </head>
 
   <body onload="renderFavoriteFilms()">
-    <button onclick="logout()"></button>
     <div class="container">
       <div class="side-bar">
         <ul>
@@ -37,13 +44,27 @@
         </ul>
       </div>
       <div class="body">
-        <div class="nav-bar"></div>
-        <div class="content">
-          <div id="admin"></div>
-          <hr />
-          <div>a</div>
+        <div class="item">
+          <div class="nav-bar"><button onclick="logout()">kha</button></div>
+              <form class="d-flex" role="search">
+            <input
+                
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+            
+          </form>
         </div>
-      </div>
+        <div class="content">
+          
+          <div id="admin"></div>
+        </div>
+      
     </div>
   </body>
   <script src="/assets/admin/js/film.js"></script>

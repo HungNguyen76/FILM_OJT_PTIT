@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data.idUser = uuid();
         data.cartUser = [];
         data.purchaseHistory = [];
+        data.username = document.querySelector("#username").value;
 
         listUsers.push(data);
         localStorage.setItem("listUsers", JSON.stringify(listUsers));
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(changeToLoginPage, 1000);
       } else {
         alert("Email đã tồn tại");
-        redirect('/pages/login.html');
+        redirect("/pages/login.html");
       }
     },
   });
