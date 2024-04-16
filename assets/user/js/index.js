@@ -22,6 +22,7 @@ const films = [
     name: "Bùa Hình Nhân",
     type: "kinhdi",
     rate: "normal",
+    nation: "thai",
   },
 
   {
@@ -30,6 +31,7 @@ const films = [
     name: "Ma Sơ Trục Quỷ",
     type: "kinhdi",
     rate: "best",
+    nation: "taybannha",
   },
 
   {
@@ -38,6 +40,7 @@ const films = [
     name: "Tà Chú Cấm",
     type: "kinhdi",
     rate: "best",
+    nation: "thai",
   },
   {
     id: "film4",
@@ -45,6 +48,7 @@ const films = [
     name: "The Conjuring (2013)",
     type: "kinhdi",
     rate: "best",
+    nation: "usa",
   },
   {
     id: "film4",
@@ -52,6 +56,7 @@ const films = [
     name: "The Conjuring 2 - Experience Enfield (2016)",
     type: "kinhdi",
     rate: "normal",
+    nation: "usa",
   },
   {
     id: "film4",
@@ -59,6 +64,7 @@ const films = [
     name: "The Conjuring 3: The Devil Made Me Do It (2021)",
     type: "kinhdi",
     rate: "normal",
+    nation: "usa",
   },
 
   {
@@ -67,6 +73,7 @@ const films = [
     name: "5 Centimet trên giây",
     type: "anime",
     rate: "normal",
+    nation: "nhat ban",
   },
   {
     id: "film5",
@@ -74,6 +81,7 @@ const films = [
     name: "Your name",
     type: "anime",
     rate: "normal",
+    nation: "nhatban",
   },
   {
     id: "film6",
@@ -81,6 +89,7 @@ const films = [
     name: "Naruto Shippuden",
     type: "anime",
     rate: "normal",
+    nation: "nhatban",
   },
   {
     id: "film7",
@@ -88,6 +97,7 @@ const films = [
     name: "Jujutsu Kaisen",
     type: "anime",
     rate: "best",
+    nation: "nhatban",
   },
   {
     id: "film8",
@@ -95,6 +105,47 @@ const films = [
     name: "Haikyuu: To the top",
     type: "anime",
     rate: "best",
+    nation: "nhatban",
+  },
+  {
+    id: "film8",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/7/70/Ironmanposter.JPG",
+    name: "IRON MAN (2018)",
+    type: "hanhdong",
+    rate: "best",
+    nation: "usa",
+  },
+  {
+    id: "film8",
+    img1: "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_.jpg",
+    name: "The Incredible Hulk (2008)",
+    type: "hanhdong",
+    rate: "normal",
+    nation: "usa",
+  },
+  {
+    id: "film8",
+    img1: "https://m.media-amazon.com/images/M/MV5BZGVkNDAyM2EtYzYxYy00ZWUxLTgwMjgtY2VmODE5OTk3N2M5XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
+    name: "Iron Man 2 (2010)",
+    type: "hanhdong",
+    rate: "normal",
+    nation: "usa",
+  },
+  {
+    id: "film8",
+    img1: "https://pics.filmaffinity.com/Thor-223512549-large.jpg",
+    name: "Thor (2011)",
+    type: "hanhdong",
+    rate: "normal",
+    nation: "usa",
+  },
+  {
+    id: "film8",
+    img1: "https://m.media-amazon.com/images/M/MV5BNzAxMjg0NjYtNjNlOS00NTdlLThkMGEtMjAwYjk3NmNkOGFhXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
+    name: "Captain America: The First Avenger (2011)",
+    type: "hanhdong",
+    rate: "best",
+    nation: "usa",
   },
 ];
 
@@ -181,6 +232,56 @@ function locAnime() {
   }
   localStorage.setItem("listAnime", JSON.stringify(listAnime));
 }
+function locHanhDong() {
+  let hanhDong = JSON.parse(localStorage.getItem("listAll"));
+  const listHanhDong = [];
+  for (let i = 0; i < hanhDong.length; i++) {
+    if (hanhDong[i].type == "hanhdong") {
+      listHanhDong.push(hanhDong[i]);
+    }
+  }
+  localStorage.setItem("listHanhDong", JSON.stringify(listHanhDong));
+}
+function locNhatBan() {
+  let nhatBan = JSON.parse(localStorage.getItem("listAll"));
+  const listNhatBan = [];
+  for (let i = 0; i < nhatBan.length; i++) {
+    if (nhatBan[i].nation == "nhatban") {
+      listNhatBan.push(nhatBan[i]);
+    }
+  }
+  localStorage.setItem("listNhatBan", JSON.stringify(listNhatBan));
+}
+function locThai() {
+  let thai = JSON.parse(localStorage.getItem("listAll"));
+  const listThai = [];
+  for (let i = 0; i < thai.length; i++) {
+    if (thai[i].nation == "thai") {
+      listThai.push(thai[i]);
+    }
+  }
+  localStorage.setItem("listThai", JSON.stringify(listThai));
+}
+function locTBN() {
+  let tbn = JSON.parse(localStorage.getItem("listAll"));
+  const listTBN = [];
+  for (let i = 0; i < tbn.length; i++) {
+    if (tbn[i].nation == "taybannha") {
+      listTBN.push(tbn[i]);
+    }
+  }
+  localStorage.setItem("listTBN", JSON.stringify(listTBN));
+}
+function locUSA() {
+  let USA = JSON.parse(localStorage.getItem("listAll"));
+  const listUSA = [];
+  for (let i = 0; i < USA.length; i++) {
+    if (USA[i].nation == "usa") {
+      listUSA.push(USA[i]);
+    }
+  }
+  localStorage.setItem("listUSA", JSON.stringify(listUSA));
+}
 function locBestViewKinhDi() {
   let bestViewKinhDi = JSON.parse(localStorage.getItem("listAll"));
   const listBestViewKinhDi = [];
@@ -207,6 +308,22 @@ function locBestViewAnime() {
   }
   localStorage.setItem("listBestViewAnime", JSON.stringify(listBestViewAnime));
 }
+function locBestViewHanhDong() {
+  let bestViewHanhDong = JSON.parse(localStorage.getItem("listAll"));
+  const listBestViewHanhDong = [];
+  for (let i = 0; i < bestViewHanhDong.length; i++) {
+    if (
+      bestViewHanhDong[i].rate == "best" &&
+      bestViewHanhDong[i].type == "hanhdong"
+    ) {
+      listBestViewHanhDong.push(bestViewHanhDong[i]);
+    }
+  }
+  localStorage.setItem(
+    "listBestViewHanhDong",
+    JSON.stringify(listBestViewHanhDong)
+  );
+}
 
 function renderKinhDi() {
   locKinhDi();
@@ -217,7 +334,13 @@ function renderKinhDi() {
 function renderAnime() {
   locAnime();
   let listAnime = JSON.parse(localStorage.getItem("listAnime")) || []; // Lấy dữ liệu từ local storage
-  loadFilms(listAnime, "loadT");
+  loadFilms(listAnime, "loadA");
+}
+
+function renderHanhDong() {
+  locHanhDong();
+  let listHanhDong = JSON.parse(localStorage.getItem("listHanhDong")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listHanhDong, "loadH");
 }
 
 function renderBestViewKinhDi() {
@@ -226,11 +349,38 @@ function renderBestViewKinhDi() {
     JSON.parse(localStorage.getItem("listBestViewKinhDi")) || [];
   loadFilms(listBestViewKinhDi, "loadBK");
 }
+
 function renderBestViewAnime() {
   locBestViewAnime();
   let listBestViewAnime =
     JSON.parse(localStorage.getItem("listBestViewAnime")) || [];
   loadFilms(listBestViewAnime, "loadBA");
+}
+function renderBestViewHanhDong() {
+  locBestViewHanhDong();
+  let listBestViewHanhDong =
+    JSON.parse(localStorage.getItem("listBestViewHanhDong")) || [];
+  loadFilms(listBestViewHanhDong, "loadBACTION");
+}
+function renderNhatBan() {
+  locNhatBan();
+  let listNhatBan = JSON.parse(localStorage.getItem("listNhatBan")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listNhatBan, "loadJ");
+}
+function renderThai() {
+  locThai();
+  let listThai = JSON.parse(localStorage.getItem("listThai")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listThai, "loadThai");
+}
+function renderTBN() {
+  locTBN();
+  let listTBN = JSON.parse(localStorage.getItem("listTBN")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listTBN, "loadTBN");
+}
+function renderUSA() {
+  locUSA();
+  let listUSA = JSON.parse(localStorage.getItem("listUSA")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listUSA, "loadUSA");
 }
 
 // Hàm xử lý tìm kiếm
