@@ -53,18 +53,20 @@
               <a
                 class="nav-link"
                 aria-current="page"
-                href="/pages/pageOut/trangchulogout.html"
+                href="/pages/pageLogin/trangchu.html"
                 >Trang chủ</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/pageOut/kinhdi.html">Kinh Dị</a>
+              <a class="nav-link" href="/pages/pageLogin/kinhdi.html"
+                >Kinh dị</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/pageOut/anime.html">Anime</a>
+              <a class="nav-link" href="/pages/pageLogin/anime.html">Anime</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/pageOut/hanhdong.html"
+              <a class="nav-link" href="/pages/pageLogin/hanhdong.html"
                 >Hành Động</a
               >
             </li>
@@ -82,30 +84,33 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    href="/pages/pageOut/quocgia/nhatban.html"
+                    href="/pages/pageLogin/quocgia/nhatban.html"
                     >Nhật Bản</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
-                    href="/pages/pageOut/quocgia/usa.html"
+                    href="/pages/pageLogin/quocgia/usa.html"
                     >USA</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
-                    href="/pages/pageOut/quocgia/thai.html"
+                    href="/pages/pageLogin/quocgia/thai.html"
                     >Thái</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
-                    href="/pages/pageOut/quocgia/tbn.html"
+                    href="/pages/pageLogin/quocgia/tbn.html"
                     >Tây Ban Nha</a
                   >
+                </li>
+                
+                
                 </li>
               </ul>
             </li>
@@ -121,6 +126,7 @@
               Search
             </button>
           </form>
+
           <div class="dropdown">
             <img
               class="usercenter_avatar_img iconlogin icon"
@@ -130,9 +136,7 @@
               data-spm-anchor-id="a2hja.14919748_WEBHOME_JINGXUAN.d_avatar.i0"
             /><!-- Replace with your icon -->
             <div class="dropdown-content">
-              <a href="/pages/pageLogin/trangchu.html" onclick="logout()"
-                >Đăng xuất</a
-              >
+              <a href="/pages/login.html">Đăng Nhập</a>
               <a href="/pages/info.html">Thông tin cá nhân</a>
             </div>
           </div>
@@ -145,7 +149,7 @@
         <div
           class="carousel-item active"
           style="
-            background-image: url('https://i.pinimg.com/originals/49/72/e0/4972e0c483b74c4f9718f1709ad67f66.jpg');
+            background-image: url(' https://static2.vieon.vn/vieplay-image/thumbnail_v4/2022/04/20/q0w2ak97_1920x1080-demonslayer.jpg');
           "
         >
           <div class="carousel-caption"></div>
@@ -153,7 +157,7 @@
         <div
           class="carousel-item"
           style="
-            background-image: url(' https://png.pngtree.com/background/20230330/original/pngtree-sci-fi-mechanical-blue-background-picture-image_2207346.jpg  ');
+            background-image: url('https://wallpapers.com/images/featured/naruto-shippuden-rxxyiybobk8m0q7u.jpg');
           "
         >
           <div class="carousel-caption"></div>
@@ -161,7 +165,7 @@
         <div
           class="carousel-item"
           style="
-            background-image: url('https://png.pngtree.com/background/20230401/original/pngtree-science-and-technology-city-background-picture-image_2253028.jpg  ');
+            background-image: url('https://sm.ign.com/ign_in/screenshot/default/jujutsukaisen_vdeh.png');
           "
         >
           <div class="carousel-caption"></div>
@@ -187,22 +191,21 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <br />
     <main>
+      <div class="container mt-5">
+        <div class="row" id="loadTK" style="width: 100%"></div>
+      </div>
       <!-- render sp -->
-      <div class="container mt-1">
-        <h3 style="color: #fff">ALL</h3>
+
+      <div class="container mt-5">
+        <h3>Tây Ban Nha</h3>
         <hr />
-        <div class="row" id="load" style="width: 100%"></div>
+        <div class="row" id="loadTBN" style="width: 100%"></div>
       </div>
       <!-- <div class="container mt-5">
-        <h3>Hiện Đại</h3>
-        <div class="row" id="loadH" style="width: 100%"></div>
-      </div> -->
-
-      <!-- <div class="container mt-5">
-        <h3>Tiên Hiệp</h3>
-        <div class="row" id="loadT" style="width: 100%"></div>
+        <h3>All</h3>
+        <hr />
+        <div class="row" id="loadA" style="width: 100%"></div>
       </div> -->
     </main>
 
@@ -251,8 +254,9 @@
         <p class="footer2_blue">- Terms & condition <span>*</span></p>
       </div>
     </footer>
-    <script></script>
+
     <script src="/assets/user/js/index.js"></script>
+    <script src="/assets/user/js/tbn.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
