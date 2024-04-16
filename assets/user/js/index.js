@@ -124,7 +124,7 @@ const films = [
     nation: "nhatban",
   },
   {
-    id: "film8",
+    id: "film81",
     img1: "https://upload.wikimedia.org/wikipedia/vi/7/70/Ironmanposter.JPG",
     name: "IRON MAN (2018)",
     type: "hanhdong",
@@ -132,7 +132,7 @@ const films = [
     nation: "usa",
   },
   {
-    id: "film8",
+    id: "film84",
     img1: "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_.jpg",
     name: "The Incredible Hulk (2008)",
     type: "hanhdong",
@@ -140,7 +140,7 @@ const films = [
     nation: "usa",
   },
   {
-    id: "film8",
+    id: "film32",
     img1: "https://m.media-amazon.com/images/M/MV5BZGVkNDAyM2EtYzYxYy00ZWUxLTgwMjgtY2VmODE5OTk3N2M5XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
     name: "Iron Man 2 (2010)",
     type: "hanhdong",
@@ -148,7 +148,7 @@ const films = [
     nation: "usa",
   },
   {
-    id: "film8",
+    id: "film90",
     img1: "https://pics.filmaffinity.com/Thor-223512549-large.jpg",
     name: "Thor (2011)",
     type: "hanhdong",
@@ -156,7 +156,7 @@ const films = [
     nation: "usa",
   },
   {
-    id: "film8",
+    id: "film100",
     img1: "https://m.media-amazon.com/images/M/MV5BNzAxMjg0NjYtNjNlOS00NTdlLThkMGEtMjAwYjk3NmNkOGFhXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
     name: "Captain America: The First Avenger (2011)",
     type: "hanhdong",
