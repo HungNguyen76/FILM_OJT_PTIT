@@ -12,9 +12,10 @@ function renderFavoriteFilms() {
       </div>
       <!-- Container chứa nút yêu thích và xem thông tin -->
       <div class="film-actions">
-       <button class="btn btn-outline-primary favorite-btn" onclick="favoriteMovie(this)">Yêu thích</button>
+       
 
        <button class="btn btn-outline-info info-btn" onclick="viewDetails(this)">Xem thông tin</button>
+       <button class="btn btn-outline-primary favorite-btn" onclick="removeMovieFromFavorites(this)">Xoá</button>
 
       </div>
     </div>
@@ -23,4 +24,11 @@ function renderFavoriteFilms() {
   document.getElementById(
     "favoriteFilms"
   ).innerHTML = `<h1>Film yêu thích của bạn</h1> <div class="row">${out}</div>`;
+}
+function removeMovieFromFavorites(button) {
+  var filmId = button.closest(".film").getAttribute("data-id");
+  var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
+  var updatedList = favoriteFilms.filter((film) => film.id !== filmId);
+  localStorage.setItem("favoriteFilms", JSON.stringify(updatedList));
+  renderFavoriteFilms(); // Render lại danh sách phim yêu thích sau khi xóa
 }
