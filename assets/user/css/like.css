@@ -1,0 +1,53 @@
+* {
+  font-family: "Dancing Script", cursive;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: antiquewhite;
+  background-image: url("https://i.pinimg.com/564x/8c/8e/c3/8c8ec3ab792162e4382079e08c0704ba.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.favorite-film {
+  display: flex;
+}
+.favorite-film {
+  display: inline-block;
+  width: calc(
+    25% - 20px
+  ); /* Đảm bảo 4 phim trên mỗi hàng, trừ đi khoảng cách giữa các phim */
+  margin-right: 15px; /* Khoảng cách giữa các phim */
+  margin-bottom: 20px; /* Khoảng cách dưới cùng */
+  vertical-align: top; /* Đảm bảo các phim trên cùng một hàng có chiều cao giống nhau */
+}
+
+.card {
+  width: 18rem;
+  border: 1px solid #212020;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 400px;
+  object-fit: cover;
+}
+
+.card-title {
+  text-align: center;
+  margin-top: 10px;
+}

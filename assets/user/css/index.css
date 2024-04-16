@@ -98,6 +98,11 @@ body {
 .containerNavbar {
   display: flex;
   margin: 15px;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+.navbar-scrolled {
+  background-color: rgb(46, 45, 45);
 }
 .left {
   margin: 15px;
@@ -135,9 +140,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: inherit;
-}
 body {
   background-color: rgb(11, 11, 11);
   font: 20px/20px pingfang SC, Microsoft YaHei, "\5FAE\8F6F\96C5\9ED1",
@@ -177,6 +179,8 @@ body {
   transform: translateX(-50%);
 }
 .iconlogin {
+  margin-right: 40px;
+  margin-left: 130px;
   width: 40px;
 }
 .containerNavbar-fluid {
@@ -185,8 +189,6 @@ body {
 .card {
   background-color: rgb(11, 11, 11);
   color: #fff;
-  /* height: 50px;
-  width: 40px; */
 }
 .bot {
   display: flex;
@@ -203,9 +205,92 @@ body {
   align-items: center;
 }
 
-/* Đảm bảo nút tìm kiếm và ô nhập liệu hiển thị đúng trên thanh điều hướng */
-.navbar-nav .form-control {
-  margin: 0 auto; /* Đưa ô nhập liệu về giữa */
-  width: auto; /* Cho phép ô nhập liệu co dãn theo nội dung */
-  max-width: 300px; /* Đặt chiều rộng tối đa */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000; /* Black background */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-size: 10px;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.5s ease;
+}
+
+.dropdown-content a:hover {
+  text-decoration: none;
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: none;
+}
+icon {
+  cursor: pointer;
+}
+
+hr {
+  color: #fff;
+}
+
+h3 {
+  color: #fff;
+}
+
+main {
+  background-image: url("https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg");
+}
+.title {
+  margin-top: 10px;
+}
+
+h2 a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.film-actions {
+  display: none;
+}
+
+.film:hover {
+  position: relative;
+}
+
+.film:hover .film-actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.info-btn {
+  border-color: #eae4e4;
+}
+.info-btn:hover {
+  border-color: rgb(6, 236, 6);
+  background-color: rgb(6, 236, 6);
+}
+.favorite-btn {
+  border-color: #eae4e4;
+}
+.favorite-btn:hover {
+  border-color: rgb(240, 34, 34);
+  background-color: rgb(247, 37, 37);
 }
