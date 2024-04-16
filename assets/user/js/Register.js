@@ -42,7 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(changeToLoginPage, 1000);
       } else {
         alert("Email đã tồn tại");
+        redirect('/pages/login.html');
       }
     },
   });
 });
+
+function redirect(url) {
+  window.location.href = url;
+}
