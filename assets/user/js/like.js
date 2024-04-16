@@ -6,8 +6,8 @@ function renderFavoriteFilms() {
     out += `
       <div class="favorite-film col-md-3 mb-4 d-flex justify-content-center">
 
-        <div class="card rounded-lg" style="width: 18rem;">
-          <img src="${favoriteFilms[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
+        <div class="card rounded-lg" style="width: 15rem;">
+          <img src="${favoriteFilms[i].img1}" class="card-img-top" alt="Product Image" style="height: 270px;">
           <div class="card-body">
             <h5 class="card-title">${favoriteFilms[i].name}</h5>
           </div>
