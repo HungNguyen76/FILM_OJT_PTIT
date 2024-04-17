@@ -35,133 +35,133 @@ const films = [
       "Hoon Payon: Bùa Hình Nhân Hoon Payon 2023 Tham đi một đoạn đường dài để gặp anh trai của mình, Tee, người là một vị sư. Tại chùa trên đảo Koh Donsingtham, anh gặp Jate, một nhà điêu khắc sử dụng phép thuật cho những con búp bê payon của mình. Tham đã nghe đồn rằng sư trưởng Tee đã bỏ trốn sau khi giết chết vị trưởng lão trước đó, nhưng Tham không tin rằng anh trai mình có thể giết ai đó. Anh cũng nghi ngờ lòng tin tôn giáo của người dân trong Búp bê của Ông Cụ Singtham. Anh coi đó là mù quáng mê tín chứ không phải là sự bảo vệ tâm linh. Sau đó, một loạt sự kiện tàn ác gieo rắc nỗi kinh hoàng cho làng. Một người phụ nữ mất tích. Xác chết chồng chất. Nghiêm trọng hơn, Bùa Hình Nhân của Ông Cụ Singtham bị phá hủy. Người dân trong làng tức giận và chuẩn bị một nghi thức để nguyền rủa và truy tìm tội phạm cầm dao.",
     dienvien:
       "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
-    type: "kinhdi",
+    type: "Kinh Dị",
     rate: "normal",
-    nation: "thai",
+    nation: "Thái",
   },
 
   {
     id: "film2",
     img1: "https://cdn.tuoitre.vn/thumb_w/480/471584752817336320/2023/6/30/ofelia2-1630x2048-1688082839824462511532.jpg",
     name: "Ma Sơ Trục Quỷ",
-    type: "kinhdi",
+    type: "Kinh Dị",
     rate: "best",
-    nation: "taybannha",
+    nation: "Tây Ban Nha",
   },
 
   {
     id: "film3",
     img1: "https://cdn.moveek.com/storage/media/cache/tall/64911e47debc6625573774.jpeg",
     name: "Tà Chú Cấm",
-    type: "kinhdi",
+    type: "Kinh Dị",
     rate: "best",
-    nation: "thai",
+    nation: "Thái",
   },
   {
     id: "film4",
     img1: "https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDQzNDMzOQ@@._V1_.jpg",
     name: "The Conjuring (2013)",
-    type: "kinhdi",
+    type: "Kinh Dị",
     rate: "best",
-    nation: "usa",
+    nation: "USA",
   },
   {
     id: "film5",
     img1: "https://m.media-amazon.com/images/M/MV5BZjU5OWVlN2EtODNlYy00MjhhLWI0MDUtMTA3MmQ5MGMwYTZmXkEyXkFqcGdeQXVyNjE5MTM4MzY@._V1_.jpg",
     name: "The Conjuring 2 - Experience Enfield (2016)",
-    type: "kinhdi",
+    type: "Kinh Dị",
     rate: "normal",
-    nation: "usa",
+    nation: "USA",
   },
   {
     id: "film6",
     img1: "https://ss-images.saostar.vn/wp700/2019/10/18/6268864/the-conjuring-3.jpg",
     name: "The Conjuring 3: The Devil Made Me Do It (2021)",
-    type: "kinhdi",
+    type: "Kinh Dị",
     rate: "normal",
-    nation: "usa",
+    nation: "USA",
   },
 
   {
     id: "film7",
     img1: "https://upload.wikimedia.org/wikipedia/vi/thumb/b/b7/5_centimet_tr%C3%AAn_gi%C3%A2y.jpg/275px-5_centimet_tr%C3%AAn_gi%C3%A2y.jpg",
     name: "5 Centimet trên giây",
-    type: "anime",
+    type: "Anime",
     rate: "normal",
-    nation: "nhat ban",
+    nation: "Nhật Bản",
   },
   {
     id: "film8",
     img1: "https://kenh14cdn.com/thumb_w/650/2017/anh-9-1484260065293.jpg",
     name: "Your name",
-    type: "anime",
+    type: "Anime",
     rate: "normal",
-    nation: "nhatban",
+    nation: "Nhật Bản",
   },
   {
     id: "film9",
     img1: "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
     name: "Naruto Shippuden",
 
-    type: "anime",
+    type: "Anime",
     rate: "normal",
-    nation: "nhatban",
+    nation: "Nhật Bản",
   },
   {
     id: "film10",
     img1: "https://m.media-amazon.com/images/M/MV5BNGY4MTg3NzgtMmFkZi00NTg5LWExMmEtMWI3YzI1ODdmMWQ1XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg",
     name: "Jujutsu Kaisen",
-    type: "anime",
+    type: "Anime",
     rate: "best",
-    nation: "nhatban",
+    nation: "Nhật Bản",
   },
   {
     id: "film11",
     img1: "https://resize.cdn.otakumode.com/full/u/30e154b109b744939ce2ac9b3c31d524.jpg",
     name: "Haikyuu: To the top",
-    type: "anime",
+    type: "Anime",
     rate: "best",
-    nation: "nhatban",
+    nation: "Nhật Bản",
   },
   {
     id: "film8",
     img1: "https://upload.wikimedia.org/wikipedia/vi/7/70/Ironmanposter.JPG",
     name: "IRON MAN (2018)",
-    type: "hanhdong",
+    type: "Hành Động",
     rate: "best",
-    nation: "usa",
+    nation: "USA",
   },
   {
     id: "film8",
     img1: "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_.jpg",
     name: "The Incredible Hulk (2008)",
-    type: "hanhdong",
+    type: "Hành Động",
     rate: "normal",
-    nation: "usa",
+    nation: "USA",
   },
   {
     id: "film8",
     img1: "https://m.media-amazon.com/images/M/MV5BZGVkNDAyM2EtYzYxYy00ZWUxLTgwMjgtY2VmODE5OTk3N2M5XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
     name: "Iron Man 2 (2010)",
-    type: "hanhdong",
+    type: "Hành Động",
     rate: "normal",
-    nation: "usa",
+    nation: "USA",
   },
   {
     id: "film8",
     img1: "https://pics.filmaffinity.com/Thor-223512549-large.jpg",
     name: "Thor (2011)",
-    type: "hanhdong",
+    type: "Hành Động",
     rate: "normal",
-    nation: "usa",
+    nation: "USA",
   },
   {
     id: "film8",
     img1: "https://m.media-amazon.com/images/M/MV5BNzAxMjg0NjYtNjNlOS00NTdlLThkMGEtMjAwYjk3NmNkOGFhXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
     name: "Captain America: The First Avenger (2011)",
-    type: "hanhdong",
+    type: "Hành Động",
     rate: "best",
-    nation: "usa",
+    nation: "USA",
   },
 ];
 
@@ -222,7 +222,7 @@ function locKinhDi() {
   let kinhDi = JSON.parse(localStorage.getItem("listAll"));
   const listKinhdi = [];
   for (let i = 0; i < kinhDi.length; i++) {
-    if (kinhDi[i].type == "kinhdi") {
+    if (kinhDi[i].type == "Kinh Dị") {
       listKinhdi.push(kinhDi[i]);
     }
   }
@@ -233,7 +233,7 @@ function locAnime() {
   let anime = JSON.parse(localStorage.getItem("listAll"));
   const listAnime = [];
   for (let i = 0; i < anime.length; i++) {
-    if (anime[i].type == "anime") {
+    if (anime[i].type == "Anime") {
       listAnime.push(anime[i]);
     }
   }
@@ -243,7 +243,7 @@ function locHanhDong() {
   let hanhDong = JSON.parse(localStorage.getItem("listAll"));
   const listHanhDong = [];
   for (let i = 0; i < hanhDong.length; i++) {
-    if (hanhDong[i].type == "hanhdong") {
+    if (hanhDong[i].type == "Hành Động") {
       listHanhDong.push(hanhDong[i]);
     }
   }
@@ -253,7 +253,7 @@ function locNhatBan() {
   let nhatBan = JSON.parse(localStorage.getItem("listAll"));
   const listNhatBan = [];
   for (let i = 0; i < nhatBan.length; i++) {
-    if (nhatBan[i].nation == "nhatban") {
+    if (nhatBan[i].nation == "Nhật Bản") {
       listNhatBan.push(nhatBan[i]);
     }
   }
@@ -263,7 +263,7 @@ function locThai() {
   let thai = JSON.parse(localStorage.getItem("listAll"));
   const listThai = [];
   for (let i = 0; i < thai.length; i++) {
-    if (thai[i].nation == "thai") {
+    if (thai[i].nation == "Thái") {
       listThai.push(thai[i]);
     }
   }
@@ -273,7 +273,7 @@ function locTBN() {
   let tbn = JSON.parse(localStorage.getItem("listAll"));
   const listTBN = [];
   for (let i = 0; i < tbn.length; i++) {
-    if (tbn[i].nation == "taybannha") {
+    if (tbn[i].nation == "Tây Ban Nha") {
       listTBN.push(tbn[i]);
     }
   }
@@ -283,7 +283,7 @@ function locUSA() {
   let USA = JSON.parse(localStorage.getItem("listAll"));
   const listUSA = [];
   for (let i = 0; i < USA.length; i++) {
-    if (USA[i].nation == "usa") {
+    if (USA[i].nation == "USA") {
       listUSA.push(USA[i]);
     }
   }
@@ -295,7 +295,7 @@ function locBestViewKinhDi() {
   for (let i = 0; i < bestViewKinhDi.length; i++) {
     if (
       bestViewKinhDi[i].rate == "best" &&
-      bestViewKinhDi[i].type == "kinhdi"
+      bestViewKinhDi[i].type == "Kinh Dị"
     ) {
       listBestViewKinhDi.push(bestViewKinhDi[i]);
     }
@@ -309,7 +309,7 @@ function locBestViewAnime() {
   let bestViewAnime = JSON.parse(localStorage.getItem("listAll"));
   const listBestViewAnime = [];
   for (let i = 0; i < bestViewAnime.length; i++) {
-    if (bestViewAnime[i].rate == "best" && bestViewAnime[i].type == "anime") {
+    if (bestViewAnime[i].rate == "best" && bestViewAnime[i].type == "Anime") {
       listBestViewAnime.push(bestViewAnime[i]);
     }
   }
@@ -321,7 +321,7 @@ function locBestViewHanhDong() {
   for (let i = 0; i < bestViewHanhDong.length; i++) {
     if (
       bestViewHanhDong[i].rate == "best" &&
-      bestViewHanhDong[i].type == "hanhdong"
+      bestViewHanhDong[i].type == "Hành Động"
     ) {
       listBestViewHanhDong.push(bestViewHanhDong[i]);
     }

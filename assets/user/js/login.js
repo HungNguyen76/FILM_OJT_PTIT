@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
           alert("Đăng nhập thành công với quyền admin");
           window.location.href = "/pages/admin/film.html";
         } else {
-          if (userFound.isLocked) {
+          if (userFound.isBlocked) {
             alert("Tài khoản của bạn đã bị khóa và không thể đăng nhập.");
           } else {
             setTimeout(function () {
