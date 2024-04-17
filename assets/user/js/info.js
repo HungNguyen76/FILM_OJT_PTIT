@@ -13,7 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("username").innerText = infor.username;
       document.getElementById("username1").innerText = infor.username;
       document.getElementById("email").innerText = infor.email;
-      document.getElementById("password").innerText = infor.password;
+      document.getElementById("password").innerText = "********";
+      // document.getElementById("password").addEventListener("input", function () {
+      var password = document.getElementById("password").value;
+      var passwordMask = document.getElementById("password-mask");
+      passwordMask.textContent = "*".repeat(password.length);
     } else {
       alert("Không tìm thấy thông tin người dùng!");
       redirect("/pages/login.html", 500);
