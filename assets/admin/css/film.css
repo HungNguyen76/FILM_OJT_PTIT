@@ -97,6 +97,6 @@ label {
   display: flex;
   justify-content: space-around;
 }
-.editForm {
+#editForm {
   text-align: center;
 }
