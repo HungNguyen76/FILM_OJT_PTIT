@@ -11,7 +11,7 @@ function renderFilmDetails(filmId) {
   var modalBody = document.getElementById("filmDetailsModalBody");
   modalBody.innerHTML = `
   <div class="box">
-    <img src="${selectedFilm.img1}" alt="Film Image" style="max-width: 30%;">
+    <img src="${selectedFilm.img1}" alt="Film Image" style="max-width: 20%;">
     
     <div>
         <h5>${selectedFilm.name}</h5>
