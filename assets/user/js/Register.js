@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ),
     ],
     onSubmit: function (data) {
+      data.username = document.querySelector("#form-1 #username").value;
+      
       let listUsers = JSON.parse(localStorage.getItem("listUsers")) || [];
       let flag = true;
       for (let i = 0; i < listUsers.length; i++) {
