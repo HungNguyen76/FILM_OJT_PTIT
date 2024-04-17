@@ -35,9 +35,9 @@ const films = [
       "Hoon Payon: Bùa Hình Nhân Hoon Payon 2023 Tham đi một đoạn đường dài để gặp anh trai của mình, Tee, người là một vị sư. Tại chùa trên đảo Koh Donsingtham, anh gặp Jate, một nhà điêu khắc sử dụng phép thuật cho những con búp bê payon của mình. Tham đã nghe đồn rằng sư trưởng Tee đã bỏ trốn sau khi giết chết vị trưởng lão trước đó, nhưng Tham không tin rằng anh trai mình có thể giết ai đó. Anh cũng nghi ngờ lòng tin tôn giáo của người dân trong Búp bê của Ông Cụ Singtham. Anh coi đó là mù quáng mê tín chứ không phải là sự bảo vệ tâm linh. Sau đó, một loạt sự kiện tàn ác gieo rắc nỗi kinh hoàng cho làng. Một người phụ nữ mất tích. Xác chết chồng chất. Nghiêm trọng hơn, Bùa Hình Nhân của Ông Cụ Singtham bị phá hủy. Người dân trong làng tức giận và chuẩn bị một nghi thức để nguyền rủa và truy tìm tội phạm cầm dao.",
     dienvien:
       "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
-    type: "kinhdi",
+    type: "Kinh Dị",
     rate: "normal",
-    nation: "thai",
+    nation: "Thái",
   },
   {
     id: "film2",
@@ -221,7 +221,7 @@ function locKinhDi() {
   let kinhDi = JSON.parse(localStorage.getItem("listAll"));
   const listKinhdi = [];
   for (let i = 0; i < kinhDi.length; i++) {
-    if (kinhDi[i].type == "kinhdi") {
+    if (kinhDi[i].type == "Kinh Dị") {
       listKinhdi.push(kinhDi[i]);
     }
   }
@@ -232,7 +232,7 @@ function locAnime() {
   let anime = JSON.parse(localStorage.getItem("listAll"));
   const listAnime = [];
   for (let i = 0; i < anime.length; i++) {
-    if (anime[i].type == "anime") {
+    if (anime[i].type == "Anime") {
       listAnime.push(anime[i]);
     }
   }
@@ -242,7 +242,7 @@ function locHanhDong() {
   let hanhDong = JSON.parse(localStorage.getItem("listAll"));
   const listHanhDong = [];
   for (let i = 0; i < hanhDong.length; i++) {
-    if (hanhDong[i].type == "hanhdong") {
+    if (hanhDong[i].type == "Hành Động") {
       listHanhDong.push(hanhDong[i]);
     }
   }
@@ -252,7 +252,7 @@ function locNhatBan() {
   let nhatBan = JSON.parse(localStorage.getItem("listAll"));
   const listNhatBan = [];
   for (let i = 0; i < nhatBan.length; i++) {
-    if (nhatBan[i].nation == "nhatban") {
+    if (nhatBan[i].nation == "Nhật Bản") {
       listNhatBan.push(nhatBan[i]);
     }
   }
@@ -262,7 +262,7 @@ function locThai() {
   let thai = JSON.parse(localStorage.getItem("listAll"));
   const listThai = [];
   for (let i = 0; i < thai.length; i++) {
-    if (thai[i].nation == "thai") {
+    if (thai[i].nation == "Thái") {
       listThai.push(thai[i]);
     }
   }
@@ -272,7 +272,7 @@ function locTBN() {
   let tbn = JSON.parse(localStorage.getItem("listAll"));
   const listTBN = [];
   for (let i = 0; i < tbn.length; i++) {
-    if (tbn[i].nation == "taybannha") {
+    if (tbn[i].nation == "Tây Ban Nha") {
       listTBN.push(tbn[i]);
     }
   }
@@ -282,7 +282,7 @@ function locUSA() {
   let USA = JSON.parse(localStorage.getItem("listAll"));
   const listUSA = [];
   for (let i = 0; i < USA.length; i++) {
-    if (USA[i].nation == "usa") {
+    if (USA[i].nation == "USA") {
       listUSA.push(USA[i]);
     }
   }
@@ -294,7 +294,7 @@ function locBestViewKinhDi() {
   for (let i = 0; i < bestViewKinhDi.length; i++) {
     if (
       bestViewKinhDi[i].rate == "best" &&
-      bestViewKinhDi[i].type == "kinhdi"
+      bestViewKinhDi[i].type == "Kinh Dị"
     ) {
       listBestViewKinhDi.push(bestViewKinhDi[i]);
     }
@@ -308,7 +308,7 @@ function locBestViewAnime() {
   let bestViewAnime = JSON.parse(localStorage.getItem("listAll"));
   const listBestViewAnime = [];
   for (let i = 0; i < bestViewAnime.length; i++) {
-    if (bestViewAnime[i].rate == "best" && bestViewAnime[i].type == "anime") {
+    if (bestViewAnime[i].rate == "best" && bestViewAnime[i].type == "Anime") {
       listBestViewAnime.push(bestViewAnime[i]);
     }
   }
@@ -320,7 +320,7 @@ function locBestViewHanhDong() {
   for (let i = 0; i < bestViewHanhDong.length; i++) {
     if (
       bestViewHanhDong[i].rate == "best" &&
-      bestViewHanhDong[i].type == "hanhdong"
+      bestViewHanhDong[i].type == "Hành Động"
     ) {
       listBestViewHanhDong.push(bestViewHanhDong[i]);
     }
