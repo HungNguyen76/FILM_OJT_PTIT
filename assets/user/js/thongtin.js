@@ -18,7 +18,7 @@ function renderFilmDetails(filmId) {
         <p>Đạo diễn: ${selectedFilm.daodien}</p>
         <p>Diễn viên: ${selectedFilm.dienvien}</p>
         <p>Năm: ${selectedFilm.nam}</p>
-        <p>Quốc gia: ${selectedFilm.quocgia}</p>
+        <p>Quốc gia: ${selectedFilm.nation}</p>
          <p>Thể loại: ${selectedFilm.type}</p>
           <p>Thời lượng: ${selectedFilm.time}</p>
 

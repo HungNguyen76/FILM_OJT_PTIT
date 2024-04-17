@@ -90,3 +90,13 @@ img {
   justify-content: space-between;
   background-color: black;
 }
+label {
+  font-size: 10px;
+}
+.editAll {
+  display: flex;
+  justify-content: space-around;
+}
+.editForm {
+  text-align: center;
+}
