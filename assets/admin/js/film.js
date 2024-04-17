@@ -86,12 +86,6 @@ function loadFilms(filmList, containerId) {
     containerId
   ).innerHTML = `  <div class="row">${out}</div> <br /> `;
 }
-// document.getElementById("clearSearch").addEventListener("click", function () {
-//   document.querySelector(".form-control").value = "";
-//   showAllMovies();
-//   window.location.reload();
-// });
-// Xử lý sự kiện click cho nút "Xóa"
 
 document.getElementById("admin").addEventListener("click", function (event) {
   if (event.target.tagName === "BUTTON" && event.target.textContent === "Xóa") {
