@@ -115,11 +115,24 @@ function renderFilmDetails(filmId) {
       filmCard.classList.add("film-card");
   
       filmCard.innerHTML = `
-        <img src="${film.img1}" alt="Film Image" style="max-width: 10%;">
-        <div class="film-info">
-          <h5>${film.name}</h5>
+      
+
+        <div class="film col-md-3 mb-4 d-flex justify-content-center" >
+    <div class="card rounded-lg" style="width: 15rem;">
+      <img src="${film.img1}" class="card-img-top" alt="Product Image" style="height: 270px;">
+      <div class="card-body">
+        <h5 class="card-title">${film.name}</h5>
+      </div>
+      <!-- Container chứa nút yêu thích và xem thông tin -->
+      <div class="film-actions">
        
-        </div>
+
+       <button class="btn btn-outline-info info-btn" onclick="viewDetails(this)">Xem thông tin</button>
+       
+
+      </div>
+    </div>
+  </div>
       `;
   
       relatedFilmsContainer.appendChild(filmCard);

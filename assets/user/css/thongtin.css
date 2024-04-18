@@ -3,9 +3,9 @@ body {
   color: whitesmoke;
 }
 
-img {
+/* img {
   max-width: 50%;
-}
+} */
 .box {
   display: flex;
 }
@@ -23,3 +23,45 @@ img {
 
 
 
+.card {
+  height: 355px;
+  width: 15rem;
+  text-align: center;
+  margin-top: 10px;
+  border: 1px solid #212020;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #212020;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+.card-body {
+  height: 200px;
+  width: 200px;
+  padding: 0.18rem;
+}
+.card-title {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.collapse {
+  font-size: 25px;
+  margin-left: 340px;
+}
+.modal_body{
+  display: flex;
+}
+.film-card{
+  display: contents;
+  
+}
