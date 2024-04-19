@@ -3,9 +3,6 @@ body {
   color: whitesmoke;
 }
 
-/* img {
-  max-width: 50%;
-} */
 .box {
   display: flex;
 }
@@ -57,4 +54,10 @@ body {
 }
 .film-card {
   display: contents;
+}
+/* Thêm CSS này vào file style của bạn */
+.film-image {
+  width: 400px; /* Chiều rộng cố định */
+  height: 500px; /* Chiều cao cố định */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo khi thay đổi kích thước */
 }
