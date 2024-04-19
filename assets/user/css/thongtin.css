@@ -18,11 +18,6 @@ body {
   margin-left: 350px;
 }
 
-
-
-
-
-
 .card {
   height: 355px;
   width: 15rem;
@@ -56,12 +51,10 @@ body {
 }
 .collapse {
   font-size: 25px;
-  margin-left: 340px;
 }
-.modal_body{
+.modal_body {
   display: flex;
 }
-.film-card{
+.film-card {
   display: contents;
-  
 }
