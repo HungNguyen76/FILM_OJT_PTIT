@@ -49,7 +49,10 @@ html {
   transform: scale(1.2);
 }
 .side-bar ul li a:hover {
-  color: crimson;
+  color: #F5B9BA;
+}
+.side-bar{
+  background-color: #ACE1FF;
 }
 
 .body {
