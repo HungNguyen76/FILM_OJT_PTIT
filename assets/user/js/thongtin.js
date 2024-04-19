@@ -31,13 +31,8 @@ function renderFilmDetails(filmId) {
 }
 
 function viewDetails(filmId) {
-  // Parse the list of all films from localStorage
-  var allFilms = JSON.parse(localStorage.getItem("listAll"));
-
-  // Render the details of the selected film
   renderFilmDetails(filmId);
 
-  // Render the related films excluding the selected film
   renderRelatedFilms(filmId);
 }
 
@@ -46,15 +41,13 @@ function renderRelatedFilms(filmId) {
   var selectedFilm = allFilms.find((film) => film.id == filmId);
   var selectedFilmType = selectedFilm.type;
 
-  // Filter out the selected film and find related films of the same type
   var relatedFilms = allFilms.filter(
     (film) => film.type == selectedFilmType && film.id !== filmId
   );
 
   var relatedFilmsContainer = document.getElementById("relatedFilmsContainer");
-  relatedFilmsContainer.innerHTML = ""; // Clear previous content
+  relatedFilmsContainer.innerHTML = "";
 
-  // Create film cards for each related film
   relatedFilms.forEach((film) => {
     var filmCard = document.createElement("div");
     filmCard.classList.add("film-card");
