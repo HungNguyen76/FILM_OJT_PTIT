@@ -7,7 +7,7 @@ window.onload = function () {
 function renderFilmDetails(filmId) {
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
-
+  console.log("selectedFilm", selectedFilm);
   var modalBody = document.getElementById("filmDetailsModalBody");
   modalBody.innerHTML = `
       <div class="box">
@@ -21,7 +21,7 @@ function renderFilmDetails(filmId) {
           <p>Thể loại: ${selectedFilm.type}</p>
           <p>Thời lượng: ${selectedFilm.time}</p>
           <hr />
-          <button>Trailer</button>
+          <button onclick="renderTrailers('${selectedFilm.id}')" data-toggle="modal" data-target="#exampleModalCenter">Trailer</button>
           <button>Xem phim</button>
           <hr />
           <p>Nội Dung: ${selectedFilm.noidung}</p>
@@ -30,6 +30,27 @@ function renderFilmDetails(filmId) {
     `;
 }
 
+function renderTrailers(filmId) {
+  var allFilms = JSON.parse(localStorage.getItem("listAll"));
+  var selectedFilm = allFilms.find((film) => film.id === filmId);
+
+  var modal = document.getElementById("detailFIlm");
+  console.log("modal", modal);
+
+  // modal.style.display = "block";
+  modal.innerHTML += `
+        <iframe
+        width="560"
+        height="315"
+        src="${selectedFilm.trailerUrl}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    `;
+}
 function viewDetails(filmId) {
   renderFilmDetails(filmId);
 
