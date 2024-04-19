@@ -38,6 +38,7 @@ const films = [
     type: "Kinh Dị",
     rate: "normal",
     nation: "Thái",
+    trailerUrl: "https://www.youtube.com/embed/cBSXc76Wq0U?si=-BAOM-8XqxEv3r8c",
   },
   {
     id: "film2",
