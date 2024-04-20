@@ -146,3 +146,6 @@ input {
   display: block; /* Hiển thị mỗi ô trên một dòng riêng */
   width: calc(100% - 20px); /* Chiều rộng của ô, trừ đi khoảng cách hai bên */
 }
+.card-body{
+  display: flex;
+}

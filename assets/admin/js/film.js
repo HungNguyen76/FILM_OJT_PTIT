@@ -17,10 +17,14 @@ function renderFavoriteFilms() {
             <img src="${adminFilms[i].img1}" class="card-img" alt="Product Image" style="height: 100px;">
           </div>
           <div class="card-body">
-              <p > Tên: ${adminFilms[i].name}</p>
-              <p>ID: ${adminFilms[i].id}</p>
-              <p>Quốc gia: ${adminFilms[i].nation}</p>
-              <p>Thời lượng: ${adminFilms[i].time}</p>
+          <div>
+          <p > Tên: ${adminFilms[i].name}</p>
+          <p>ID: ${adminFilms[i].id}</p></div>
+          <div>
+          <p >  <p>Quốc gia: ${adminFilms[i].nation}</p>
+          <p>Thời lượng: ${adminFilms[i].time}</p></div>
+             
+             
             </div>
             <div class="nut">
               <button data-id="${adminFilms[i].id}">Xóa</button>
@@ -69,7 +73,8 @@ function loadFilms(filmList, containerId) {
             <img src="${filmList[i].img1}" class="card-img" alt="Product Image" style="height: 100px;">
           </div>
           <div class="card-body">
-          
+
+
          
           <p > Tên: ${filmList[i].name}</p>
           <p>ID: ${filmList[i].id}</p>
@@ -79,7 +84,6 @@ function loadFilms(filmList, containerId) {
           <p>Quốc gia: ${filmList[i].nation}</p>
           <p>Thời lượng: ${filmList[i].time}</p>
     
-              
               
           
             <div class="nut">
