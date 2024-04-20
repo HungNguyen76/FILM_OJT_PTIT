@@ -69,11 +69,19 @@ function loadFilms(filmList, containerId) {
             <img src="${filmList[i].img1}" class="card-img" alt="Product Image" style="height: 100px;">
           </div>
           <div class="card-body">
-              <p > Tên: ${filmList[i].name}</p>
-              <p>ID: ${filmList[i].id}</p>
-              <p>Quốc gia: ${filmList[i].nation}</p>
-              <p>Thời lượng: ${filmList[i].time}</p>
-            </div>
+          
+         
+          <p > Tên: ${filmList[i].name}</p>
+          <p>ID: ${filmList[i].id}</p>
+        
+          
+
+          <p>Quốc gia: ${filmList[i].nation}</p>
+          <p>Thời lượng: ${filmList[i].time}</p>
+    
+              
+              
+          
             <div class="nut">
             <button data-id="${filmList[i].id}">Xóa</button>
 
