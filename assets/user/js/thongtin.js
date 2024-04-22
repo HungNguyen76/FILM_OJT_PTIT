@@ -24,7 +24,7 @@ function renderFilmDetails(filmId) {
           <p>Thời lượng: ${selectedFilm.time}</p>
           <hr />
           <button onclick="renderTrailers('${selectedFilm.id}')" data-toggle="modal" data-target="#exampleModalCenter">Trailer</button>
-          <button>Xem phim</button>
+         <button onclick="watchFilm('${selectedFilm.id}')">Xem phim</button>
           <hr />
           <p>Nội Dung: ${selectedFilm.noidung}</p>
         </div>
@@ -121,8 +121,10 @@ function watchTrailer(trailerUrl) {
   // Thực hiện hành động để xem trailer
 }
 
-// Hàm xem phim
 function watchFilm(filmId) {
+  // Lưu ID của bộ phim được chọn vào bộ nhớ cục bộ
   localStorage.setItem("selectedFilmId", filmId);
-  renderFilmDetails(filmId); // Gọi hàm renderFilmDetails đã có
+
+  // Chuyển hướng đến trang nơi có thể xem bộ phim
+  window.location.href = "/pages/pageLogin/video.html";
 }

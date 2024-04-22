@@ -39,6 +39,7 @@ const films = [
     rate: "normal",
     nation: "Thái",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film2",
