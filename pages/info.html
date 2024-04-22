@@ -84,7 +84,7 @@
       <section class="container-left">
         <div class="container-left__person">
           <img src="/assets/img/profile-none.png" />
-          <div id="username">lhbtran2003</div>
+          <div id="username">lhbtran</div>
         </div>
         <hr />
         <div class="container-left__person">
@@ -102,29 +102,35 @@
         <div class="abc">
           <p class="container-right-title">Tên người dùng</p>
           <div class="container-right-render">
-            <p class="container-right-render__info" id="username">
-              lhbtran2003
-            </p>
-            <a class="container-right-render__change"> Change </a>
+            <p class="container-right-render__info" id="username1"></p>
           </div>
         </div>
+        
         <hr />
+        
         <div class="abc">
           <p class="container-right-title">Email</p>
           <div class="container-right-render">
             <p class="container-right-render__info" id="email"></p>
-            <a class="container-right-render__change">Change</a>
           </div>
         </div>
+        
         <hr />
+        
         <div class="abc">
-          <p class="container-right-render__title">Mật khẩu</p>
+          <p class="container-right-title">Mật khẩu</p>
           <div class="container-right-render">
-            <p class="container-right-render__info" id="passwork"></p>
-            <a class="container-right-render__change">Change</a>
+            <p class="container-right-render__info" id="password"></p>
+            <span id="password-mask"></span>
+            <p class="container-right-render__change" onclick="changePassword()">Change</p>
           </div>
         </div>
       </section>
+
+<div id="form-submit">
+  <form action="" id="form-1"></form>
+</div>
+      
     </main>
 
     <script src="/assets/user/js/info.js"></script>

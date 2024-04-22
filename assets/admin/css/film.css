@@ -1,0 +1,151 @@
+body,
+html {
+  font-family: Arial, sans-serif;
+  background-color: #0b0b0b;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #9ccfff;
+  padding: 20px;
+  margin: 10px 0 10px 20px;
+  border-radius: 8px;
+}
+
+.body {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 280px;
+  background-color: #0b0b0b;
+}
+
+.side-bar ul {
+  padding: 0;
+  list-style-type: none;
+  font-size: large;
+  margin-top: 30px;
+}
+
+.side-bar ul li {
+  margin: 10px;
+}
+
+.side-bar ul li a {
+  color: #4c3933;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+/* Hover effect cho các mục trong sidebar */
+.side-bar ul li:hover {
+  color: #00f;
+  transform: scale(1.2);
+}
+
+.side-bar ul li a:hover {
+  color: #dd9baa;
+}
+
+.body .nav-bar {
+  height: 60px;
+}
+
+/* Phần content chứa danh sách phim */
+.body .content {
+  margin-top: 50px;
+}
+
+hr {
+  color: black;
+}
+.card-body{
+  display: flex;
+}
+
+.card-body p {
+  width: 130px;
+}
+
+.admin-film {
+  justify-content: space-between;
+  display: flex;
+  font-size: large;
+}
+
+#admin {
+  background-color: aliceblue;
+}
+
+.admin-card img {
+  width: 30%;
+  height: 200px;
+  margin-left: 100px;
+  margin-top: 30px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.form-control {
+  width: 300px;
+  margin-right: 10px;
+  padding: 5px;
+}
+/*home*/
+.item button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item button:hover {
+  background-color: #45a049;
+}
+.nut {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.nut button {
+  margin: 0 5px;
+}
+.nut button:hover {
+  color: brown;
+}
+.add{
+  text-decoration: none;
+  color: whitesmoke;
+}
+label{
+  color: aliceblue;
+}
+.editAll{
+  display: flex;
+  justify-content: space-around;
+}
+.editForm{
+  text-align: center;
+}
+input {
+  margin: 10px; /* Khoảng cách giữa các ô */
+  display: block; /* Hiển thị mỗi ô trên một dòng riêng */
+  width: calc(100% - 20px); /* Chiều rộng của ô, trừ đi khoảng cách hai bên */
+}
+.card-body{
+  display: flex;
+}

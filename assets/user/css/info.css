@@ -109,6 +109,9 @@ button:hover {
     font-size: 20px;
     padding-left: 8px;
 }
+.container-right-render input {
+  background-color: #111111;
+}
 
 .footer {
     background-color: rgb(11, 11, 11);

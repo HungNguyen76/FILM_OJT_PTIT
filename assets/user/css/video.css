@@ -1,0 +1,99 @@
+body {
+  background-color: black;
+  color: whitesmoke;
+}
+.video {
+  text-align: center;
+  margin: 35px;
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid whitesmoke;
+}
+.name {
+  text-align: center;
+}
+#relatedFilms {
+  text-align: center;
+  background-color: black;
+}
+.relatedFilmsContainer {
+  margin: 35px 140px; /* Giữa trên và dưới, căn giữa trái và phải */
+  width: fit-content;
+}
+.pr {
+  text-align: center;
+  border: 2px solid rgb(5, 241, 214);
+}
+.card {
+  background-color: rgb(26, 25, 25);
+}
+.navbar-nav {
+  margin-left: 400px;
+}
+.containerFilm {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px;
+}
+.card-title {
+  text-align: center;
+  font-size: 15px;
+}
+.film {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  margin: auto;
+  background-color: rgb(26, 25, 25);
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+  width: 150px; /* Đặt chiều rộng cố định cho tất cả hình ảnh */
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 15px;
+}
+/* CSS cho nút Vietsub */
+.vietsub-buttons {
+  display: flex;
+
+  gap: 10px;
+}
+
+.vietsub-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vietsub-btn:hover {
+  background-color: #555;
+}
+.vietsub-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.share a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #fff;
+}

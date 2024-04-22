@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ),
     ],
     onSubmit: function (data) {
+      data.username = document.querySelector("#form-1 #username").value;
+      
       let listUsers = JSON.parse(localStorage.getItem("listUsers")) || [];
       let flag = true;
       for (let i = 0; i < listUsers.length; i++) {
@@ -32,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data.idUser = uuid();
         data.cartUser = [];
         data.purchaseHistory = [];
+        data.username = document.querySelector("#username").value;
 
         listUsers.push(data);
         localStorage.setItem("listUsers", JSON.stringify(listUsers));
@@ -42,7 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(changeToLoginPage, 1000);
       } else {
         alert("Email đã tồn tại");
+        redirect("/pages/login.html");
       }
     },
   });
 });
+
+function redirect(url) {
+  window.location.href = url;
+}
