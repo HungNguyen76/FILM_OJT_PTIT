@@ -92,10 +92,12 @@ function renderComments(filmId) {
         <div id="commentsContainer"></div>
         <form id="commentForm">
           <textarea id="commentText" placeholder="Bình luận..." required></textarea>
-          
+            <div>
+          <button class="but" type="submit">Submit</button>
+            </div>
         </form>
        
-        <button class="but" type="submit">Submit</button>
+        
       </div>
     `;
     commentsContainer = document.getElementById("commentsContainer");
