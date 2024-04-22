@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("https://i.pinimg.com/736x/5e/a4/ff/5ea4ff07b6de41cb78a99623e638bb79.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.black {
+  color: white;
+  padding: 20px;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+}
+
+.add img {
+  margin-right: 10px;
+}
+
+.all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coban,
+.imgall,
+.kt {
+  flex: 1;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+.in4 {
+  margin-top: 35px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.buttonall {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* phần thông tin cơ bản và phần chứa file hình ảnh */
+.all {
+  display: flex;
+}
+
+.coban,
+.imgall {
+  flex: 1; /* Phần tử nằm trong flex container sẽ tự động chia đều không gian */
+  padding: 10px;
+}
+.imgall {
+  margin-top: -1px;
+}
+
+a {
+  text-decoration: none;
+  color: burlywood;
+  /* margin-top: 10px; */
+}
+
+a:hover {
+  color: rgb(165, 70, 70);
+}

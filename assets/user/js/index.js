@@ -39,6 +39,7 @@ const films = [
     nation: "Thái",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    comment: "",
   },
   {
     id: "film2",
@@ -55,6 +56,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/5PvzGDU8WjM?si=QQby4sL4i-LRRABD",
+    comment: "",
   },
 
   {
@@ -72,6 +74,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/ZW1YuceEQDE?si=1zpHpA2xNxbxQznv",
+    comment: "",
   },
   {
     id: "film4",
@@ -87,7 +90,8 @@ const films = [
       "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
-    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    video: " https://www.youtube.com/embed/d_oU87vizWg?si=X3J-E48Wottqrh-W",
+    comment: "",
   },
   {
     id: "film5",
@@ -103,7 +107,8 @@ const films = [
       "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
-    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    video: " https://www.youtube.com/embed/rwIOCoDtHyI?si=5o1qOQfpPxYvgiGL",
+    comment: "",
   },
   {
     id: "film6",
@@ -119,7 +124,8 @@ const films = [
       "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
-    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    video: " https://www.youtube.com/embed/V5GS5ANG96M?si=CyP63OU3yRq6ANQ1",
+    comment: "",
   },
 
   {
@@ -136,7 +142,8 @@ const films = [
       "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
-    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    video: " https://www.youtube.com/embed/uVmP52g30Wc?si=Em29ekJMhzPG0fFG",
+    comment: "",
   },
   {
     id: "film8",
@@ -152,7 +159,8 @@ const films = [
       "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
-    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    video: " https://www.youtube.com/embed/JV0dEgbX5yk?si=nx-ScUCurq1cpU9H",
+    comment: "",
   },
   {
     id: "film9",
@@ -170,6 +178,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    comment: "",
   },
   {
     id: "film10",
@@ -186,6 +195,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    comment: "",
   },
   {
     id: "film11",
@@ -202,6 +212,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    comment: "",
   },
   {
     id: "film12",
@@ -218,6 +229,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    comment: "",
   },
   {
     id: "film13",
@@ -234,6 +246,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    comment: "",
   },
   {
     id: "film14",
@@ -250,6 +263,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    comment: "",
   },
   {
     id: "film81",
@@ -266,6 +280,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    comment: "",
   },
   {
     id: "film83",
@@ -282,6 +297,7 @@ const films = [
     nam: "2022",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    comment: "",
   },
 ];
 
