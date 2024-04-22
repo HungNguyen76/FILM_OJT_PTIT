@@ -27,7 +27,6 @@ const films = [
     id: "film1",
     img1: "https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/437876857_1007098554112821_2529601479420935111_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=eR8xzzfrD3cAb7-7X50&_nc_ht=scontent.fsgn2-10.fna&oh=00_AfB-X703l_JV5Kof7eDb3fRANG4xISlh0u4YFCscOHWaCA&oe=6622F660",
     name: "Bùa Hình Nhân",
-    nation: "my",
     nam: "2022",
     daodien: "ta",
     time: "1 tiếng 30p",
@@ -48,6 +47,14 @@ const films = [
     type: "Kinh Dị",
     rate: "best",
     nation: "Tây Ban Nha",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/5PvzGDU8WjM?si=QQby4sL4i-LRRABD",
   },
 
   {
@@ -57,6 +64,14 @@ const films = [
     type: "Kinh Dị",
     rate: "best",
     nation: "Thái",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/ZW1YuceEQDE?si=1zpHpA2xNxbxQznv",
   },
   {
     id: "film4",
@@ -65,6 +80,14 @@ const films = [
     type: "Kinh Dị",
     rate: "best",
     nation: "USA",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film5",
@@ -73,6 +96,14 @@ const films = [
     type: "Kinh Dị",
     rate: "normal",
     nation: "USA",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film6",
@@ -81,6 +112,14 @@ const films = [
     type: "Kinh Dị",
     rate: "normal",
     nation: "USA",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
 
   {
@@ -90,6 +129,14 @@ const films = [
     type: "Anime",
     rate: "normal",
     nation: "Nhật Bản",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film8",
@@ -98,6 +145,14 @@ const films = [
     type: "Anime",
     rate: "normal",
     nation: "Nhật Bản",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film9",
@@ -107,6 +162,14 @@ const films = [
     type: "Anime",
     rate: "normal",
     nation: "Nhật Bản",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film10",
@@ -115,6 +178,14 @@ const films = [
     type: "Anime",
     rate: "best",
     nation: "Nhật Bản",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film11",
@@ -123,6 +194,14 @@ const films = [
     type: "Anime",
     rate: "best",
     nation: "Nhật Bản",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film12",
@@ -131,6 +210,14 @@ const films = [
     type: "Hành Động",
     rate: "best",
     nation: "USA",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film13",
@@ -139,6 +226,14 @@ const films = [
     type: "Hành Động",
     rate: "normal",
     nation: "USA",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film14",
@@ -147,6 +242,14 @@ const films = [
     type: "Hành Động",
     rate: "normal",
     nation: "USA",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film81",
@@ -155,6 +258,14 @@ const films = [
     type: "Hành Động",
     rate: "normal",
     nation: "USA",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
   {
     id: "film83",
@@ -163,6 +274,14 @@ const films = [
     type: "Hành Động",
     rate: "best",
     nation: "USA",
+    daodien: "ta",
+    time: "2 tiếng 30p",
+    noidung: "thêm vào sau nha",
+    dienvien:
+      "Phuwin Tangsakyuen, Up Poompat Iam-samang, Nick Kunatip Pinpradab,",
+    nam: "2022",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
 ];
 

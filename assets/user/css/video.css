@@ -92,8 +92,41 @@ hr {
   text-decoration: none;
   color: #fff;
 }
-.share a {
-  font-size: 30px;
-  text-decoration: none;
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   color: #fff;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.pinterest {
+  background-color: #bd081c;
+}
+.whatsapp {
+  background-color: #25d366;
+}
+
+.social-icon i {
+  font-size: 24px;
 }

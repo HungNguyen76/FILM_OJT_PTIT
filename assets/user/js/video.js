@@ -49,10 +49,20 @@ function video(filmId) {
           <h5>Chia sẻ: </h5>
 
 
-          <a href="" class="fa fa-facebook"></a>
-           <a href="" class="fa fa-twitter"></a>
-            <a href="" class="fa fa-github"></a>
-             <a href="" class="fa fa-instagram"></a>
+         <div class="social-icons">
+            <a href="https://www.facebook.com" class="social-icon facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com" class="social-icon twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://www.pinterest.com" class="social-icon pinterest">
+               <i class="fa fa-pinterest"></i>
+           </a>
+           <a href="https://www.whatsapp.com" class="social-icon whatsapp">
+              <i class="fa fa-whatsapp"></i>
+           </a>
+      </div>
        
          
           
