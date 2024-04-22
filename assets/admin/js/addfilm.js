@@ -5,7 +5,6 @@ function addFilmToCollection(newFilm) {
     return;
   }
 
-  // Lấy danh sách phim hiện tại từ localStorage hoặc tạo một mảng mới nếu không tồn tại
   const listAll = JSON.parse(localStorage.getItem("listAll")) || [];
 
   // Thêm bộ phim mới vào mảng
@@ -31,6 +30,8 @@ addFilmForm.addEventListener("submit", function (event) {
   const type = document.getElementById("type").value;
   const rate = document.getElementById("rate").value;
   const noidung = document.getElementById("noidung").value;
+  const Trailer = document.getElementById("Trailer").value;
+  const Video = document.getElementById("Video").value;
 
   // Lấy thêm các trường thông tin khác của phim từ form
 
@@ -47,17 +48,13 @@ addFilmForm.addEventListener("submit", function (event) {
     type: type,
     rate: rate,
     noidung: noidung,
+    Trailer: Trailer,
+    Video: Video,
   };
 
-  // Gọi hàm để thêm phim vào danh sách và lưu vào localStorage
   addFilmToCollection(newFilm);
 
-  // Reset form sau khi thêm phim thành công
   addFilmForm.reset();
 
-  // Thông báo cho người dùng biết rằng phim đã được thêm thành công
   alert("Phim đã được thêm!");
-
-  // Cập nhật lại trang web để hiển thị phim mới
-  // (Bạn có thể thực hiện cập nhật giao diện ở đây nếu cần)
 });
