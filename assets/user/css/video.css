@@ -130,3 +130,24 @@ a {
 .social-icon i {
   font-size: 24px;
 }
+/* CSS cho các bình luận */
+.comment {
+  color: #333;
+  background-color: #f8f9fa; /* Màu nền cho thẻ bình luận */
+  border: 1px solid #e1e4e8; /* Viền cho thẻ */
+  border-radius: 5px; /* Bo góc cho thẻ */
+  padding: 10px; /* Khoảng cách trong thẻ */
+  margin-bottom: 10px; /* Khoảng cách giữa các thẻ bình luận */
+}
+
+.comment strong {
+  color: #007bff; /* Màu cho tên người dùng */
+}
+#commentText {
+  border-radius: 5px;
+}
+.but {
+  border-radius: 8px;
+  color: whitesmoke;
+  background-color: #333;
+}

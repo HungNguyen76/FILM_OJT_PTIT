@@ -111,20 +111,24 @@ window.onclick = function (event) {
 };
 
 function logout() {
+  localStorage.removeItem("nameLogin");
   localStorage.removeItem("checkLogin");
   localStorage.removeItem("favoriteFilms");
   window.location.href = "/pages/pageLogin/trangchu.html";
-}
-
-// Hàm xem trailer
-function watchTrailer(trailerUrl) {
-  // Thực hiện hành động để xem trailer
 }
 
 function watchFilm(filmId) {
   // Lưu ID của bộ phim được chọn vào bộ nhớ cục bộ
   localStorage.setItem("selectedFilmId", filmId);
 
-  // Chuyển hướng đến trang nơi có thể xem bộ phim
-  window.location.href = "/pages/pageLogin/video.html";
+  // Kiểm tra xem người dùng đã đăng nhập hay chưa
+  var checkLogin = localStorage.getItem("checkLogin");
+
+  // Nếu người dùng đã đăng nhập, chuyển hướng đến trang xem phim
+  if (checkLogin) {
+    window.location.href = "/pages/pageOut/video.html";
+  } else {
+    // Nếu người dùng chưa đăng nhập, chuyển hướng đến trang đăng nhập
+    window.location.href = "/pages/pageLogin/video.html";
+  }
 }

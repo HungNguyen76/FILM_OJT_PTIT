@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (userFound) {
         localStorage.setItem("checkLogin", userFound.idUser);
+        localStorage.setItem(
+          "nameLogin",
+          JSON.stringify({
+            username: userFound.username,
+            idUser: userFound.idUser,
+          })
+        );
 
         let adminData = JSON.parse(localStorage.getItem("admin"));
         if (

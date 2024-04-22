@@ -63,13 +63,84 @@ function video(filmId) {
               <i class="fa fa-whatsapp"></i>
            </a>
       </div>
+          <br />
+          <hr />
+
+    
        
-         
+          
           
           </div>
         </div>
     `;
+  renderComments(filmId);
 }
+
+// Giả sử bạn có một danh sách người dùng đã đăng nhập lưu trong localStorage
+var nameLogin = JSON.parse(localStorage.getItem("nameLogin")) || {};
+function renderComments(filmId) {
+  var comments = JSON.parse(localStorage.getItem("comments")) || {};
+  var filmComments = comments[filmId] || [];
+
+  // Tạo hoặc cập nhật phần tử commentsContainer
+  var commentsContainer = document.getElementById("commentsContainer");
+  if (!commentsContainer) {
+    var modal = document.getElementById("video");
+    modal.innerHTML += `
+      <div id="commentSection">
+        <h3>Bình luận:</h3>
+        <div id="commentsContainer"></div>
+        <form id="commentForm">
+          <textarea id="commentText" placeholder="Bình luận..." required></textarea>
+          
+        </form>
+       
+        <button class="but" type="submit">Submit</button>
+      </div>
+    `;
+    commentsContainer = document.getElementById("commentsContainer");
+  }
+
+  // Cập nhật nội dung của commentsContainer với các bình luận mới
+  commentsContainer.innerHTML = filmComments
+    .map(function (comment) {
+      // Sử dụng tên người dùng đã lưu trong mỗi bình luận
+      var username = comment.username || "Ẩn danh";
+      return (
+        '<div class="comment"><strong>' +
+        username +
+        ":</strong> " +
+        comment.text +
+        "</div>"
+      );
+    })
+    .join("");
+
+  // Đăng ký event listener cho form submit nếu chưa có
+  var commentForm = document.getElementById("commentForm");
+  if (!commentForm.getAttribute("listener")) {
+    commentForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var commentText = document.getElementById("commentText").value;
+      var username = nameLogin.username || "Ẩn danh"; // Sử dụng tên từ nameLogin hoặc mặc định là "Ẩn danh"
+
+      if (commentText.trim() !== "") {
+        // Thêm bình luận mới vào danh sách bình luận của phim
+        filmComments.push({ username: username, text: commentText }); // Lưu tên người dùng cùng với bình luận
+        comments[filmId] = filmComments;
+        localStorage.setItem("comments", JSON.stringify(comments));
+
+        // Hiển thị lại bình luận
+        renderComments(filmId);
+
+        // Xóa nội dung trong textarea
+        document.getElementById("commentText").value = "";
+      }
+    });
+    commentForm.setAttribute("listener", "true");
+  }
+}
+
 function renderRelatedFilms(filmId) {
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
