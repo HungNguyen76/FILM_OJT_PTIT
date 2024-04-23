@@ -1,7 +1,7 @@
 function renderFavoriteFilms() {
   var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
   var out = "";
-  console.log(favoriteFilms);
+
   for (let i = 0; i < favoriteFilms.length; i++) {
     out += `
       <div class="film col-md-3 mb-4 d-flex justify-content-center" data-id="${favoriteFilms[i].id}">

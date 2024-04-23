@@ -76,7 +76,6 @@ function video(filmId) {
   renderComments(filmId);
 }
 
-// Giả sử bạn có một danh sách người dùng đã đăng nhập lưu trong localStorage
 var nameLogin = JSON.parse(localStorage.getItem("nameLogin")) || {};
 function renderComments(filmId) {
   var comments = JSON.parse(localStorage.getItem("comments")) || {};
@@ -124,7 +123,7 @@ function renderComments(filmId) {
     commentForm.addEventListener("submit", function (event) {
       event.preventDefault();
       var commentText = document.getElementById("commentText").value;
-      var username = nameLogin.username || "Ẩn danh"; // Sử dụng tên từ nameLogin hoặc mặc định là "Ẩn danh"
+      var username = nameLogin.username || "Ẩn danh";
 
       if (commentText.trim() !== "") {
         // Thêm bình luận mới vào danh sách bình luận của phim
@@ -168,9 +167,6 @@ function renderRelatedFilms(filmId) {
           <div class="card-body">
             <h5 class="card-title">${film.name}</h5>
           </div>
-       
-
-         
           
           <div class="film-actions">
             <button class="btn btn-outline-info info-btn" onclick="viewDetails('${film.id}')">Xem film </button>

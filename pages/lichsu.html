@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch Sử Xem Phim</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      .film-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .film-card {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        padding: 20px;
+        width: 300px;
+      }
+      .film-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .film-info {
+        margin-top: 10px;
+      }
+      .film-info h3 {
+        margin: 0;
+        color: #333;
+      }
+      .film-info p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lịch Sử Xem Phim</h1>
+    <div id="filmList" class="film-list">
+      <!-- Nơi hiển thị danh sách phim -->
+    </div>
+
+    <script>
+      // Hàm này sẽ được gọi khi trang tải xong
+      document.addEventListener("DOMContentLoaded", function () {
+        var userId = localStorage.getItem("checkLogin"); // Lấy ID người dùng từ localStorage
+        if (userId) {
+          renderWatchHistory(userId);
+        }
+      });
+
+      function renderWatchHistory(userId) {
+        var history = JSON.parse(localStorage.getItem("watchHistory")) || {};
+        var userHistory = history[userId] || [];
+        var filmList = document.getElementById("filmList");
+        filmList.innerHTML = ""; // Xóa danh sách hiện tại
+
+        userHistory.forEach(function (film) {
+          var filmCard = document.createElement("div");
+          filmCard.className = "film-card";
+          filmCard.innerHTML = `
+          <img src="${film.img1}" alt="${film.name}" class="film-image">
+          <div class="film-info">
+            <h3>${film.name}</h3>
+            <p>Đạo diễn: ${film.daodien}</p>
+            <p>Diễn viên: ${film.dienvien}</p>
+            <p>Năm sản xuất: ${film.nam}</p>
+            <p>Quốc gia: ${film.nation}</p>
+            <p>Thể loại: ${film.type}</p>
+            <p>Thời lượng: ${film.time}</p>
+            <p>Xem vào: ${new Date(film.watchedOn).toLocaleString()}</p>
+          </div>
+        `;
+          filmList.appendChild(filmCard);
+        });
+      }
+    </script>
+  </body>
+</html>

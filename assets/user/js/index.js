@@ -567,7 +567,7 @@ function favoriteMovie(btn) {
   }
 
   var filmId = btn.closest(".film").getAttribute("data-id");
-  console.log("Yêu thích phim với id: ", filmId);
+
   var selectedFilm = films.find((film) => film.id === filmId);
   var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
   var isFilmInFavorites = favoriteFilms.some((film) => film.id === filmId);
