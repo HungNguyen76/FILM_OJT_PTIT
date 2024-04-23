@@ -18,10 +18,8 @@ function renderWatchHistory(userId) {
           <img src="${film.img1}" alt="${film.name}" class="film-image">
           <div class="film-info">
             <h3>${film.name}</h3>
-            <p>Đạo diễn: ${film.daodien}</p>
-            <p>Diễn viên: ${film.dienvien}</p>
+            
             <p>Năm sản xuất: ${film.nam}</p>
-            <p>Quốc gia: ${film.nation}</p>
             <p>Thể loại: ${film.type}</p>
             <p>Thời lượng: ${film.time}</p>
             <p>Xem vào: ${new Date(film.watchedOn).toLocaleString()}</p>

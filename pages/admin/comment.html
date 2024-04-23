@@ -17,10 +17,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/assets/user/css/search.css" />
+    <link rel="stylesheet" href="/assets/admin/css/comment.css">
   </head>
   
 
-  <body onload="renderFavoriteFilms()">
+  <body >
     <div class="container">
       <div class="side-bar">
          <ul>
@@ -52,21 +53,15 @@
       <div class="body">
         <div class="item">
            <div class="nav-bar"><button onclick="logout()"><i class="fa-solid fa-house-user"></i> Home user</button></div>
-             
-     
-          
-            
           </form>
         </div>
-        <div class="content">
-          <div id="editForm"></div>
-          <div id="admin"></div>
-          
-
-        </div>
+     <div id="allComments">
+      <h3>Tất cả bình luận:</h3>
+      <div id="commentsContainer"></div>
+    </div>
+>
       
     </div>
   </body>
- 
-  <script src="/assets/admin/js/film.js"></script>
+ <script src="/assets/admin/js/comment.js"></script>
 </html>
