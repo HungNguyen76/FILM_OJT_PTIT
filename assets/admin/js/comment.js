@@ -24,3 +24,10 @@ function renderComments(filmId) {
     commentsContainer.appendChild(commentElement);
   });
 }
+function logout() {
+  localStorage.removeItem("checkLogin");
+
+  localStorage.removeItem("favoriteFilms");
+
+  window.location.href = "/pages/pageLogin/trangchu.html";
+}
