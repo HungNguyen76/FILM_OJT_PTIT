@@ -151,7 +151,7 @@ function renderRelatedFilms(filmId) {
   );
 
   var relatedFilmsContainer = document.getElementById("relatedFilms");
-  relatedFilmsContainer.innerHTML = "<h3>Phim Có Liên Quan</h3>";
+  relatedFilmsContainer.innerHTML = "<h3>Đề xuất: </h3>";
 
   var filmContainer = document.createElement("div");
   filmContainer.classList.add("relatedFilmsContainer");

@@ -3,30 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List Users</title>
-    <link rel="stylesheet" href="/assets/admin/css/account.css" />
+    <title>List Movie</title>
+    <link rel="stylesheet" href="/assets/admin/css/film.css" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/user/css/search.css" />
   </head>
+  
 
-  <body onload="renderUsersAccounts()">
-    <button class="home" onclick="logout()">
-      <i class="fa-solid fa-house-user"> </i>Home user
-    </button>
+  <body onload="renderFavoriteFilms()">
     <div class="container">
       <div class="side-bar">
-        <ul>
+         <ul>
           <li class="category">
-            <a href="/pages/admin/film.html"
+            <a href="/assets/admin/js/film.js"
               ><i class="fa-solid fa-list"></i> Quản lí danh mục</a
             >
           </li>
           <li class="film">
-            <a href="/pages/admin/film.html"
-              ><i class="fa-solid fa-film"></i> Quản lí phim</a
-            >
+            <a href="#"><i class="fa-solid fa-film"></i> Quản lí phim</a>
           </li>
           <li class="account">
             <a href="/pages/admin/account.html"
@@ -46,13 +50,23 @@
         </ul>
       </div>
       <div class="body">
-        <!-- <div class="nav-bar"></div> -->
-        <div class="content">
-          <div id="users"></div>
-          <hr />
+        <div class="item">
+           <div class="nav-bar"><button onclick="logout()"><i class="fa-solid fa-house-user"></i> Home user</button></div>
+             
+     
+          
+            
+          </form>
         </div>
-      </div>
+        <div class="content">
+          <div id="editForm"></div>
+          <div id="admin"></div>
+          
+
+        </div>
+      
     </div>
   </body>
-  <script src="/assets/admin/js/account.js"></script>
+ 
+  <script src="/assets/admin/js/film.js"></script>
 </html>
