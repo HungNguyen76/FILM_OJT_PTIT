@@ -1,37 +1,32 @@
-function renderWatchHistory(userId) {
-  // Lấy lịch sử xem phim từ local storage dựa trên userId
-  var allHistory = JSON.parse(localStorage.getItem("watchHistory")) || {};
-  var films = allHistory[userId] || []; // Lấy lịch sử xem phim của người dùng cụ thể
-  var out = "";
-
-  for (let i = 0; i < films.length; i++) {
-    var film = films[i];
-    out += `
-    <h1>heeeeeee</h1>
-            <div class="film-card">
-                <img src="${film.img1}" alt="${
-      film.name
-    }" class="film-history-image">
-                <div class="film-info">
-                    <h5>${film.name}</h5>
-                    <p>Đạo diễn: ${film.daodien}</p>
-                    <p>Diễn viên: ${film.dienvien}</p>
-                    <p>Năm: ${film.nam}</p>
-                    <p>Quốc gia: ${film.nation}</p>
-                    <p>Thể loại: ${film.type}</p>
-                    <p>Thời lượng: ${film.time}</p>
-                    <p>Xem vào: ${new Date(film.watchedOn).toLocaleString()}</p>
-                </div>
-            </div>`;
+document.addEventListener("DOMContentLoaded", function () {
+  var userId = localStorage.getItem("checkLogin"); // Lấy ID người dùng từ localStorage
+  if (userId) {
+    renderWatchHistory(userId);
   }
-  document.getElementById(
-    "watchHistory"
-  ).innerHTML = `<h1>Lịch sử xem phim của bạn</h1> <div class="row">${out}</div>`;
+});
+
+function renderWatchHistory(userId) {
+  var history = JSON.parse(localStorage.getItem("watchHistory")) || {};
+  var userHistory = history[userId] || [];
+  var filmList = document.getElementById("filmList");
+  filmList.innerHTML = ""; // Xóa danh sách hiện tại
+
+  userHistory.forEach(function (film) {
+    var filmCard = document.createElement("div");
+    filmCard.className = "film-card";
+    filmCard.innerHTML = `
+          <img src="${film.img1}" alt="${film.name}" class="film-image">
+          <div class="film-info">
+            <h3>${film.name}</h3>
+            <p>Đạo diễn: ${film.daodien}</p>
+            <p>Diễn viên: ${film.dienvien}</p>
+            <p>Năm sản xuất: ${film.nam}</p>
+            <p>Quốc gia: ${film.nation}</p>
+            <p>Thể loại: ${film.type}</p>
+            <p>Thời lượng: ${film.time}</p>
+            <p>Xem vào: ${new Date(film.watchedOn).toLocaleString()}</p>
+          </div>
+        `;
+    filmList.appendChild(filmCard);
+  });
 }
-
-// Gọi hàm này với ID người dùng hiện tại khi cần render lịch sử xem
-
-window.onload = function () {
-  var currentUserId = "178716907"; // Thay thế bằng ID người dùng thực tế
-  renderWatchHistory(currentUserId);
-};

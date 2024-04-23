@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+.film-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.film-card {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+}
+.film-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.film-info {
+  margin-top: 10px;
+}
+.film-info h3 {
+  margin: 0;
+  color: #333;
+}
+.film-info p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
