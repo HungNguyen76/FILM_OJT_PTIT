@@ -20,7 +20,7 @@ function renderComments(filmId) {
     var commentElement = document.createElement("div");
     commentElement.classList.add("comment");
     commentElement.innerHTML =
-      "<strong>" + username + ":</strong> " + comment.text;
+      "<strong> " + username + ":" + " " + comment.text;
 
     // Tạo nút "Xoá" và xử lý sự kiện khi được nhấn
     var deleteButton = document.createElement("button");
