@@ -1,0 +1,11 @@
+.comment {
+  margin-bottom: 10px;
+  border: 1px solid #fff6f6;
+  padding: 10px;
+}
+.comment strong {
+  font-weight: bold;
+}
+#allComments {
+  color: wheat;
+}

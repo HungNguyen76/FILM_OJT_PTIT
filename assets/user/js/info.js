@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function logout() {
+  localStorage.removeItem("nameLogin");
   localStorage.removeItem("checkLogin");
 
   localStorage.removeItem("favoriteFilms");

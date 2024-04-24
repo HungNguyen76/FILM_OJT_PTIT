@@ -70,7 +70,7 @@ html {
 hr {
   color: black;
 }
-.card-body{
+.card-body {
   display: flex;
 }
 
@@ -127,18 +127,18 @@ hr {
 .nut button:hover {
   color: brown;
 }
-.add{
+.add {
   text-decoration: none;
   color: whitesmoke;
 }
-label{
+label {
   color: aliceblue;
 }
-.editAll{
+.editAll {
   display: flex;
   justify-content: space-around;
 }
-.editForm{
+.editForm {
   text-align: center;
 }
 input {
@@ -146,6 +146,9 @@ input {
   display: block; /* Hiển thị mỗi ô trên một dòng riêng */
   width: calc(100% - 20px); /* Chiều rộng của ô, trừ đi khoảng cách hai bên */
 }
-.card-body{
+.card-body {
   display: flex;
+}
+#editForm {
+  text-align: center;
 }

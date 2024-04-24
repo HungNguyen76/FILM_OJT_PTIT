@@ -153,6 +153,7 @@ body {
   color: white;
 }
 .navbar-nav .nav-link:hover {
+  font-size: 30px;
   color: lightskyblue;
 }
 .containerNavbar {
@@ -250,7 +251,7 @@ h3 {
 
 main {
   background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
   background-image: url("https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg");
 }
 .title {
