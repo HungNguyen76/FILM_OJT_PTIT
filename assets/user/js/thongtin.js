@@ -10,23 +10,47 @@ function renderFilmDetails(filmId) {
   console.log("selectedFilm", selectedFilm);
   var modalBody = document.getElementById("filmDetailsModalBody");
   modalBody.innerHTML = `
+
       <div class="box">
    
         <img src="${selectedFilm.img1}" alt="Film Image" class="film-image">
         
-        <div>
+        <div class="box-right">
           <h5>${selectedFilm.name}</h5>
-          <p>Đạo diễn: ${selectedFilm.daodien}</p>
-          <p>Diễn viên: ${selectedFilm.dienvien}</p>
-          <p>Năm: ${selectedFilm.nam}</p>
-          <p>Quốc gia: ${selectedFilm.nation}</p>
-          <p>Thể loại: ${selectedFilm.type}</p>
-          <p>Thời lượng: ${selectedFilm.time}</p>
-          <hr />
-          <button onclick="renderTrailers('${selectedFilm.id}')" data-toggle="modal" data-target="#exampleModalCenter">Trailer</button>
-         <button onclick="watchFilm('${selectedFilm.id}')">Xem phim</button>
+
+          <div class="box-right__under">
+            <div class="title">
+              <p>Đạo diễn</p>
+              <p>Diễn viên</p>
+              <p>Năm</p>
+              <p>Quốc gia</p>
+              <p>Thể loại</p>
+              <p>Thời lượng</p>
+            </div>
+            <div class="colon">
+              <p>:</p>
+              <p>:</p>
+              <p>:</p>
+              <p>:</p>
+              <p>:</p>
+              <p>:</p>
+            </div>
+            <div class="infor">
+              <p>${selectedFilm.daodien}</p>
+              <p>${selectedFilm.dienvien}</p>
+              <p>${selectedFilm.nam}</p>
+              <p>${selectedFilm.nation}</p>
+              <p>${selectedFilm.type}</p>
+              <p>${selectedFilm.time}</p>
+            </div>
+          </div>
+        
+        <hr>
+        <button onclick="renderTrailers('${selectedFilm.id}')" data-toggle="modal" data-target="#exampleModalCenter">Trailer</button>
+        <button onclick="watchFilm('${selectedFilm.id}')">Xem phim</button>
           <hr />
           <p>Nội Dung: ${selectedFilm.noidung}</p>
+          </div>
         </div>
       </div>
     `;
