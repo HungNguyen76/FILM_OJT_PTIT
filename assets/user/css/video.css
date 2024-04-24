@@ -151,3 +151,13 @@ a {
   color: whitesmoke;
   background-color: #333;
 }
+.star {
+  cursor: pointer;
+  font-size: 20px;
+  color: grey;
+  transition: color 0.3s;
+}
+
+.star.selected {
+  color: gold;
+}

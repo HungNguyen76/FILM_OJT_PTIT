@@ -6,7 +6,7 @@ window.onload = function () {
 function renderFilmDetails(filmId) {
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
-  console.log("selectedFilm", selectedFilm);
+
   var modalBody = document.getElementById("filmDetailsModalBody");
   modalBody.innerHTML = `
 
@@ -25,6 +25,7 @@ function renderFilmDetails(filmId) {
               <p>Quốc gia</p>
               <p>Thể loại</p>
               <p>Thời lượng</p>
+          
             </div>
             <div class="colon">
               <p>:</p>
@@ -33,6 +34,7 @@ function renderFilmDetails(filmId) {
               <p>:</p>
               <p>:</p>
               <p>:</p>
+            
             </div>
             <div class="infor">
               <p>${selectedFilm.daodien}</p>
@@ -41,6 +43,7 @@ function renderFilmDetails(filmId) {
               <p>${selectedFilm.nation}</p>
               <p>${selectedFilm.type}</p>
               <p>${selectedFilm.time}</p>
+              
             </div>
           </div>
         
@@ -124,58 +127,15 @@ window.onclick = function (event) {
 };
 localStorage.setItem("selectedFilmId", filmId);
 
-// function watchFilm(filmId) {
-//   // Lấy thông tin phim từ danh sách tất cả phim
-//   localStorage.setItem("selectedFilmId", filmId);
-//   var allFilms = JSON.parse(localStorage.getItem("listAll"));
-//   var selectedFilm = allFilms.find((film) => film.id === filmId);
-
-//   // Kiểm tra xem người dùng đã đăng nhập hay chưa
-//   var checkLogin = localStorage.getItem("checkLogin");
-//   var userId = localStorage.getItem("nameLogin");
-//   if (!checkLogin || !userId) {
-//     window.location.href = "/pages/pageLogin/video.html";
-//     return;
-//   }
-
-//   // Lấy lịch sử xem phim từ local storage hoặc khởi tạo đối tượng rỗng nếu chưa có
-//   var history = JSON.parse(localStorage.getItem("watchHistory")) || {};
-
-//   // Lấy thời gian hiện tại
-//   var watchDate = new Date().toISOString();
-
-//   // Tạo một mục lịch sử mới với tất cả thông tin của phim
-//   var newHistoryEntry = {
-//     ...selectedFilm,
-//     watchedOn: watchDate,
-//   };
-
-//   // Kiểm tra xem lịch sử của người dùng hiện tại đã tồn tại chưa
-//   if (!history[userId]) {
-//     history[userId] = []; // Nếu chưa, khởi tạo mảng lịch sử cho người dùng
-//   }
-
-//   // // Thêm mục mới vào mảng lịch sử của người dùng
-//   history[userId].push(newHistoryEntry);
-
-//   // Lưu lịch sử đã cập nhật vào local storage
-//   localStorage.setItem("watchHistory", JSON.stringify(history));
-
-//   // Chuyển hướng đến trang xem phim
-//   window.location.href = "/pages/pageOut/video.html";
-// }
 function watchFilm(filmId) {
   // Lấy thông tin phim từ danh sách tất cả phim
   localStorage.setItem("selectedFilmId", filmId);
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
+  // Tăng số lượt xem cho phim được chọn và chuyển đổi sang số nguyên
 
   // Kiểm tra xem người dùng đã đăng nhập hay chưa và lấy ID người dùng
   var userId = localStorage.getItem("checkLogin"); // Giả sử bạn lưu ID người dùng khi đăng nhập
-  if (!userId) {
-    window.location.href = "/pages/pageLogin/video.html";
-    return;
-  }
 
   // Lấy lịch sử xem phim từ local storage hoặc khởi tạo đối tượng rỗng nếu chưa có
   var history = JSON.parse(localStorage.getItem("watchHistory")) || {};
@@ -197,8 +157,13 @@ function watchFilm(filmId) {
   // Thêm mục mới vào mảng lịch sử của người dùng
   history[userId].push(newHistoryEntry);
 
+  // Lưu danh sách phim đã cập nhật vào local storage
+  localStorage.setItem("listAll", JSON.stringify(allFilms));
+
   // Lưu lịch sử đã cập nhật vào local storage
   localStorage.setItem("watchHistory", JSON.stringify(history));
+  // Lưu danh sách phim đã cập nhật vào local storage
+  localStorage.setItem("listAll", JSON.stringify(allFilms));
 
   // Chuyển hướng đến trang xem phim
   window.location.href = "/pages/pageOut/video.html";
