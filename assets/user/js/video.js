@@ -80,10 +80,6 @@ function video(filmId) {
 
   // Kiểm tra xem người dùng đã đăng nhập hay chưa và lấy ID người dùng
   var userId = localStorage.getItem("checkLogin"); // Giả sử bạn lưu ID người dùng khi đăng nhập
-  if (!userId) {
-    window.location.href = "/pages/pageLogin/video.html";
-    return;
-  }
 
   // Lấy lịch sử xem phim từ local storage hoặc khởi tạo đối tượng rỗng nếu chưa có
   var history = JSON.parse(localStorage.getItem("watchHistory")) || {};
