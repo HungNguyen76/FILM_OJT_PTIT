@@ -73,6 +73,41 @@ function video(filmId) {
           </div>
         </div>
     `;
+  // Lấy thông tin phim từ danh sách tất cả phim
+  localStorage.setItem("selectedFilmId", filmId);
+  var allFilms = JSON.parse(localStorage.getItem("listAll"));
+  var selectedFilm = allFilms.find((film) => film.id === filmId);
+
+  // Kiểm tra xem người dùng đã đăng nhập hay chưa và lấy ID người dùng
+  var userId = localStorage.getItem("checkLogin"); // Giả sử bạn lưu ID người dùng khi đăng nhập
+  if (!userId) {
+    window.location.href = "/pages/pageLogin/video.html";
+    return;
+  }
+
+  // Lấy lịch sử xem phim từ local storage hoặc khởi tạo đối tượng rỗng nếu chưa có
+  var history = JSON.parse(localStorage.getItem("watchHistory")) || {};
+
+  // Lấy thời gian hiện tại
+  var watchDate = new Date().toISOString();
+
+  // Tạo một mục lịch sử mới với tất cả thông tin của phim
+  var newHistoryEntry = {
+    ...selectedFilm,
+    watchedOn: watchDate,
+  };
+
+  // Kiểm tra xem lịch sử của người dùng hiện tại đã tồn tại chưa
+  if (!history[userId]) {
+    history[userId] = []; // Nếu chưa, khởi tạo mảng lịch sử cho người dùng
+  }
+
+  // Thêm mục mới vào mảng lịch sử của người dùng
+  history[userId].push(newHistoryEntry);
+
+  // Lưu lịch sử đã cập nhật vào local storage
+  localStorage.setItem("watchHistory", JSON.stringify(history));
+
   renderComments(filmId);
 }
 
