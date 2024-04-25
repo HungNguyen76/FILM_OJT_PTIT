@@ -342,7 +342,7 @@ const films = [
   },
 ];
 
-localStorage.setItem("listAll", JSON.stringify(films));
+// localStorage.setItem("listAll", JSON.stringify(films));
 //em ctrl S lại xong qua trang
 window.onload = function () {
   renderSapChieu();
@@ -592,10 +592,10 @@ function searchMovies() {
     return movie.name.toLowerCase().includes(searchQuery);
   });
 
-  loadFilms(filteredMovies, "load");
+  loadFilms(filteredMovies, "search");
 
   if (filteredMovies.length === 0) {
-    document.getElementById("load").innerHTML = "<p>Không tìm thấy phim</p>";
+    document.getElementById("search").innerHTML = "<p>Không tìm thấy phim</p>";
   }
 }
 
