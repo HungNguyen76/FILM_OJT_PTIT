@@ -7,6 +7,7 @@ function video(filmId) {
   addStarRatingEventListeners();
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var video = allFilms.find((film) => film.id === filmId);
+  console.log(video.view);
 
   var modal = document.getElementById("video");
 
@@ -34,8 +35,10 @@ function video(filmId) {
           <br />
         
           <div class="vietsub-buttons"> 
-          <button class="vietsub-btn"><a href="#">Sever #1</a></button>
-          <button class="vietsub-btn"><a href="#">Sever #2</a></button>
+          <div>  <button class="vietsub-btn"><a href="#">Sever #1</a></button>
+          <button class="vietsub-btn"><a href="#">Sever #2</a></button></div>
+          <div><h5>Lượt xem: ${video.views} </h5></div>
+        
         </div>
         <br />
         <hr />
@@ -85,7 +88,10 @@ function video(filmId) {
   localStorage.setItem("selectedFilmId", filmId);
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
-
+  if (selectedFilm) {
+    selectedFilm.views = (selectedFilm.views || 0) + 1;
+    localStorage.setItem("listAll", JSON.stringify(allFilms)); // Cập nhật lại danh sách phim với số lượt xem mới
+  }
   // Kiểm tra xem người dùng đã đăng nhập hay chưa và lấy ID người dùng
   var userId = localStorage.getItem("checkLogin"); // Giả sử bạn lưu ID người dùng khi đăng nhập
 

@@ -133,6 +133,10 @@ function watchFilm(filmId) {
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
   // Tăng số lượt xem cho phim được chọn và chuyển đổi sang số nguyên
+  if (selectedFilm) {
+    selectedFilm.views = (selectedFilm.views || 0) + 1; // Đảm bảo rằng views là một số và tăng nó lên
+    localStorage.setItem("listAll", JSON.stringify(allFilms)); // Cập nhật lại danh sách phim với số lượt xem mới
+  }
 
   // Kiểm tra xem người dùng đã đăng nhập hay chưa và lấy ID người dùng
   var userId = localStorage.getItem("checkLogin"); // Giả sử bạn lưu ID người dùng khi đăng nhập

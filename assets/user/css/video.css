@@ -161,3 +161,7 @@ a {
 .star.selected {
   color: gold;
 }
+.vietsub-buttons {
+  display: flex;
+  justify-content: space-between;
+}
