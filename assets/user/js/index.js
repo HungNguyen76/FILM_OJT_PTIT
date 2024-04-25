@@ -56,7 +56,6 @@ const films = [
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/5PvzGDU8WjM?si=QQby4sL4i-LRRABD",
   },
-
   {
     id: "film3",
     img1: "https://cdn.moveek.com/storage/media/cache/tall/64911e47debc6625573774.jpeg",
