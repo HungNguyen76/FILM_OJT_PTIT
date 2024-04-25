@@ -1,7 +1,7 @@
 window.onload = function () {
   renderNhatBan();
   renderThai();
-  renderTBN();
+  renderKorea();
   renderUSA();
 };
 function locNhatBan() {
@@ -24,15 +24,15 @@ function locThai() {
   }
   localStorage.setItem("listThai", JSON.stringify(listThai));
 }
-function locTBN() {
-  let tbn = JSON.parse(localStorage.getItem("listAll"));
-  const listTBN = [];
-  for (let i = 0; i < tbn.length; i++) {
-    if (tbn[i].nation == "Tây Ban Nha") {
-      listTBN.push(tbn[i]);
+function locKorea() {
+  let korea = JSON.parse(localStorage.getItem("listAll"));
+  const listKorea = [];
+  for (let i = 0; i < korea.length; i++) {
+    if (korea[i].nation == "Korea") {
+      listKorea.push(korea[i]);
     }
   }
-  localStorage.setItem("listTBN", JSON.stringify(listTBN));
+  localStorage.setItem("listKorea", JSON.stringify(listKorea));
 }
 function locUSA() {
   let USA = JSON.parse(localStorage.getItem("listAll"));
@@ -54,10 +54,10 @@ function renderThai() {
   let listThai = JSON.parse(localStorage.getItem("listThai")) || []; // Lấy dữ liệu từ local storage
   loadFilms(listThai, "loadThai");
 }
-function renderTBN() {
-  locTBN();
-  let listTBN = JSON.parse(localStorage.getItem("listTBN")) || []; // Lấy dữ liệu từ local storage
-  loadFilms(listTBN, "loadTBN");
+function renderKorea() {
+  locKorea();
+  let listKorea = JSON.parse(localStorage.getItem("listKorea")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listKorea, "loadKorea");
 }
 function renderUSA() {
   locUSA();
