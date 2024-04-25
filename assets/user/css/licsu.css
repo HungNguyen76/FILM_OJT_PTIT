@@ -25,7 +25,6 @@ body {
   object-fit: cover;
   border-radius: 5px;
 }
-
 .film-card {
   display: flex;
   align-items: center;
@@ -50,4 +49,16 @@ h1 {
 
 .film-card:hover {
   background-color: #8bcfcf;
+}
+.nut {
+  display: flex;
+  justify-content: flex-end;
+}
+button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+button {
+  border-radius: 10px;
+  padding: 10px;
 }

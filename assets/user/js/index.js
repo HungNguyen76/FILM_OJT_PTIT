@@ -25,7 +25,7 @@ window.onclick = function (event) {
 const films = [
   {
     id: "film1",
-    img1: "https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/437876857_1007098554112821_2529601479420935111_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=eR8xzzfrD3cAb7-7X50&_nc_ht=scontent.fsgn2-10.fna&oh=00_AfB-X703l_JV5Kof7eDb3fRANG4xISlh0u4YFCscOHWaCA&oe=6622F660",
+    img1: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_bhn_7-_kc_02.06.2023_1_.jpg",
     name: "Bùa Hình Nhân",
     nam: "2023",
     daodien: " Phontharis Chotkijsadarsopon",
@@ -42,20 +42,37 @@ const films = [
   },
   {
     id: "film2",
-    img1: "https://cdn.tuoitre.vn/thumb_w/480/471584752817336320/2023/6/30/ofelia2-1630x2048-1688082839824462511532.jpg",
-    name: "Ma Sơ Trục Quỷ",
+    img1: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/7/0/700x1000_exhuma-min.jpg",
+    name: "EXHUMA: QUẬT MỘ TRÙNG MA",
     type: "Kinh Dị",
     rate: "best",
-    nation: "Tây Ban Nha",
-    daodien: "  Adrian Garcia Bogliano",
-    time: "  102 phút",
+    nation: "Korea",
+    daodien: "  Jang Jae Hyun",
+    time: "  133 phút",
     noidung:
-      "Ofelia - một nữ tu trẻ vừa đặt chân đến thị trấn San Ramon đã bị ép phải thực hiện buổi lễ trừ tà cho một phụ nữ đang mang thai. Tưởng chừng buổi trục quỷ đã hoàn tất, Ofelia bàng hoàng nhận ra hiện thân quỷ dữ chưa từng biến mất.",
-    dienvien: "María Evoli | Ramón Medína | Pilar Santacruz",
-    nam: "2023",
+      "Hai pháp sư, một thầy phong thuỷ và một chuyên gia khâm liệm cùng hợp lực khai quật ngôi mộ bị nguyền rủa của một gia đình giàu có, nhằm cứu lấy sinh mạng hậu duệ cuối cùng trong dòng tộc. Bí mật hắc ám của tổ tiên được đánh thức.",
+    dienvien: "  Choi Min Sik | Yoo Hai Jin | Kim Go Eun | Lee Do Hyun | ...",
+    nam: "2024",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/5PvzGDU8WjM?si=QQby4sL4i-LRRABD",
   },
+  {
+    id: "film21",
+    img1: "https://www9.phimhay.in/wp-content/uploads/2023/09/cuoc-goi-49455-1-300x450.jpg",
+    name: "The Call",
+    type: "Kinh Dị",
+    rate: "best",
+    nation: "Korea",
+    daodien: "Lee Chung-hyun",
+    time: "  112 phút",
+    noidung:
+      "Kết nối qua điện thoại ở cùng một căn nhà nhưng cách nhau 20 năm, kẻ sát nhân hàng loạt đe dọa quá khứ - và tính mạng - của một phụ nữ khác để thay đổi số phận bản thân.",
+    dienvien: "Jun Jong Seo | Kim Sung Ryoung | Park Shin Hye",
+    nam: "2020",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/5PvzGDU8WjM?si=QQby4sL4i-LRRABD",
+  },
+
   {
     id: "film3",
     img1: "https://cdn.moveek.com/storage/media/cache/tall/64911e47debc6625573774.jpeg",
@@ -287,11 +304,48 @@ const films = [
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
   },
+  {
+    id: "film84",
+    img1: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/f/z/fzone_007c_g_vie-vn_4x5_.jpg",
+    name: "HÀNH TINH KHỈ: VƯƠNG QUỐC MỚI",
+    type: "Hành Động",
+    // rate: "best",
+    nation: "USA",
+    daodien: "Wes Ball",
+    time: "chưa cập nhật",
+    noidung:
+      "Đạo diễn Wes Ball mang một hơi thở mới đến loạt phim điện ảnh danh tiếng này. Lấy bối cảnh nhiều đời sau sự ra đi của Vua Khỉ Caesar, hành tinh này là nơi loài khỉ thống trị, còn loài người dần lui về trong bóng tối. Khi một thủ lĩnh khỉ có tên Proximus Caesar xây dựng đế chế của mình, chú khỉ trẻ tuổi Noa bắt đầu một hành trình gian khổ, đặt câu hỏi về tất cả những gì anh ta đã biết về quá khứ và đưa ra những lựa chọn định hình lại tương lai cho cả loài khỉ và loài người.",
+    dienvien:
+      " Owen Teague | Freya Allan | Kevin Durand | Peter Macon | William H. Macy",
+    nam: "2024",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    period: "sắp chiếu",
+  },
+  {
+    id: "film85",
+    img1: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/0/406x600-peenak.jpg",
+    name: "NGÔI ĐỀN KỲ QUÁI 4",
+    type: "Kinh Dị",
+    // rate: "best",
+    nation: "Thái",
+    daodien: "Phontharis Chotkijsadarsopon",
+    time: "chưa cập nhật",
+    noidung:
+      "Hồn ma Nak với sức mạnh khủng khiếp nhất, đáng sợ nhất mà bộ đôi mỏ hỗn Balloon & First phải đối mặt để giải cứu cho trai đẹp Min Joon. Liệu hội bạn này sẽ giải được nghiệp mình tạo ra hay sẽ tan rã từ đây?",
+    dienvien:
+      "Witthawat Rattanaboonbaramee | Bhuripat Vejvongsatechawat | Phiravich Attachitsataporn",
+    nam: "2024",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    period: "sắp chiếu",
+  },
 ];
 
-// localStorage.setItem("listAll", JSON.stringify(films));
+localStorage.setItem("listAll", JSON.stringify(films));
 //em ctrl S lại xong qua trang
 window.onload = function () {
+  renderSapChieu();
   load();
 };
 function load() {
@@ -391,15 +445,15 @@ function locThai() {
   }
   localStorage.setItem("listThai", JSON.stringify(listThai));
 }
-function locTBN() {
-  let tbn = JSON.parse(localStorage.getItem("listAll"));
-  const listTBN = [];
-  for (let i = 0; i < tbn.length; i++) {
-    if (tbn[i].nation == "Tây Ban Nha") {
-      listTBN.push(tbn[i]);
+function locKorea() {
+  let korea = JSON.parse(localStorage.getItem("listAll"));
+  const listKorea = [];
+  for (let i = 0; i < korea.length; i++) {
+    if (korea[i].nation == "Korea") {
+      listKorea.push(korea[i]);
     }
   }
-  localStorage.setItem("listTBN", JSON.stringify(listTBN));
+  localStorage.setItem("listKorea", JSON.stringify(listKorea));
 }
 function locUSA() {
   let USA = JSON.parse(localStorage.getItem("listAll"));
@@ -454,6 +508,17 @@ function locBestViewHanhDong() {
   );
 }
 
+function locSapChieu() {
+  let sapChieu = JSON.parse(localStorage.getItem("listAll"));
+  const listSapChieu = [];
+  for (let i = 0; i < sapChieu.length; i++) {
+    if (sapChieu[i].period == "sắp chiếu") {
+      listSapChieu.push(sapChieu[i]);
+    }
+  }
+  localStorage.setItem("listSapChieu", JSON.stringify(listSapChieu));
+}
+
 function renderKinhDi() {
   locKinhDi();
   let listKinhDi = JSON.parse(localStorage.getItem("listKinhDi")) || []; // Lấy dữ liệu từ local storage
@@ -501,15 +566,20 @@ function renderThai() {
   let listThai = JSON.parse(localStorage.getItem("listThai")) || []; // Lấy dữ liệu từ local storage
   loadFilms(listThai, "loadThai");
 }
-function renderTBN() {
-  locTBN();
-  let listTBN = JSON.parse(localStorage.getItem("listTBN")) || []; // Lấy dữ liệu từ local storage
-  loadFilms(listTBN, "loadTBN");
+function renderKorea() {
+  locKorea();
+  let listKorea = JSON.parse(localStorage.getItem("listKorea")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listKorea, "loadKorea");
 }
 function renderUSA() {
   locUSA();
   let listUSA = JSON.parse(localStorage.getItem("listUSA")) || []; // Lấy dữ liệu từ local storage
   loadFilms(listUSA, "loadUSA");
+}
+function renderSapChieu() {
+  locSapChieu();
+  let listSapChieu = JSON.parse(localStorage.getItem("listSapChieu")) || []; // Lấy dữ liệu từ local storage
+  loadFilms(listSapChieu, "loadSCh");
 }
 
 // Hàm xử lý tìm kiếm
