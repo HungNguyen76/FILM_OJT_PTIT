@@ -70,7 +70,7 @@ function loadFilms(filmList, containerId) {
     out += `
       <div class="film col-md-3 mb-4 d-flex justify-content-center" data-id="${filmList[i].id}">
         <div class="card rounded-lg" style="width: 18rem;">
-          <img src="${filmList[i].img1}" class="card-img-top" alt="Product Image" style="height: 400px;">
+          <img src="${filmList[i].img1}" class="card-img-top" alt="Product Image" style="height: 200px;">
           <div class="card-body">
             <h5 class="card-title">${filmList[i].name}</h5>
           </div>

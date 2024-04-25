@@ -1,7 +1,5 @@
-body,
-html {
-  font-family: Arial, sans-serif;
-  background-color: #0b0b0b;
+body, html {
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -16,46 +14,47 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 200px;
-  background-color: #9ccfff;
+  height: 650px;
+  width: 250px;
+  background-color: #6ace6ae4;
   padding: 20px;
   margin: 10px 0 10px 20px;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .body {
   flex-grow: 1;
   padding: 20px;
   margin-left: 280px;
-  background-color: #0b0b0b;
+  background-color: #fff;
 }
 
 .side-bar ul {
   padding: 0;
+  display: grid;
+  justify-content: center;
   list-style-type: none;
   font-size: large;
-  margin-top: 30px;
+  margin: 0;
 }
-
 .side-bar ul li {
   margin: 10px;
+  height: 27px;
+  display: flex;
+    align-items: center;
 }
 
 .side-bar ul li a {
-  color: #4c3933;
+  color: black;
   text-decoration: none;
   transition: transform 0.3s;
 }
-
-/* Hover effect cho các mục trong sidebar */
 .side-bar ul li:hover {
-  color: #00f;
   transform: scale(1.2);
 }
-
 .side-bar ul li a:hover {
-  color: #dd9baa;
+  color: #f1718d;
 }
 
 .body .nav-bar {
@@ -86,6 +85,7 @@ hr {
 
 #admin {
   background-color: aliceblue;
+  margin-left: 30px;
 }
 
 .admin-card img {
