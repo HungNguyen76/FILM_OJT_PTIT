@@ -18,7 +18,7 @@ function renderFilmsByViews() {
     filmsContainer.innerHTML += `
       <div class="film col-md-3 mb-4 d-flex justify-content-center">
         <div class="card rounded-lg" >
-          <img src="${film.img1}" class="card-img-top" alt="Product Image"  style="height: 400px; width: 300px">
+          <img src="${film.img1}" class="card-img-top" alt="Product Image"  style="height: 300px; width: 250px">
           <div class="card-body">
             <h5 class="card-title">${film.name}</h5>
             <p class="card-text">Lượt xem: ${film.views}</p> <!-- Hiển thị số lượt xem -->
