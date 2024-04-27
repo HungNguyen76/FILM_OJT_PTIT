@@ -67,14 +67,24 @@ body, html {
 }
 
 hr {
-  color: black;
+  color:rgb(220, 112, 115);
 }
 .card-body {
   display: flex;
+  font-size: medium;
 }
 
 .card-body p {
   width: 130px;
+}
+.card-body div {
+  width: 180px;
+}
+.title {
+  margin: 16px 0 0 0;
+}
+.content_of_title {
+  margin: 0 0 16px 0;
 }
 
 .admin-film {
@@ -84,8 +94,9 @@ hr {
 }
 
 #admin {
-  background-color: aliceblue;
-  margin-left: 30px;
+  background-color:rgba(255, 242, 225, 0.89);
+  margin-left: 0px;
+  border-radius: 10px;
 }
 
 .admin-card img {
@@ -102,18 +113,21 @@ hr {
   margin-right: 10px;
   padding: 5px;
 }
+input.form-control {
+  margin: 0 0 10px 0;
+}
 /*home*/
 .item button {
   padding: 5px 10px;
   background-color: #4caf50;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 7px;
   cursor: pointer;
 }
 
 .item button:hover {
-  background-color: #45a049;
+  background-color: #167b1a;
 }
 .nut {
   display: flex;

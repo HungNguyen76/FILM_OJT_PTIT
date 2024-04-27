@@ -1,48 +1,54 @@
-body, html {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body,
+html {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .container {
-    display: flex;
-    height: 100%; /* Thiết lập chiều cao 100% cho container */
+  display: flex;
+  height: 100%; /* Thiết lập chiều cao 100% cho container */
 }
+
 
 .side-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 650px;
-    width: 250px;
-    background-color: #6ace6ae4;
-    padding: 20px;
-    margin: 10px 0 10px 20px;
-    border-radius: 8px;
-  }
-
-
-.body {
-    flex-grow: 1; /* Body mở rộng để lấp đầy không gian còn lại của container */
-    padding: 20px;
-    margin-left: 280px;
-    background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 650px;
+  width: 250px;
+  background-color: #6ace6ae4;
+  padding: 20px;
+  margin: 10px 0 10px 20px;
+  border-radius: 8px;
+  border-radius: 8px;
+    box-sizing: border-box;
 }
+
+
+
+
 .side-bar ul {
-   padding: 0;
-   display: grid;
-   justify-content: center;
-   font-size: large ;
-   list-style-type: none;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    list-style-type: none;
+    font-size: large;
+    margin: 0;
 }
 .side-bar ul li {
-    margin: 10px; 
+    margin: 10px;
+    height: 27px;
+    display: flex;
+    align-items: center;
 }
+
 .side-bar ul li a {
     color: black;
     text-decoration: none;
     transition: transform 0.3s;
+    font-family: sans-serif;
 }
 .side-bar ul li:hover {
     transform: scale(1.2);
@@ -50,41 +56,81 @@ body, html {
 .side-bar ul li a:hover {
     color: #f1718d;
 }
-
+.side-bar ul {
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  font-size: large;
+  list-style-type: none;
+}
+.side-bar ul li {
+  margin: 10px;
+}
+.side-bar ul li a {
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+.side-bar ul li:hover {
+  transform: scale(1.2);
+}
+.side-bar ul li a:hover {
+  color: #f1718d;
+}
 .body {
+    flex-grow: 1; /* Body mở rộng để lấp đầy không gian còn lại của container */
+    padding: 20px;
+    margin-left: 280px ;
+    background-color: #fff;
     display: grid;
-    grid-template-rows: auto 1fr; /* Chiếm hết phần còn lại của .body */
+    grid-template-rows: auto 1fr; 
+  }
+  
+.body {
+  grid-template-rows: auto 1fr; /* Chiếm hết phần còn lại của .body */
 }
 
 .body .nav-bar {
-    border: 1px black solid;
-    background-color: antiquewhite;
+  background-color: #6ace6ae4;
+  height: 100px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  border-radius: 15px;
+}
+.nav-bar img {
+    width: 100px;
     height: 60px;
 }
 
 .body .content {
-    margin-top: 50px;
-    background-color: white;
-    display: grid;
-    font-size: 70px;
+  margin-top: 50px;
+  background-color: white;
+  display: grid;
+  font-size: 70px;
 }
 .content h1 {
-    text-align: center;
-    border: 1px solid none;
-    border-radius: 20px;
-    background-color: rgb(171, 113, 225);
-    margin: 10px 0 30px 0;
-
+  text-align: center;
+  border: 1px solid none;
+  border-radius: 20px;
+  background-color: rgb(171, 113, 225);
+  margin: 10px 0 30px 0;
 }
 .space {
-    height: 100px;
+  height: 100px;
+}
+div.card-body {
+    background-color: antiquewhite;
 }
 
 h5.card-title {
-    text-align: center;
-    font-size: medium;
+  text-align: center;
+  font-size: medium;
 }
 
 i {
-    padding-right: 2px;
+  padding-right: 3px;
+  width: 18px;
+  height: 18.67px;
+  font-weight: 900;
 }

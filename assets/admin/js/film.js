@@ -18,11 +18,13 @@ function renderFavoriteFilms() {
           </div>
           <div class="card-body">
           <div>
-          <p > Tên: ${adminFilms[i].name}</p>
+          <p class="title"> Tên: </p>
+          <p class="content_of_title">${adminFilms[i].name}</p>
           <p>ID: ${adminFilms[i].id}</p></div>
           <div>
-          <p >  <p>Quốc gia: ${adminFilms[i].nation}</p>
-          <p>Thời lượng: ${adminFilms[i].time}</p></div>
+          <p style="white-space: nowrap;">Quốc gia: ${adminFilms[i].nation}</p>
+          <p class="title">Thời lượng: </p>
+          <p class="content_of_title">${adminFilms[i].time}</p></div>
              
              
             </div>

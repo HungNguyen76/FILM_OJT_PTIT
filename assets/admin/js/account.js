@@ -16,9 +16,9 @@ function renderUsersAccounts() {
     out += `
       <div class="admin-film col-md-3 mb-4 d-flex justify-content-center ${adminClass}">
         <div class="card-body">
-            <p >Tài khoản: ${accounts[i].email}</p>
-            <p>Password: ${accounts[i].password}</p>
-            <p>Trạng thái: ${blockedStatus}</p>
+            <p style="white-space: nowrap;">Tài khoản: ${accounts[i].email}</p>
+            <p style="white-space: nowrap;">Password: ${accounts[i].password}</p>
+            <p style="white-space: nowrap;">Trạng thái: ${blockedStatus}</p>
         </div>
         <div class="nut">
           <button class="block-account-btn" data-index="${i}">${blockButtonText}</button>
