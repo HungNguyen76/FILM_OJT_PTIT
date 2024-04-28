@@ -341,7 +341,7 @@ const films = [
     period: "sắp chiếu",
   },
 ];
-localStorage.setItem("listAll", JSON.stringify(films));
+// localStorage.setItem("listAll", JSON.stringify(films));
 //em ctrl S lại xong qua trang
 
 window.onload = function () {

@@ -170,7 +170,15 @@ function watchFilm(filmId) {
   localStorage.setItem("listAll", JSON.stringify(allFilms));
 
   // Chuyển hướng đến trang xem phim
-  window.location.href = "/pages/pageOut/video.html";
+  var userId = localStorage.getItem("checkLogin");
+
+  // Nếu người dùng đã đăng nhập (userId khác null), chuyển hướng đến trang "dashboard.html"
+  if (userId) {
+    window.location.href = "/pages/pageOut/video.html";
+  } else {
+    // Nếu người dùng chưa đăng nhập, chuyển hướng đến trang "login.html"
+    window.location.href = "/pages/pageLogin/video.html";
+  }
 }
 
 function logout() {

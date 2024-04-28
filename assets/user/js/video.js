@@ -37,7 +37,7 @@ function video(filmId) {
           <div class="vietsub-buttons"> 
           <div>  <button class="vietsub-btn"><a href="#">Sever #1</a></button>
           <button class="vietsub-btn"><a href="#">Sever #2</a></button></div>
-          <div><h5>Lượt xem: ${video.views} </h5></div>
+          <div><h5> <i class="fa fa-eye"></i> : ${video.views} </h5></div>
         
         </div>
         <br />
