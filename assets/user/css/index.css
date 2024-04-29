@@ -1,20 +1,9 @@
-.footer {
-  background-color: rgb(21, 21, 21);
-  color: #fff;
-  /* position: fixed; */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
 body {
   margin: 0;
   padding: 0;
   font-family: Montserrat, sans-serif;
 }
-.footer1 {
-  display: flex;
-  justify-content: space-evenly;
-}
+
 .logo {
   height: 15px;
   width: 25px;
@@ -60,21 +49,6 @@ body {
 }
 .des2_col2 {
   padding: 0px 60px;
-}
-.footer2 {
-  display: flex;
-  justify-content: space-around;
-  font-size: 10px;
-}
-.footer2 p {
-  color: rgb(186, 186, 186);
-  margin-left: -140px;
-}
-.footer2 .footer2_blue {
-  color: rgb(35, 128, 251);
-}
-.footer2 .footer2_blue span {
-  color: red;
 }
 
 .card-body {

@@ -174,12 +174,11 @@ const films = [
     id: "film9",
     img1: "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
     name: "Naruto Shippuden",
-
     type: "Anime",
     rate: "normal",
     nation: "Nhật Bản",
     daodien: "Kishimoto Masashi",
-    time: "500 tập",
+    time: "100 phút",
     noidung:
       "Naruto: Shippuden là một bộ anime truyền hình dài tập được chuyển thể từ Phần II của loạt manga của Kishimoto Masashi với tổng cộng 500 tập phim. Nội dung phim lấy bối cảnh hai năm rưỡi sau Phần I trong vũ trụ Naruto, xoay quanh cậu nhẫn giả thiếu niên Uzumaki Naruto và những đồng đội của cậu.",
     dienvien: "Takeuchi Junko | Nakamura Chie | Inoue Kazuhiko",
@@ -341,7 +340,7 @@ const films = [
     period: "sắp chiếu",
   },
 ];
-// localStorage.setItem("listAll", JSON.stringify(films));
+localStorage.setItem("listAll", JSON.stringify(films));
 //em ctrl S lại xong qua trang
 
 window.onload = function () {
