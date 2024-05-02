@@ -71,6 +71,8 @@ body {
   font-size: 16px;
   color: #beb4b4;
   font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 .register-form .form-submit:hover {
   cursor: pointer;
@@ -90,4 +92,12 @@ body {
   text-decoration: none;
   color: #d8c7c7;
   margin-top: 15px;
+}
+.register-form a {
+  color: rgb(1, 164, 164);
+  display: flex;
+  justify-content: center;
+}
+.form-message {
+  color: brown;
 }

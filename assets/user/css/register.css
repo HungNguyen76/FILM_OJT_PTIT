@@ -81,7 +81,7 @@ body {
 .form-submit a {
   text-decoration: none;
   color: #d8c7c7;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .form-group i {
   position: absolute;
@@ -90,4 +90,7 @@ body {
   transform: translateY(-50%);
   font-size: 20px;
   color: #000000;
+}
+.form-message {
+  color: brown;
 }
