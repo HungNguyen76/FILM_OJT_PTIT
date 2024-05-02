@@ -62,19 +62,22 @@ function renderTrailers(filmId) {
   var selectedFilm = allFilms.find((film) => film.id === filmId);
 
   var modal = document.getElementById("detailFIlm");
-  console.log("modal", modal);
+  // Clear previous content
+  modal.innerHTML = "";
+
+  // Append new iframe
   modal.innerHTML += `
-        <iframe
-        width="560"
-        height="315"
-        src="${selectedFilm.trailerUrl}"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    `;
+    <iframe
+      width="560"
+      height="315"
+      src="${selectedFilm.trailerUrl}"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  `;
 }
 function viewDetails(filmId) {
   renderFilmDetails(filmId);
