@@ -145,13 +145,11 @@ function editFilm(filmId) {
     <input type="text" id="type" value="${filmToEdit.type}" required><br>
       <label for="editNation">Poster:</label>
     <input type="text" id="img" value="${filmToEdit.img1}" required><br>
-     <label for="editNation">Quốc gia:</label>
-    <input type="text" id="editNation" value="${filmToEdit.nation}" required><br>
+     
   </div>
     
 <div>
-  <label for="editTime">Thời lượng:</label>
-    <input type="text" id="editTime" value="${filmToEdit.time}" required><br>
+  
    
     <label for="editTime">Đạo diễn:</label>
     <input type="text" id="daodien" value="${filmToEdit.daodien}" required><br>
@@ -164,6 +162,19 @@ function editFilm(filmId) {
 
     <label for="noidung">Noi Dung:</label>
       <textarea id="noidung" name="editDescription">${filmToEdit.noidung}</textarea><br />
+</div>
+<div>
+    <label for="editTime">Thời lượng:</label>
+    <input type="text" id="editTime" value="${filmToEdit.time}" required><br>
+    <label for="editNation">Quốc gia:</label>
+    <input type="text" id="editNation" value="${filmToEdit.nation}" required><br>
+      <label for="trailer">Trailer:</label>
+    <input type="text" id="trailer" value="${filmToEdit.trailerUrl}" required><br>
+    <label for="video">video:</label>
+    <input type="text" id="video" value="${filmToEdit.video}" required><br>
+    
+
+
 </div>
   </div>
 
@@ -192,6 +203,8 @@ function saveEditedFilm(filmId) {
   var type = document.getElementById("type").value;
   var dienvien = document.getElementById("dienvien").value;
   var noidung = document.getElementById("noidung").value;
+  var trailer = document.getElementById("trailer").value;
+  var video = document.getElementById("video").value;
 
   // Cập nhật thông tin phim
   allMovies[filmToEditIndex].name = editedName;
@@ -207,6 +220,9 @@ function saveEditedFilm(filmId) {
   allMovies[filmToEditIndex].dienvien = dienvien;
 
   allMovies[filmToEditIndex].noidung = noidung;
+  allMovies[filmToEditIndex].trailerUrl = trailer;
+
+  allMovies[filmToEditIndex].video = video;
 
   // Lưu lại danh sách phim vào localStorage
   localStorage.setItem("listAll", JSON.stringify(allMovies));
