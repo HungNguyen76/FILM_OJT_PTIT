@@ -6,7 +6,7 @@ window.onload = function () {
 function renderFilmDetails(filmId) {
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
-  console.log("selectedFilm", selectedFilm);
+
   var modalBody = document.getElementById("filmDetailsModalBody");
   modalBody.innerHTML = `
 
@@ -25,6 +25,7 @@ function renderFilmDetails(filmId) {
               <p>Quốc gia</p>
               <p>Thể loại</p>
               <p>Thời lượng</p>
+          
             </div>
             <div class="colon">
               <p>:</p>
@@ -33,6 +34,7 @@ function renderFilmDetails(filmId) {
               <p>:</p>
               <p>:</p>
               <p>:</p>
+            
             </div>
             <div class="infor">
               <p>${selectedFilm.daodien}</p>
@@ -41,6 +43,7 @@ function renderFilmDetails(filmId) {
               <p>${selectedFilm.nation}</p>
               <p>${selectedFilm.type}</p>
               <p>${selectedFilm.time}</p>
+              
             </div>
           </div>
         
@@ -129,13 +132,14 @@ function watchFilm(filmId) {
   localStorage.setItem("selectedFilmId", filmId);
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
+  // Tăng số lượt xem cho phim được chọn và chuyển đổi sang số nguyên
+  if (selectedFilm) {
+    selectedFilm.views = (selectedFilm.views || 0) + 1; // Đảm bảo rằng views là một số và tăng nó lên
+    localStorage.setItem("listAll", JSON.stringify(allFilms)); // Cập nhật lại danh sách phim với số lượt xem mới
+  }
 
   // Kiểm tra xem người dùng đã đăng nhập hay chưa và lấy ID người dùng
   var userId = localStorage.getItem("checkLogin"); // Giả sử bạn lưu ID người dùng khi đăng nhập
-  if (!userId) {
-    window.location.href = "/pages/pageLogin/video.html";
-    return;
-  }
 
   // Lấy lịch sử xem phim từ local storage hoặc khởi tạo đối tượng rỗng nếu chưa có
   var history = JSON.parse(localStorage.getItem("watchHistory")) || {};
@@ -157,11 +161,24 @@ function watchFilm(filmId) {
   // Thêm mục mới vào mảng lịch sử của người dùng
   history[userId].push(newHistoryEntry);
 
+  // Lưu danh sách phim đã cập nhật vào local storage
+  localStorage.setItem("listAll", JSON.stringify(allFilms));
+
   // Lưu lịch sử đã cập nhật vào local storage
   localStorage.setItem("watchHistory", JSON.stringify(history));
+  // Lưu danh sách phim đã cập nhật vào local storage
+  localStorage.setItem("listAll", JSON.stringify(allFilms));
 
   // Chuyển hướng đến trang xem phim
-  window.location.href = "/pages/pageOut/video.html";
+  var userId = localStorage.getItem("checkLogin");
+
+  // Nếu người dùng đã đăng nhập (userId khác null), chuyển hướng đến trang "dashboard.html"
+  if (userId) {
+    window.location.href = "/pages/pageOut/video.html";
+  } else {
+    // Nếu người dùng chưa đăng nhập, chuyển hướng đến trang "login.html"
+    window.location.href = "/pages/pageLogin/video.html";
+  }
 }
 
 function logout() {

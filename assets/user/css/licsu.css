@@ -1,8 +1,10 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+  background-image: url("https://i.pinimg.com/564x/21/65/22/2165228494812bccc605661eb5beb3fe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin: 0;
+  padding: 20px; */
 }
 .film-list {
   display: flex;
@@ -10,27 +12,53 @@ body {
   justify-content: space-around;
 }
 .film-card {
-  background: #fff;
+  background: #e5dada;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 300px;
+  width: 350px;
 }
 .film-image {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
   border-radius: 5px;
 }
+.film-card {
+  display: flex;
+  align-items: center;
+}
+
+.film-image {
+  width: 170px;
+  height: 300px;
+  border-radius: 5px;
+}
+
 .film-info {
-  margin-top: 10px;
+  margin-left: 10px;
 }
-.film-info h3 {
-  margin: 0;
-  color: #333;
+
+h1 {
+  color: #ffc0cb;
+  text-align: center;
+  font-family: "Jersey 15", sans-serif;
+  font-size: 30px;
 }
-.film-info p {
-  color: #666;
-  font-size: 14px;
-  line-height: 1.6;
+
+.film-card:hover {
+  background-color: #8bcfcf;
+}
+.nut {
+  display: flex;
+  justify-content: flex-end;
+}
+button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+button {
+  border-radius: 10px;
+  padding: 10px;
 }

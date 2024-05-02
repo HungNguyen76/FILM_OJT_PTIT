@@ -2,6 +2,8 @@
   margin-bottom: 10px;
   border: 1px solid #fff6f6;
   padding: 10px;
+  justify-content: space-between;
+  display: flex;
 }
 .comment strong {
   font-weight: bold;

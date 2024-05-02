@@ -1,67 +1,102 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  color: antiquewhite;
+  background-color: #161616;
 }
 
 .container {
-    display: flex;
-    height: 100%; /* Thiết lập chiều cao 100% cho container */
+  display: flex;
+  height: 100%;
 }
-
-/* .side-bar {
-    width: 200px;
-    background-color: rgb(232, 117, 236);
-    padding: 20px;
-    margin: 10px 0 10px 20px;
-    border-radius: 8px;
-} */
 
 .side-bar {
-    position: fixed; /* Sử dụng fixed positioning */
-    top: 0; /* Đặt phần tử ở đỉnh màn hình */
-    left: 0; /* Đặt phần tử ở bên trái màn hình */
-    height: 650px; /* Chiếm toàn bộ chiều cao của màn hình */
-    width: 200px;
-    background-color: rgb(149, 220, 240);
-    padding: 20px;
-    margin: 10px 0 10px 20px;
-    border-radius: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: rgb(149, 220, 240);
+  padding: 20px;
+  margin: 10px 0 10px 20px;
+  border-radius: 8px;
 }
 
-
-.body {
-    flex-grow: 1; /* Body mở rộng để lấp đầy không gian còn lại của container */
-    padding: 20px;
-    margin-left: 280px;
-    background-color: #fff;
-}
 .side-bar ul {
-   padding: 0;
-   display: grid;
-   justify-content: center;
-   font-size: larger ;
-   list-style-type: none;
+  padding: 0;
+  list-style-type: none;
 }
+
 .side-bar ul li {
-    margin: 10px;
-    
+  margin: 10px;
 }
+
 .side-bar ul li a {
-    color: black;
-    text-decoration: none;
-    transition: transform 0.3s;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s;
 }
+
 .side-bar ul li:hover {
-    color: #00f; /* Màu chữ khi rê chuột vào */
-    transform: scale(1.2);
+  color: #00f;
+  transform: scale(1.2);
 }
+
 .side-bar ul li a:hover {
-    color: crimson;
+  color: crimson;
 }
 
 .body {
-    display: grid;
-    grid-template-rows: auto 1fr; /* Chiếm hết phần còn lại của .body */
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 280px;
+  background-color: #161616;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.card-img-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-img-top {
+  width: 200px; 
+  height: auto;
+  margin: 0 20px; 
+}
+.card-body{
+  margin: 0 20px;
+}
+.card.rounded-lg {
+  margin-top: 40px; 
+}
+
+.card-img-top {
+  width: 200px; 
+  height: auto;
+  margin: 0 20px; 
+  border-radius: 20px;
+}
+
+
+/* Card */
+.card.rounded-lg {
+  margin-top: 40px;
+  margin-left: 30px;
+  background-color: #161616;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng smooth */
+}
+
+.card.rounded-lg:hover {
+  transform: translateY(5px); 
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); 
+}

@@ -4,8 +4,10 @@ window.onload = function () {
 };
 function video(filmId) {
   renderRelatedFilms(filmId);
+  addStarRatingEventListeners();
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var video = allFilms.find((film) => film.id === filmId);
+  console.log(video.view);
 
   var modal = document.getElementById("video");
 
@@ -33,8 +35,10 @@ function video(filmId) {
           <br />
         
           <div class="vietsub-buttons"> 
-          <button class="vietsub-btn"><a href="#">Sever #1</a></button>
-          <button class="vietsub-btn"><a href="#">Sever #2</a></button>
+          <div>  <button class="vietsub-btn"><a href="#">Sever #1</a></button>
+          <button class="vietsub-btn"><a href="#">Sever #2</a></button></div>
+          <div><h5> <i class="fa fa-eye"></i> : ${video.views} </h5></div>
+        
         </div>
         <br />
         <hr />
@@ -65,9 +69,16 @@ function video(filmId) {
       </div>
           <br />
           <hr />
-
-    
-       
+          <h5>Đánh giá:</h5>
+        <div class="rating">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+           <span class="star" data-value="3">&#9733;</span>
+           <span class="star" data-value="4">&#9733;</span>
+           <span class="star" data-value="5">&#9733;</span>
+        </div>
+          <br />
+          <hr />
           
           
           </div>
@@ -77,7 +88,10 @@ function video(filmId) {
   localStorage.setItem("selectedFilmId", filmId);
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
-
+  if (selectedFilm) {
+    selectedFilm.views = (selectedFilm.views || 0) + 1;
+    localStorage.setItem("listAll", JSON.stringify(allFilms)); // Cập nhật lại danh sách phim với số lượt xem mới
+  }
   // Kiểm tra xem người dùng đã đăng nhập hay chưa và lấy ID người dùng
   var userId = localStorage.getItem("checkLogin"); // Giả sử bạn lưu ID người dùng khi đăng nhập
 
@@ -105,6 +119,39 @@ function video(filmId) {
   localStorage.setItem("watchHistory", JSON.stringify(history));
 
   renderComments(filmId);
+}
+// JavaScript để xử lý sự kiện click vào ngôi sao
+function addStarRatingEventListeners() {
+  // Ensure that the DOM has been updated with the modal content
+  setTimeout(function () {
+    var stars = document.querySelectorAll(".star");
+    stars.forEach(function (star) {
+      star.addEventListener("click", function (e) {
+        var rating = parseInt(e.target.getAttribute("data-value"));
+        setRating(rating, stars);
+      });
+    });
+  }, 0);
+}
+
+function setRating(rating, stars) {
+  // Update the stars display based on the rating
+  stars.forEach(function (star, index) {
+    if (index < rating) {
+      star.style.color = "gold";
+    } else {
+      star.style.color = "grey";
+    }
+  });
+
+  // Save the rating to localStorage or send it to the server
+  saveRating(rating);
+}
+
+function saveRating(rating) {
+  // Save the rating to localStorage
+  // Alternatively, you can send the rating to the server
+  localStorage.setItem("filmRating", rating);
 }
 
 var nameLogin = JSON.parse(localStorage.getItem("nameLogin")) || {};

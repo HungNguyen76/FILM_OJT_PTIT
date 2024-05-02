@@ -1,5 +1,5 @@
 window.onload = function () {
-  renderTBN();
+  renderKorea();
 };
 // Hàm xử lý tìm kiếm
 function searchMovies() {
