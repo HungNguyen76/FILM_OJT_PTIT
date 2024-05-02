@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
@@ -21,9 +28,13 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="/assets/user/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/assets/user/css/video.css" />
   </head>
-  <body>
-    <!-- navbar -->
+  <body style="background-color: black">
     <nav class="navbar navbar-expand-lg">
       <div class="containerNavbar">
         <a class="navbar-brand" href="#">
@@ -68,59 +79,8 @@
                 >Hành Động</a
               >
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Quốc Gia
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/pages/pageOut/quocgia/nhatban.html"
-                    >Nhật Bản</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/pages/pageOut/quocgia/usa.html"
-                    >USA</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/pages/pageOut/quocgia/thai.html"
-                    >Thái</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/pages/pageOut/quocgia/tbn.html"
-                    >Tây Ban Nha</a
-                  >
-                </li>
-              </ul>
-            </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+
           <div class="dropdown">
             <img
               class="usercenter_avatar_img iconlogin icon"
@@ -139,63 +99,17 @@
         </div>
       </div>
     </nav>
-
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div
-          class="carousel-item active"
-          style="
-            background-image: url('https://i.pinimg.com/originals/49/72/e0/4972e0c483b74c4f9718f1709ad67f66.jpg');
-          "
-        >
-          <div class="carousel-caption"></div>
-        </div>
-        <div
-          class="carousel-item"
-          style="
-            background-image: url(' https://png.pngtree.com/background/20230330/original/pngtree-sci-fi-mechanical-blue-background-picture-image_2207346.jpg  ');
-          "
-        >
-          <div class="carousel-caption"></div>
-        </div>
-        <div
-          class="carousel-item"
-          style="
-            background-image: url('https://png.pngtree.com/background/20230401/original/pngtree-science-and-technology-city-background-picture-image_2253028.jpg  ');
-          "
-        >
-          <div class="carousel-caption"></div>
-        </div>
-        <!-- Thêm các slide khác nếu cần -->
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    <div class="pr">
+      <h3>Cần tài trợ !!!</h3>
+      <img src="/img/kha.jpg" alt="" style="height: 150px; width: 150px" />
+      <img src="/img/ta.jpg" alt="" style="height: 150px; width: 150px" />
     </div>
-    <br />
-    <main>
-      <!-- render sp -->
-      <div class="container mt-1">
-        <h3 style="color: #fff">ALL</h3>
-        <hr />
-        <div class="row" id="load" style="width: 100%"></div>
-      </div>
-    </main>
+
+    <div class="containerFilm">
+      <div id="video"></div>
+
+      <div id="relatedFilms"></div>
+    </div>
 
     <footer class="footer">
       <div class="footer1">
@@ -242,12 +156,7 @@
         <p class="footer2_blue">- Terms & condition <span>*</span></p>
       </div>
     </footer>
-
     <script src="/assets/user/js/index.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="/assets/user/js/video.js"></script>
   </body>
 </html>

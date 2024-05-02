@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/assets/admin/css/add.css" />
+  </head>
+  <body>
+    <div class="black">
+      <div class="add">
+        <img src="/assets/user/img/logo.jpg" alt="" width="20px" />
+        <h1>Add Film</h1>
+      </div>
+      <a href="/pages/pageOut/trangchulogout.html"
+        ><i class="fa-solid fa-house-user"></i> User</a
+      >
+
+      <form id="addFilmForm">
+        <div class="all">
+          <div class="coban">
+            <h3 for="">Thông tin cơ bản</h3>
+            <label for="carId" class="in4">ID Film</label>
+            <input type="text" id="id" name="carId" required />
+            <br /><br />
+            <label for="carName">Name</label>
+            <input type="text" id="Name" required />
+            <br /><br />
+          </div>
+          <div class="imgall">
+            <h3>File hình ảnh</h3>
+            <br /><br />
+            <label for="img1">Poster</label>
+            <input type="text" id="Poster" name="img1" required />
+            <br /><br />
+            <label>Trailer</label>
+            <input type="text" id="Trailer" name="Trailer" required />
+            <br /><br />
+            <label>Video</label>
+            <input type="text" id="Video" name="Video" required />
+            <br /><br />
+            <label for="">Đánh giá </label>
+            <input type="text" id="rate" required />
+            <br /><br />
+            <label for="">Nội dung phim </label>
+            <input type="text" id="noidung" required />
+            <br /><br />
+          </div>
+          <div class="kt">
+            <h3>Các Thông tin khác</h3>
+            <label for="" class="in4">Quốc gia</label>
+            <input type="text" id="nation" required />
+            <br /><br />
+            <label for="">Năm sản xuất </label>
+            <input type="text" id="nam" required />
+            <br /><br />
+            <label for="">Đạo diễn </label>
+            <input type="text" id="daodien" required />
+            <br /><br />
+            <label for="">Thời lượng film </label>
+            <input type="text" id="time" required />
+            <br /><br />
+            <label for="">Diễn Viên </label>
+            <input type="text" id="dienvien" required />
+            <br /><br />
+            <label for="">Thể loại </label>
+            <input type="text" id="type" required />
+            <br /><br />
+          </div>
+        </div>
+        <div class="buttonall">
+          <button class="button">ADD Film</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="/assets/admin/js/addfilm.js"></script>
+  </body>
+</html>

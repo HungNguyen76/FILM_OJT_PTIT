@@ -1,0 +1,153 @@
+body {
+  background-color: black;
+  color: whitesmoke;
+}
+.video {
+  text-align: center;
+  margin: 35px;
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid whitesmoke;
+}
+.name {
+  text-align: center;
+}
+#relatedFilms {
+  text-align: center;
+  background-color: black;
+}
+.relatedFilmsContainer {
+  margin: 35px 140px; /* Giữa trên và dưới, căn giữa trái và phải */
+  width: fit-content;
+}
+.pr {
+  text-align: center;
+  border: 2px solid rgb(5, 241, 214);
+}
+.card {
+  background-color: rgb(26, 25, 25);
+}
+.navbar-nav {
+  margin-left: 400px;
+}
+.containerFilm {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px;
+}
+.card-title {
+  text-align: center;
+  font-size: 15px;
+}
+.film {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  margin: auto;
+  background-color: rgb(26, 25, 25);
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+  width: 150px; /* Đặt chiều rộng cố định cho tất cả hình ảnh */
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 15px;
+}
+/* CSS cho nút Vietsub */
+.vietsub-buttons {
+  display: flex;
+
+  gap: 10px;
+}
+
+.vietsub-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vietsub-btn:hover {
+  background-color: #555;
+}
+.vietsub-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.pinterest {
+  background-color: #bd081c;
+}
+.whatsapp {
+  background-color: #25d366;
+}
+
+.social-icon i {
+  font-size: 24px;
+}
+/* CSS cho các bình luận */
+.comment {
+  color: #333;
+  background-color: #f8f9fa; /* Màu nền cho thẻ bình luận */
+  border: 1px solid #e1e4e8; /* Viền cho thẻ */
+  border-radius: 5px; /* Bo góc cho thẻ */
+  padding: 10px; /* Khoảng cách trong thẻ */
+  margin-bottom: 10px; /* Khoảng cách giữa các thẻ bình luận */
+}
+
+.comment strong {
+  color: #007bff; /* Màu cho tên người dùng */
+}
+#commentText {
+  border-radius: 5px;
+}
+.but {
+  border-radius: 8px;
+  color: whitesmoke;
+  background-color: #333;
+}

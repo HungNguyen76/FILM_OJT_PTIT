@@ -1,0 +1,137 @@
+body,
+html {
+  background-color:black;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%; 
+}
+
+.side-bar {
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  height: 650px;
+  width: 200px;
+  background-color: #9ccfff;
+  padding: 20px;
+  margin: 10px 0 10px 20px;
+  border-radius: 8px;
+}
+
+.body {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 280px;
+  background-color: #fff;
+}
+.side-bar ul {
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  font-size: larger;
+  list-style-type: none;
+}
+.side-bar ul li {
+  margin: 10px;
+}
+.side-bar ul li a {
+  color: #4c3933;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+.side-bar ul li:hover {
+  color: #00f; 
+  transform: scale(1.2);
+}
+.side-bar ul li a:hover {
+  color: rgb(140, 115, 120);
+}
+
+.body {
+  grid-template-rows: auto 1fr; 
+}
+
+.body .nav-bar {
+  border: 1px black solid;
+  background-color: antiquewhite;
+  height: 5px;
+}
+
+.body .content {
+  margin-top: 50px;
+  /* background-color: blanchedalmond; */
+
+  font-size: 70px;
+}
+hr {
+  color: black;
+}
+.card-body {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+p {
+  width: 130px;
+}
+.admin-film {
+  justify-content: space-between;
+  display: flex;
+  font-size: large;
+}
+img {
+  height: 100px;
+}
+
+.content{
+  background-color: aliceblue;
+}
+.body{
+  background-color: black;
+}
+
+.home {
+  display:flex;
+  margin-top: 20px; 
+  margin-left: 300px; 
+  background-color:rgb(140, 115, 120);
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: none; 
+  cursor: pointer; 
+  font-size: 20px;
+  color: rgb(207, 201, 201); 
+}
+
+.home:hover {
+  color: rgb(36, 34, 35); 
+}
+
+
+.nut {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.nut button {
+  margin: 0 5px;
+}
+.nut button:hover {
+  color: brown;
+}
+
+.card-body{
+  margin: 20px;
+}
+
+/* Thêm lớp CSS mới cho tài khoản admin */
+/* .admin-film.admin {
+    background-color: rgba(255, 0, 0, 0.1); 
+} */

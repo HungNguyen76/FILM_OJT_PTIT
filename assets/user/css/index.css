@@ -98,6 +98,11 @@ body {
 .containerNavbar {
   display: flex;
   margin: 15px;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+.navbar-scrolled {
+  background-color: rgb(46, 45, 45);
 }
 .left {
   margin: 15px;
@@ -135,9 +140,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: inherit;
-}
 body {
   background-color: rgb(11, 11, 11);
   font: 20px/20px pingfang SC, Microsoft YaHei, "\5FAE\8F6F\96C5\9ED1",
@@ -151,6 +153,7 @@ body {
   color: white;
 }
 .navbar-nav .nav-link:hover {
+  font-size: 30px;
   color: lightskyblue;
 }
 .containerNavbar {
@@ -223,11 +226,12 @@ body {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  transition: background-color 0.5s ease; /* Smooth background transition */
+  transition: background-color 0.5s ease;
 }
 
 .dropdown-content a:hover {
-  background-color: #555; /* Darker background on hover */
+  text-decoration: none;
+  background-color: #555;
 }
 
 .dropdown:hover .dropdown-content {
@@ -246,6 +250,8 @@ h3 {
 }
 
 main {
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url("https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg");
 }
 .title {
@@ -257,12 +263,37 @@ h2 a {
   justify-content: flex-end;
 }
 
-/* CSS để ẩn nút yêu thích và xem thông tin */
 .film-actions {
   display: none;
 }
 
-/* Hiển thị nút yêu thích và xem thông tin khi hover vào film */
+.film:hover {
+  position: relative;
+}
+
 .film:hover .film-actions {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.info-btn {
+  border-color: #eae4e4;
+}
+.info-btn:hover {
+  border-color: rgb(6, 236, 6);
+  background-color: rgb(6, 236, 6);
+}
+.favorite-btn {
+  border-color: #eae4e4;
+}
+.favorite-btn:hover {
+  border-color: rgb(240, 34, 34);
+  background-color: rgb(247, 37, 37);
 }

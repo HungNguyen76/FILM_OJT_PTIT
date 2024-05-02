@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (userFound) {
         localStorage.setItem("checkLogin", userFound.idUser);
+        localStorage.setItem(
+          "nameLogin",
+          JSON.stringify({
+            username: userFound.username,
+            idUser: userFound.idUser,
+          })
+        );
 
         let adminData = JSON.parse(localStorage.getItem("admin"));
         if (
@@ -23,15 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
           data.password === adminData.pass
         ) {
           alert("Đăng nhập thành công với quyền admin");
-          window.location.href = "/pages/admin/admin.html";
+          window.location.href = "/pages/admin/film.html";
         } else {
-          if (userFound.isLocked) {
+          if (userFound.isBlocked) {
             alert("Tài khoản của bạn đã bị khóa và không thể đăng nhập.");
           } else {
-            alert("Đăng nhập thành công");
-            window.location.href = userFound.isAdmin
-              ? "/pages/admin/admin.html"
-              : "/pages/pageOut/trangchulogout.html";
+            setTimeout(function () {
+              window.location.href = userFound.isAdmin
+                ? "/pages/admin/film.html"
+                : "/pages/pageOut/trangchulogout.html";
+            }, 1000); // 1000 milliseconds = 1 second
           }
         }
       } else {
