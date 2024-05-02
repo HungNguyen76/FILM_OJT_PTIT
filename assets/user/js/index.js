@@ -341,7 +341,7 @@ const films = [
   },
 ];
 // localStorage.setItem("listAll", JSON.stringify(films));
-//em ctrl S lại xong qua trang
+// khi thao tác thì nhớ comment cái dòng này lại nha
 
 window.onload = function () {
   renderSapChieu();
