@@ -128,14 +128,12 @@ body {
   color: white;
 }
 .navbar-nav .nav-link:hover {
-  font-size: 30px;
-  /* color: lightskyblue; */
-  color: #4682b4;
-  filter: brightness(120%);
+  font-size: 22px;
+  color: lightskyblue;
+  transition: 0.5s;
 }
 .containerNavbar {
   width: 124px;
-  height: 20px;
 }
 .navbar {
   position: fixed;
