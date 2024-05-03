@@ -30,5 +30,10 @@ function removeMovieFromFavorites(button) {
   var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
   var updatedList = favoriteFilms.filter((film) => film.id !== filmId);
   localStorage.setItem("favoriteFilms", JSON.stringify(updatedList));
-  renderFavoriteFilms(); // Render lại danh sách phim yêu thích sau khi xóa
+  renderFavoriteFilms();
+}
+function viewDetails(btn) {
+  var filmId = btn.closest(".film").getAttribute("data-id");
+  localStorage.setItem("selectedFilmId", filmId);
+  window.location.href = "/pages/pageOut/thongtin.html";
 }
