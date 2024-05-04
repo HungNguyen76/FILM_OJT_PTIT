@@ -39,6 +39,7 @@ const films = [
     nation: "Thái",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film2",
@@ -55,6 +56,7 @@ const films = [
     nam: "2024",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/5PvzGDU8WjM?si=QQby4sL4i-LRRABD",
+    views: 0,
   },
   {
     id: "film21",
@@ -71,6 +73,7 @@ const films = [
     nam: "2020",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/5PvzGDU8WjM?si=QQby4sL4i-LRRABD",
+    views: 0,
   },
 
   {
@@ -88,6 +91,7 @@ const films = [
     nam: "2023",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/ZW1YuceEQDE?si=1zpHpA2xNxbxQznv",
+    views: 0,
   },
   {
     id: "film4",
@@ -104,6 +108,7 @@ const films = [
     nam: "2013",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/d_oU87vizWg?si=X3J-E48Wottqrh-W",
+    views: 0,
   },
   {
     id: "film5",
@@ -120,6 +125,7 @@ const films = [
     nam: "2016",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/rwIOCoDtHyI?si=5o1qOQfpPxYvgiGL",
+    views: 0,
   },
   {
     id: "film6",
@@ -136,6 +142,7 @@ const films = [
     nam: "2021",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/V5GS5ANG96M?si=CyP63OU3yRq6ANQ1",
+    views: 0,
   },
 
   {
@@ -153,6 +160,7 @@ const films = [
     nam: "2007",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/uVmP52g30Wc?si=Em29ekJMhzPG0fFG",
+    views: 0,
   },
   {
     id: "film8",
@@ -169,6 +177,7 @@ const films = [
     nam: "2016",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/JV0dEgbX5yk?si=nx-ScUCurq1cpU9H",
+    views: 0,
   },
   {
     id: "film9",
@@ -185,6 +194,7 @@ const films = [
     nam: "2007",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film10",
@@ -201,6 +211,7 @@ const films = [
     nam: "2020",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film11",
@@ -217,6 +228,7 @@ const films = [
     nam: "2020",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film12",
@@ -234,6 +246,7 @@ const films = [
     nam: "2008",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film13",
@@ -251,6 +264,7 @@ const films = [
     nam: "2008",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film14",
@@ -268,6 +282,7 @@ const films = [
     nam: "2010",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film81",
@@ -285,6 +300,7 @@ const films = [
     nam: "2011",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film83",
@@ -302,6 +318,7 @@ const films = [
     nam: "2011",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film84",
@@ -320,6 +337,7 @@ const films = [
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
     period: "sắp chiếu",
+    views: 0,
   },
   {
     id: "film85",
@@ -338,6 +356,7 @@ const films = [
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
     period: "sắp chiếu",
+    views: 0,
   },
 ];
 // localStorage.setItem("listAll", JSON.stringify(films));

@@ -137,7 +137,7 @@ function watchFilm(filmId) {
   var selectedFilm = allFilms.find((film) => film.id === filmId);
   // Tăng số lượt xem cho phim được chọn và chuyển đổi sang số nguyên
   if (selectedFilm) {
-    selectedFilm.views = (selectedFilm.views || 0) + 1; // Đảm bảo rằng views là một số và tăng nó lên
+    selectedFilm.views = (selectedFilm.views || 0) + 1;
     localStorage.setItem("listAll", JSON.stringify(allFilms)); // Cập nhật lại danh sách phim với số lượt xem mới
   }
 
