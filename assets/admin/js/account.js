@@ -101,7 +101,6 @@ function editAccount(index) {
       var editedEmail = document.getElementById("edit-email").value;
       var editedPassword = document.getElementById("edit-password").value;
       var editedRole = document.getElementById("edit-role").value;
-
       // Cập nhật thông tin tài khoản
       account.email = editedEmail;
       account.password = editedPassword;
