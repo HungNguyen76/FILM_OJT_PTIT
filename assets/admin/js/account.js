@@ -149,3 +149,6 @@ function searchAccount() {
     searchResults.appendChild(accountInfo);
   });
 }
+document.querySelector(".btn-outline-success").addEventListener("click", function () {
+  searchAccount();
+});
