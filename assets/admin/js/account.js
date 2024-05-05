@@ -121,3 +121,31 @@ function editAccount(index) {
 
 
 
+function searchAccount() {
+  var searchQuery = document.querySelector(".form-control").value.toLowerCase();
+
+  var allAccounts = JSON.parse(localStorage.getItem("listUsers")) || [];
+
+  var filteredAccounts = allAccounts.filter(function (account) {
+    return account.email.toLowerCase().includes(searchQuery);
+  });
+
+  // Hiển thị danh sách tài khoản tìm được
+  var accCount = filteredAccounts.length;
+  document.getElementById("acc").innerHTML = 'Tìm thấy ' + accCount + ' tài khoản.';
+
+  // Render danh sách tài khoản
+  var searchResults = document.getElementById("search-results");
+  searchResults.innerHTML = ""; // Xóa nội dung cũ trước khi render lại
+
+  filteredAccounts.forEach(function (account) {
+    var accountInfo = document.createElement("div");
+    accountInfo.classList.add("searched-account");
+    accountInfo.innerHTML = `
+      <p>Email: ${account.email}</p>
+      <p>Password: ${account.password}</p>
+      <p>Trạng thái: ${account.isBlocked ? "Đã chặn" : "Chưa chặn"}</p>
+    `;
+    searchResults.appendChild(accountInfo);
+  });
+}
