@@ -50,6 +50,7 @@ function renderFilmDetails(filmId) {
         <hr>
         <button onclick="renderTrailers('${selectedFilm.id}')" data-toggle="modal" data-target="#exampleModalCenter">Trailer</button>
         <button onclick="watchFilm('${selectedFilm.id}')">Xem phim</button>
+        <button onclick="favoriteMovie('${selectedFilm.id}')">Yêu thích</button>
           <hr />
           <p>Nội Dung: ${selectedFilm.noidung}</p>
           </div>
@@ -57,6 +58,34 @@ function renderFilmDetails(filmId) {
       </div>
     `;
 }
+function checkLoggedIn() {
+  const userEmail = localStorage.getItem("checkLogin");
+  if (userEmail) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function favoriteMovie(filmId) {
+  var isLoggedIn = checkLoggedIn();
+  if (!isLoggedIn) {
+    alert("Vui lòng đăng nhập để thêm phim vào danh sách yêu thích.");
+    return;
+  }
+
+  var allFilms = JSON.parse(localStorage.getItem("listAll"));
+  var selectedFilm = allFilms.find((film) => film.id === filmId);
+  var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
+  var isFilmInFavorites = favoriteFilms.some((film) => film.id === filmId);
+  if (!isFilmInFavorites) {
+    favoriteFilms.push(selectedFilm);
+    localStorage.setItem("favoriteFilms", JSON.stringify(favoriteFilms));
+    alert("Đã thêm phim vào danh sách yêu thích.");
+  } else {
+    alert("Phim đã có trong danh sách yêu thích.");
+  }
+}
+
 function renderTrailers(filmId) {
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
