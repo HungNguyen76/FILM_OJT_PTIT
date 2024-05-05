@@ -131,7 +131,35 @@ img {
   margin: 20px;
 }
 
-/* Thêm lớp CSS mới cho tài khoản admin */
-/* .admin-film.admin {
-    background-color: rgba(255, 0, 0, 0.1); 
-} */
+.searched-account {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.searched-account p {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.searched-account .btn {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.searched-account .block-account-btn,
+.searched-account .delete-account-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.searched-account .edit-account-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
