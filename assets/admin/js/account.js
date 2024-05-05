@@ -130,9 +130,7 @@ function searchAccount() {
     return account.email.toLowerCase().includes(searchQuery);
   });
 
-  // Hiển thị danh sách tài khoản tìm được
-  var accCount = filteredAccounts.length;
-  document.getElementById("acc").innerHTML = 'Tìm thấy ' + accCount + ' tài khoản.';
+
 
   // Render danh sách tài khoản
   var searchResults = document.getElementById("search-results");
