@@ -724,7 +724,6 @@ document.getElementById("clearSearch").addEventListener("click", function () {
 function logout() {
   localStorage.removeItem("nameLogin");
   localStorage.removeItem("checkLogin");
-  localStorage.removeItem("favoriteFilms");
 }
 // Sau khi người dùng đăng nhập thành công
 localStorage.setItem("checkLogin", "true");
@@ -746,11 +745,16 @@ function favoriteMovie(btn) {
   }
 
   var filmId = btn.closest(".film").getAttribute("data-id");
+  var userId = localStorage.getItem("checkLogin");
 
   var selectedFilm = films.find((film) => film.id === filmId);
   var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
-  var isFilmInFavorites = favoriteFilms.some((film) => film.id === filmId);
+  var isFilmInFavorites = favoriteFilms.some(
+    (film) => film.id === filmId && film.userId === userId
+  );
   if (!isFilmInFavorites) {
+    // Thêm ID người dùng vào đối tượng film yêu thích
+    selectedFilm.userId = userId;
     favoriteFilms.push(selectedFilm);
     localStorage.setItem("favoriteFilms", JSON.stringify(favoriteFilms));
     alert("Đã thêm phim vào danh sách yêu thích.");
@@ -758,6 +762,7 @@ function favoriteMovie(btn) {
     alert("Phim đã có trong danh sách yêu thích.");
   }
 }
+
 function viewDetails(btn) {
   const isLoggedIn = localStorage.getItem("checkLogin");
   if (!isLoggedIn) {

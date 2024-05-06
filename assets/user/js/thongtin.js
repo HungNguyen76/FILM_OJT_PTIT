@@ -66,25 +66,50 @@ function checkLoggedIn() {
     return false;
   }
 }
-function favoriteMovie(filmId) {
-  var isLoggedIn = checkLoggedIn();
-  if (!isLoggedIn) {
-    alert("Vui lòng đăng nhập để thêm phim vào danh sách yêu thích.");
-    return;
-  }
-
-  var allFilms = JSON.parse(localStorage.getItem("listAll"));
-  var selectedFilm = allFilms.find((film) => film.id === filmId);
+function addMovieToFavorites(filmId, userId) {
+  // Lấy danh sách phim yêu thích từ local storage hoặc khởi tạo mảng rỗng nếu chưa có
   var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
-  var isFilmInFavorites = favoriteFilms.some((film) => film.id === filmId);
-  if (!isFilmInFavorites) {
-    favoriteFilms.push(selectedFilm);
+
+  // Kiểm tra xem phim đã được thêm vào yêu thích của người dùng chưa
+  var isAlreadyFavorite = favoriteFilms.some(
+    (film) => film.id === filmId && film.userId === userId
+  );
+  if (!isAlreadyFavorite) {
+    // Nếu phim chưa được thêm vào yêu thích, thêm vào danh sách
+    favoriteFilms.push({ id: filmId, userId: userId });
+
+    // Lưu danh sách đã cập nhật vào local storage
     localStorage.setItem("favoriteFilms", JSON.stringify(favoriteFilms));
-    alert("Đã thêm phim vào danh sách yêu thích.");
+
+    // Render lại danh sách phim yêu thích
+    renderFavoriteFilms();
   } else {
-    alert("Phim đã có trong danh sách yêu thích.");
+    alert("Phim đã có trong danh sách yêu thích!");
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var userId = localStorage.getItem("checkLogin"); // Lấy ID người dùng từ localStorage
+  if (userId) {
+    renderWatchHistory(userId);
+    document
+      .getElementById("clearHistoryBtn")
+      .addEventListener("click", function () {
+        clearWatchHistory(userId);
+      });
+
+    // Thêm sự kiện nhấn vào nút "Thêm vào yêu thích" cho mỗi phim trong lịch sử xem
+    var addToFavoritesButtons = document.querySelectorAll(
+      ".add-to-favorites-btn"
+    );
+    addToFavoritesButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var filmId = button.closest(".film-card").getAttribute("data-id");
+        addMovieToFavorites(filmId, userId);
+      });
+    });
+  }
+});
 
 function renderTrailers(filmId) {
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
@@ -216,6 +241,6 @@ function watchFilm(filmId) {
 function logout() {
   localStorage.removeItem("nameLogin");
   localStorage.removeItem("checkLogin");
-  localStorage.removeItem("favoriteFilms");
+
   window.location.href = "/pages/pageLogin/trangchu.html";
 }
