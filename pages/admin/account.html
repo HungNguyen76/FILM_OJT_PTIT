@@ -47,19 +47,22 @@
       </div>
 
       <div class="body">
-        <input
+        <div class="input">
+          <input
           type="text"
           id="search-input"
-          placeholder="Nhập email tài khoản cần tìm..."
+          placeholder=" ACC cần tìm..."
         />
-        <button onclick="searchAccount()">Tìm kiếm</button>
+        <button onclick="searchAccount()" class="nutSearch"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        
 
-        <!-- <div class="nav-bar"></div> -->
+     
         <div class="content">
           <div id="search-results"></div>
           <div id="users"></div>
 
-         
+          
         </div>
       </div>
     </div>

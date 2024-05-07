@@ -17,9 +17,9 @@ html {
   left: 0; 
   height: 650px;
   width: 200px;
-  background-color: #9ccfff;
+  background-color: black;
   padding: 20px;
-  margin: 10px 0 10px 20px;
+  margin: 10px 0 10px 50px;
   border-radius: 8px;
 }
 
@@ -40,7 +40,7 @@ html {
   margin: 10px;
 }
 .side-bar ul li a {
-  color: #4c3933;
+  color: #817d7c;
   text-decoration: none;
   transition: transform 0.3s;
 }
@@ -49,7 +49,7 @@ html {
   transform: scale(1.2);
 }
 .side-bar ul li a:hover {
-  color: rgb(140, 115, 120);
+  color: rgb(114, 80, 87);
 }
 
 .body {
@@ -74,15 +74,14 @@ hr {
 .card-body {
   font-size: 20px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  justify-content: space-evenly;
+
 }
 p {
   width: 130px;
 }
 .admin-film {
-  justify-content: space-between;
-  display: flex;
+ 
   font-size: large;
 }
 img {
@@ -90,7 +89,7 @@ img {
 }
 
 .content{
-  background-color: aliceblue;
+  background-color: rgb(0, 0, 0);
 }
 .body{
   background-color: black;
@@ -116,7 +115,7 @@ img {
 
 .nut {
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin-right: 30px;
 }
 
@@ -134,4 +133,68 @@ img {
 .content{
   background-color: #161616;
   color: bisque;
+}
+.admin-film {
+  /* justify-content: space-between;
+  display: flex; */
+  font-size: large;
+  background-color: #333; /* Đổi màu nền */
+  padding: 20px; /* Thêm padding */
+  border-radius: 10px; /* Bo tròn viền */
+  margin-bottom: 20px; /* Tạo khoảng cách giữa các ô tài khoản */
+}
+
+.admin-film p {
+  margin-bottom: 10px; /* Tạo khoảng cách giữa các dòng thông tin */
+}
+
+.nut button {
+  margin: 0 5px;
+  background-color: #555; /* Đổi màu nền của nút */
+  color: white; /* Đổi màu chữ */
+  border: none; /* Xóa viền */
+  padding: 5px 10px; /* Thêm padding */
+  border-radius: 5px; /* Bo tròn góc */
+  cursor: pointer;
+}
+
+.nut button:hover {
+  background-color: #777; /* Đổi màu khi hover */
+}
+
+.edit-form {
+  margin-top: 20px; /* Tạo khoảng cách giữa nút và form chỉnh sửa */
+}
+
+.edit-form input {
+  margin-bottom: 10px; /* Tạo khoảng cách giữa các input */
+  padding: 5px; /* Thêm padding */
+  border-radius: 5px; /* Bo tròn góc */
+}
+
+#save-changes-btn {
+  background-color: #007bff; /* Đổi màu nền */
+  color: white; /* Đổi màu chữ */
+  border: none; /* Xóa viền */
+  padding: 5px 10px; /* Thêm padding */
+  border-radius: 5px; /* Bo tròn góc */
+  cursor: pointer;
+}
+
+#save-changes-btn:hover {
+  background-color: #0056b3; /* Đổi màu khi hover */
+}
+
+#search-input {
+  padding: 5px; /* Thêm padding */
+  border-radius: 30px; /* Bo tròn góc */
+  margin-bottom: 20px; /* Tạo khoảng cách giữa input và danh sách tài khoản */
+}
+.input{
+  justify-content: center;
+  display: flex;
+}
+.nutSearch{
+  border-radius: 40px;
+    height: 30px;
 }

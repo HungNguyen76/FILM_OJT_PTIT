@@ -19,11 +19,11 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+ 
   width: 200px;
-  background-color: rgb(149, 220, 240);
+  background-color: #161616;
   padding: 20px;
-  margin: 10px 0 10px 20px;
+  margin: 10px 0 10px 50px;
   border-radius: 8px;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .side-bar ul li a {
-  color: black;
+  color: #4c3933;
   text-decoration: none;
   transition: transform 0.3s;
 }

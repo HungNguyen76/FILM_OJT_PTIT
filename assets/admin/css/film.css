@@ -16,11 +16,11 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+ 
   width: 200px;
-  background-color: #9ccfff;
+  background-color: #0b0b0b;
   padding: 20px;
-  margin: 10px 0 10px 20px;
+  margin: 10px 0 10px 50px;
   border-radius: 8px;
 }
 
@@ -75,7 +75,7 @@ hr {
 }
 
 .card-body p {
-  width: 130px;
+  width: 250px;
 }
 
 .admin-film {
@@ -98,27 +98,38 @@ hr {
 }
 
 .form-control {
-  width: 300px;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
   margin-right: 10px;
   padding: 5px;
 }
 /*home*/
+.item{
+  display: flex;
+  justify-content: space-between;
+}
 .item button {
   padding: 5px 10px;
-  background-color: #4caf50;
+  background-color: #e46959;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
 .item button:hover {
-  background-color: #45a049;
+  background-color: #eb2d3d;
 }
 .nut {
   display: flex;
   align-items: center;
   margin-right: 30px;
+  
+}
+.nut button{
+  background-color: #161616;
+  color: aliceblue;
 }
 
 .nut button {
@@ -155,4 +166,8 @@ input {
 #admin{
   background-color: #161616;
   color: antiquewhite;
+}
+.d{
+  display: flex;
+  justify-content: center;
 }

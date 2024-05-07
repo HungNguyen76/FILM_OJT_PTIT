@@ -25,8 +25,8 @@ function renderFavoriteFilms() {
              
             </div>
             <div class="nut">
-              <button data-id="${adminFilms[i].id}">Xóa</button>
-            <button onclick="editFilm('${adminFilms[i].id}')">Sửa</button>
+              <button data-id="${adminFilms[i].id}"><i class="fa-solid fa-trash"></i></button>
+            <button onclick="editFilm('${adminFilms[i].id}')"><i class="fa-solid fa-wrench"></i></button>
 
 
             </div>
@@ -52,7 +52,7 @@ function searchMovies() {
   }
 }
 
-document.querySelector("form").addEventListener("submit", function (event) {
+document.querySelector("form").addEventListener("input", function (event) {
   event.preventDefault();
   searchMovies();
 });
@@ -85,9 +85,9 @@ function loadFilms(filmList, containerId) {
               
           
             <div class="nut">
-            <button data-id="${filmList[i].id}">Xóa</button>
+            <button data-id="${filmList[i].id}"><i class="fa-solid fa-trash"></i></button>
 
-            <button >Sửa</button>
+            <button ><i class="fa-solid fa-wrench"></i></button>
 
             </div>
       
