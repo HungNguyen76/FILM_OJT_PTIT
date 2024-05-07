@@ -84,7 +84,15 @@
     <main>
       <section class="container-left">
         <div class="container-left__person">
-          <img src="/assets/img/profile-none.png" />
+
+         <div class="container-left__person" id="profile-image-container">
+    <label for="profile-image-input">
+        <img src="/assets/img/profile-none.png" id="profile-image-preview" />
+        <input type="file" id="profile-image-input" accept="image/*" style="display: none;" onchange="previewImage(this)">
+
+    </label>
+</div>
+
           <div class="name">
             <h1 id="username"></h1>
           </div>

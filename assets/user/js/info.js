@@ -1,30 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-  function showUserInfo() {
-    var userId = localStorage.getItem("checkLogin");
-    var userInfo = JSON.parse(localStorage.getItem("listUsers"));
-
-    console.log(userId);
-    console.log(userInfo);
-
-    let infor = userInfo.find((user) => user.idUser == userId);
-    console.log(infor);
-
-    if (infor) {
-      document.getElementById("username").innerText = infor.username;
-      document.getElementById("username1").innerText = infor.username;
-      document.getElementById("email").innerText = infor.email;
-      document.getElementById("password").innerText = infor.password;
-      // document.getElementById("password").addEventListener("input", function () {
-      var password = document.getElementById("password").value;
-      var passwordMask = document.getElementById("password-mask");
-      passwordMask.textContent = "*".repeat(password.length);
-    } else {
-      alert("Không tìm thấy thông tin người dùng!");
-      redirect("/pages/login.html", 500);
-    }
-  }
   showUserInfo();
 });
+
+function showUserInfo() {
+  var userId = localStorage.getItem("checkLogin");
+  var userInfo = JSON.parse(localStorage.getItem("listUsers"));
+
+  let infor = userInfo.find((user) => user.idUser == userId);
+  console.log(infor);
+
+  if (infor) {
+    document.getElementById("username").innerText = infor.username;
+    document.getElementById("username1").innerText = infor.username;
+    document.getElementById("email").innerText = infor.email;
+    // Hide the actual password and show masked password
+    var passwordMask = document.getElementById("password-mask");
+    passwordMask.textContent = "*".repeat(infor.password.length);
+
+    // Display the profile image from Local Storage if it exists
+    var profileImage = localStorage.getItem(userId + "_profile_image");
+    if (profileImage) {
+      document.getElementById('profile-image-preview').setAttribute('src', profileImage);
+    } else {
+      document.getElementById('profile-image-preview').setAttribute('src', '/assets/img/profile-none.png');
+    }
+  } else {
+    alert("Không tìm thấy thông tin người dùng!");
+    redirect("/pages/login.html", 500);
+  }
+}
 
 function logout() {
   localStorage.removeItem("nameLogin");
@@ -99,3 +103,21 @@ function redirect(url, delay) {
     window.location.href = url;
   }, delay);
 }
+function previewImage(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      var userId = localStorage.getItem("checkLogin");
+      // Save the profile image in Local Storage with the user's ID
+      localStorage.setItem(userId + "_profile_image", e.target.result);
+      // Update the profile image preview
+      document.getElementById('profile-image-preview').setAttribute('src', e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+// Trigger the file input when the profile image container is clicked
+document.getElementById('profile-image-container').addEventListener('click', function() {
+  document.getElementById('profile-image-input').click();
+});
