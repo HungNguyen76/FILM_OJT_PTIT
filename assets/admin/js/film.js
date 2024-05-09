@@ -91,7 +91,7 @@ function loadFilms(filmList, containerId) {
         <td style="border-bottom: 1px solid #ddd;">${filmList[i].nation}</td>
         <td style="border-bottom: 1px solid #ddd;">${filmList[i].time}</td>
         <td style="border-bottom: 1px solid #ddd;">
-          <button data-id="${adminFilms[i].id}"><i class="fa-solid fa-trash"></i></button>
+          <button data-id="${filmList[i].id}"><i class="fa-solid fa-trash"></i></button>
 
           <button onclick="editFilm('${filmList[i].id}')"><i class="fa-solid fa-wrench"></i></button>
         </td>
