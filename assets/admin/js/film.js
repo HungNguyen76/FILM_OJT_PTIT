@@ -6,36 +6,41 @@ function logout() {
 
 function renderFavoriteFilms() {
   var adminFilms = JSON.parse(localStorage.getItem("listAll")) || [];
-  var out = "";
+  var out =
+    "<table class='table' style='border-collapse: separate; border-spacing: 0px 30px;'>"; // Bắt đầu bảng
+
+  out += `
+    <tr>
+      <th>Hình Ảnh</th>
+      <th>Tên Phim</th>
+      <th>ID</th>
+      <th>Quốc Gia</th>
+      <th>Thời Lượng</th>
+      <th>Hành Động</th>
+    </tr>
+  `;
 
   for (let i = 0; i < adminFilms.length; i++) {
     out += `
-        <div class="admin-film col-md-3 mb-4 d-flex justify-content-center">
-          <div class="admin-card rounded-lg" style="width: 18rem;">
-            <img src="${adminFilms[i].img1}" class="card-img" alt="Product Image" style="height: 100px;">
-          </div>
-          <div class="card-body">
-          <div>
-          <p > Tên: ${adminFilms[i].name}</p>
-          <p>ID: ${adminFilms[i].id}</p></div>
-          <div>
-          <p >  <p>Quốc gia: ${adminFilms[i].nation}</p>
-          <p>Thời lượng: ${adminFilms[i].time}</p></div>
-             
-             
-            </div>
-            <div class="nut">
-              <button data-id="${adminFilms[i].id}"><i class="fa-solid fa-trash"></i></button>
-            <button onclick="editFilm('${adminFilms[i].id}')"><i class="fa-solid fa-wrench"></i></button>
+      <tr>
+        <td style="border-bottom: 1px solid #ddd;"><img src="${adminFilms[i].img1}" alt="Product Image" style="height: 100px;"></td>
+        <td style="border-bottom: 1px solid #ddd;">${adminFilms[i].name}</td>
+        <td style="border-bottom: 1px solid #ddd;">${adminFilms[i].id}</td>
+        <td style="border-bottom: 1px solid #ddd;">${adminFilms[i].nation}</td>
+        <td style="border-bottom: 1px solid #ddd;">${adminFilms[i].time}</td>
+        <td style="border-bottom: 1px solid #ddd;">
+       <button data-id="${adminFilms[i].id}"><i class="fa-solid fa-trash"></i></button>
 
-
-            </div>
-        </div>
-        <hr />
-        `;
+          <button onclick="editFilm('${adminFilms[i].id}')"><i class="fa-solid fa-wrench"></i></button>
+        </td>
+      </tr>
+    `;
   }
-  document.getElementById("admin").innerHTML = `  ${out}`;
+
+  out += "</table>"; // Kết thúc bảng
+  document.getElementById("admin").innerHTML = out;
 }
+
 function searchMovies() {
   var searchQuery = document.querySelector(".form-control").value.toLowerCase();
 
@@ -63,41 +68,39 @@ function showAllMovies() {
 }
 
 function loadFilms(filmList, containerId) {
-  var out = "";
+  var out =
+    "<table class='table' style='border-collapse: separate; border-spacing: 0px 30px;'>"; // Bắt đầu bảng
+
+  out += `
+    <tr>
+      <th>Hình Ảnh</th>
+      <th>Tên Phim</th>
+      <th>ID</th>
+      <th>Quốc Gia</th>
+      <th>Thời Lượng</th>
+      <th>Hành Động</th>
+    </tr>
+  `;
+
   for (let i = 0; i < filmList.length; i++) {
     out += `
-        <div class="admin-film col-md-3 mb-4 d-flex justify-content-center">
-          <div class="admin-card rounded-lg" style="width: 18rem;">
-            <img src="${filmList[i].img1}" class="card-img" alt="Product Image" style="height: 100px;">
-          </div>
-          <div class="card-body">
+      <tr>
+        <td style="border-bottom: 1px solid #ddd;"><img src="${filmList[i].img1}" alt="Product Image" style="height: 100px;"></td>
+        <td style="border-bottom: 1px solid #ddd;">${filmList[i].name}</td>
+        <td style="border-bottom: 1px solid #ddd;">${filmList[i].id}</td>
+        <td style="border-bottom: 1px solid #ddd;">${filmList[i].nation}</td>
+        <td style="border-bottom: 1px solid #ddd;">${filmList[i].time}</td>
+        <td style="border-bottom: 1px solid #ddd;">
+          <button data-id="${adminFilms[i].id}"><i class="fa-solid fa-trash"></i></button>
 
-
-         
-          <p > Tên: ${filmList[i].name}</p>
-          <p>ID: ${filmList[i].id}</p>
-        
-          
-
-          <p>Quốc gia: ${filmList[i].nation}</p>
-          <p>Thời lượng: ${filmList[i].time}</p>
-    
-              
-          
-            <div class="nut">
-            <button data-id="${filmList[i].id}"><i class="fa-solid fa-trash"></i></button>
-
-            <button ><i class="fa-solid fa-wrench"></i></button>
-
-            </div>
-      
-        </div>
-        <br />
-        `;
+          <button onclick="editFilm('${filmList[i].id}')"><i class="fa-solid fa-wrench"></i></button>
+        </td>
+      </tr>
+    `;
   }
-  document.getElementById(
-    containerId
-  ).innerHTML = `  <div class="row">${out}</div> <br /> `;
+
+  out += "</table>"; // Kết thúc bảng
+  document.getElementById(containerId).innerHTML = out;
 }
 
 document.getElementById("admin").addEventListener("click", function (event) {
@@ -231,3 +234,29 @@ function saveEditedFilm(filmId) {
   // Xóa form chỉnh sửa
   document.getElementById("editForm").innerHTML = "";
 }
+document.getElementById("admin").addEventListener("click", function (event) {
+  if (
+    event.target.tagName === "BUTTON" &&
+    event.target.querySelector("i").classList.contains("fa-trash")
+  ) {
+    // Lấy ID của phim cần xóa từ thuộc tính data-id
+    var filmId = event.target.dataset.id;
+
+    // Lấy danh sách phim từ localStorage
+    var allMovies = JSON.parse(localStorage.getItem("listAll")) || [];
+
+    // Lọc ra phim có ID không trùng với ID cần xóa
+    var updatedMovies = allMovies.filter(function (movie) {
+      return movie.id !== filmId;
+    });
+
+    // Cập nhật lại danh sách phim trong localStorage
+    localStorage.setItem("listAll", JSON.stringify(updatedMovies));
+
+    // Xóa phim khỏi giao diện người dùng
+    event.target.parentElement.parentElement.remove();
+
+    // Cập nhật lại giao diện
+    renderFavoriteFilms();
+  }
+});

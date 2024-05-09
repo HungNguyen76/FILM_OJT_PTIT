@@ -16,7 +16,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
- 
+
   width: 200px;
   background-color: #0b0b0b;
   padding: 20px;
@@ -70,18 +70,19 @@ html {
 hr {
   color: black;
 }
-.card-body {
-  display: flex;
-}
 
-.card-body p {
+/* .card-body p {
   width: 250px;
-}
+} */
 
 .admin-film {
   justify-content: space-between;
-  display: flex;
+
   font-size: large;
+}
+.f {
+  display: flex;
+  justify-content: space-around;
 }
 
 #admin {
@@ -105,7 +106,7 @@ hr {
   padding: 5px;
 }
 /*home*/
-.item{
+.item {
   display: flex;
   justify-content: space-between;
 }
@@ -125,17 +126,16 @@ hr {
   display: flex;
   align-items: center;
   margin-right: 30px;
-  
 }
-.nut button{
+button {
   background-color: #161616;
   color: aliceblue;
 }
 
-.nut button {
+button {
   margin: 0 5px;
 }
-.nut button:hover {
+button:hover {
   color: brown;
 }
 .add {
@@ -163,11 +163,18 @@ input {
 #editForm {
   text-align: center;
 }
-#admin{
+#admin {
   background-color: #161616;
   color: antiquewhite;
 }
-.d{
+.d {
   display: flex;
   justify-content: center;
+}
+.table {
+  width: 1080px;
+}
+.table td {
+  text-align: center; /* Căn giữa nội dung theo chiều ngang */
+  vertical-align: middle; /* Căn giữa nội dung theo chiều dọc */
 }
