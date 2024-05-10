@@ -706,7 +706,7 @@ function searchMovies() {
   }
 }
 
-document.querySelector("form").addEventListener("input", function (event) {
+document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
   searchMovies();
 });
