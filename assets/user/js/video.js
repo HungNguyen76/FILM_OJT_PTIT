@@ -294,3 +294,4 @@ function viewDetails(filmId) {
   video(filmId);
   renderRelatedFilms(filmId);
 }
+//@
