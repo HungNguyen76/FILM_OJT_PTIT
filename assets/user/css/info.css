@@ -248,3 +248,8 @@ a {
 a:hover {
   color: inherit;
 }
+.font-logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 48px;
+  color: rgb(204, 195, 218);
+}

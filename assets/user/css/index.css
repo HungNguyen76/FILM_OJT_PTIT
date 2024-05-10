@@ -3,11 +3,12 @@ body {
   padding: 0;
   font-family: Montserrat, sans-serif;
 }
-
-.logo {
-  height: 15px;
-  width: 25px;
+.font-logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 48px;
+  color: rgb(204, 195, 218);
 }
+
 .word {
   width: 61px;
   height: 15px;
@@ -127,12 +128,12 @@ body {
   color: white;
 }
 .navbar-nav .nav-link:hover {
-  font-size: 30px;
+  font-size: 22px;
   color: lightskyblue;
+  transition: 0.5s;
 }
 .containerNavbar {
   width: 124px;
-  height: 20px;
 }
 .navbar {
   position: fixed;

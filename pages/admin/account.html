@@ -40,16 +40,29 @@
           </li>
           <li class="country">
             <a href="/pages/admin/comment.html"
-              ><i class='fa fa-comment'></i> Comment</a
+              ><i class="fa fa-comment"></i> Comment</a
             >
           </li>
         </ul>
       </div>
+
       <div class="body">
-        <!-- <div class="nav-bar"></div> -->
+        <div class="input">
+          <input
+          type="text"
+          id="search-input"
+          placeholder=" ACC cần tìm..."
+        />
+        <button onclick="searchAccount()" class="nutSearch"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        
+
+     
         <div class="content">
+          <div id="search-results"></div>
           <div id="users"></div>
-          <hr />
+
+          
         </div>
       </div>
     </div>

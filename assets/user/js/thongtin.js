@@ -50,6 +50,7 @@ function renderFilmDetails(filmId) {
         <hr>
         <button onclick="renderTrailers('${selectedFilm.id}')" data-toggle="modal" data-target="#exampleModalCenter">Trailer</button>
         <button onclick="watchFilm('${selectedFilm.id}')">Xem phim</button>
+        <button onclick="favoriteMovie('${selectedFilm.id}')">Yêu thích</button>
           <hr />
           <p>Nội Dung: ${selectedFilm.noidung}</p>
           </div>
@@ -57,6 +58,59 @@ function renderFilmDetails(filmId) {
       </div>
     `;
 }
+function checkLoggedIn() {
+  const userEmail = localStorage.getItem("checkLogin");
+  if (userEmail) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function addMovieToFavorites(filmId, userId) {
+  // Lấy danh sách phim yêu thích từ local storage hoặc khởi tạo mảng rỗng nếu chưa có
+  var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
+
+  // Kiểm tra xem phim đã được thêm vào yêu thích của người dùng chưa
+  var isAlreadyFavorite = favoriteFilms.some(
+    (film) => film.id === filmId && film.userId === userId
+  );
+  if (!isAlreadyFavorite) {
+    // Nếu phim chưa được thêm vào yêu thích, thêm vào danh sách
+    favoriteFilms.push({ id: filmId, userId: userId });
+
+    // Lưu danh sách đã cập nhật vào local storage
+    localStorage.setItem("favoriteFilms", JSON.stringify(favoriteFilms));
+
+    // Render lại danh sách phim yêu thích
+    renderFavoriteFilms();
+  } else {
+    alert("Phim đã có trong danh sách yêu thích!");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var userId = localStorage.getItem("checkLogin"); // Lấy ID người dùng từ localStorage
+  if (userId) {
+    renderWatchHistory(userId);
+    document
+      .getElementById("clearHistoryBtn")
+      .addEventListener("click", function () {
+        clearWatchHistory(userId);
+      });
+
+    // Thêm sự kiện nhấn vào nút "Thêm vào yêu thích" cho mỗi phim trong lịch sử xem
+    var addToFavoritesButtons = document.querySelectorAll(
+      ".add-to-favorites-btn"
+    );
+    addToFavoritesButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var filmId = button.closest(".film-card").getAttribute("data-id");
+        addMovieToFavorites(filmId, userId);
+      });
+    });
+  }
+});
+
 function renderTrailers(filmId) {
   var allFilms = JSON.parse(localStorage.getItem("listAll"));
   var selectedFilm = allFilms.find((film) => film.id === filmId);
@@ -137,7 +191,7 @@ function watchFilm(filmId) {
   var selectedFilm = allFilms.find((film) => film.id === filmId);
   // Tăng số lượt xem cho phim được chọn và chuyển đổi sang số nguyên
   if (selectedFilm) {
-    selectedFilm.views = (selectedFilm.views || 0) + 1; // Đảm bảo rằng views là một số và tăng nó lên
+    selectedFilm.views = (selectedFilm.views || 0) + 1;
     localStorage.setItem("listAll", JSON.stringify(allFilms)); // Cập nhật lại danh sách phim với số lượt xem mới
   }
 
@@ -187,6 +241,6 @@ function watchFilm(filmId) {
 function logout() {
   localStorage.removeItem("nameLogin");
   localStorage.removeItem("checkLogin");
-  localStorage.removeItem("favoriteFilms");
+
   window.location.href = "/pages/pageLogin/trangchu.html";
 }

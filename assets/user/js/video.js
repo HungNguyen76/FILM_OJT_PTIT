@@ -37,7 +37,16 @@ function video(filmId) {
           <div class="vietsub-buttons"> 
           <div>  <button class="vietsub-btn"><a href="#">Sever #1</a></button>
           <button class="vietsub-btn"><a href="#">Sever #2</a></button></div>
-          <div><h5> <i class="fa fa-eye"></i> : ${video.views} </h5></div>
+         
+          <div class=" allLike">
+          <h5 class="h5like"> 
+          <button class='like' onclick="favoriteMovie('${filmId}')">❤️</button> 
+          </h5>
+      
+          
+          <h5> <i class="fa fa-eye"></i> : ${video.views} </h5>
+          </div>
+          
         
         </div>
         <br />
@@ -120,9 +129,35 @@ function video(filmId) {
 
   renderComments(filmId);
 }
-// JavaScript để xử lý sự kiện click vào ngôi sao
+function checkLoggedIn() {
+  const userEmail = localStorage.getItem("checkLogin");
+  if (userEmail) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function favoriteMovie(filmId) {
+  var isLoggedIn = checkLoggedIn();
+  if (!isLoggedIn) {
+    alert("Vui lòng đăng nhập để thêm phim vào danh sách yêu thích.");
+    return;
+  }
+
+  var allFilms = JSON.parse(localStorage.getItem("listAll"));
+  var selectedFilm = allFilms.find((film) => film.id === filmId);
+  var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
+  var isFilmInFavorites = favoriteFilms.some((film) => film.id === filmId);
+  if (!isFilmInFavorites) {
+    favoriteFilms.push(selectedFilm);
+    localStorage.setItem("favoriteFilms", JSON.stringify(favoriteFilms));
+    alert("Đã thêm phim vào danh sách yêu thích.");
+  } else {
+    alert("Phim đã có trong danh sách yêu thích.");
+  }
+}
 function addStarRatingEventListeners() {
-  // Ensure that the DOM has been updated with the modal content
+ 
   setTimeout(function () {
     var stars = document.querySelectorAll(".star");
     stars.forEach(function (star) {
@@ -135,7 +170,7 @@ function addStarRatingEventListeners() {
 }
 
 function setRating(rating, stars) {
-  // Update the stars display based on the rating
+ 
   stars.forEach(function (star, index) {
     if (index < rating) {
       star.style.color = "gold";
@@ -144,13 +179,11 @@ function setRating(rating, stars) {
     }
   });
 
-  // Save the rating to localStorage or send it to the server
   saveRating(rating);
 }
 
 function saveRating(rating) {
-  // Save the rating to localStorage
-  // Alternatively, you can send the rating to the server
+ 
   localStorage.setItem("filmRating", rating);
 }
 
@@ -261,3 +294,4 @@ function viewDetails(filmId) {
   video(filmId);
   renderRelatedFilms(filmId);
 }
+//@

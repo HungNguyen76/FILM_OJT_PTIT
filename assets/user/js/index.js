@@ -39,6 +39,7 @@ const films = [
     nation: "Thái",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film2",
@@ -55,6 +56,7 @@ const films = [
     nam: "2024",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/5PvzGDU8WjM?si=QQby4sL4i-LRRABD",
+    views: 0,
   },
   {
     id: "film21",
@@ -71,6 +73,7 @@ const films = [
     nam: "2020",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/5PvzGDU8WjM?si=QQby4sL4i-LRRABD",
+    views: 0,
   },
 
   {
@@ -88,6 +91,7 @@ const films = [
     nam: "2023",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/ZW1YuceEQDE?si=1zpHpA2xNxbxQznv",
+    views: 0,
   },
   {
     id: "film4",
@@ -104,6 +108,7 @@ const films = [
     nam: "2013",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/d_oU87vizWg?si=X3J-E48Wottqrh-W",
+    views: 0,
   },
   {
     id: "film5",
@@ -120,6 +125,7 @@ const films = [
     nam: "2016",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/rwIOCoDtHyI?si=5o1qOQfpPxYvgiGL",
+    views: 0,
   },
   {
     id: "film6",
@@ -136,6 +142,7 @@ const films = [
     nam: "2021",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/V5GS5ANG96M?si=CyP63OU3yRq6ANQ1",
+    views: 0,
   },
 
   {
@@ -153,6 +160,7 @@ const films = [
     nam: "2007",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/uVmP52g30Wc?si=Em29ekJMhzPG0fFG",
+    views: 0,
   },
   {
     id: "film8",
@@ -169,88 +177,110 @@ const films = [
     nam: "2016",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/JV0dEgbX5yk?si=nx-ScUCurq1cpU9H",
+    views: 0,
   },
   {
     id: "film9",
-    img1: "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
-    name: "Naruto Shippuden",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/0/03/Tenki_no_Ko_poster.jpg",
+    name: "Weathering with you",
     type: "Anime",
     rate: "normal",
     nation: "Nhật Bản",
-    daodien: "Kishimoto Masashi",
-    time: "100 phút",
+    daodien: "Shinkai Makoto",
+    time: "112 phút",
     noidung:
-      "Naruto: Shippuden là một bộ anime truyền hình dài tập được chuyển thể từ Phần II của loạt manga của Kishimoto Masashi với tổng cộng 500 tập phim. Nội dung phim lấy bối cảnh hai năm rưỡi sau Phần I trong vũ trụ Naruto, xoay quanh cậu nhẫn giả thiếu niên Uzumaki Naruto và những đồng đội của cậu.",
-    dienvien: "Takeuchi Junko | Nakamura Chie | Inoue Kazuhiko",
-    nam: "2007",
+      "Câu chuyện diễn ra trong một thời kỳ thời tiết vô cùng mưa gió, chàng trai học sinh trung học Hodaka Morishima bỏ trốn từ ngôi nhà nông thôn đầy rắc rối của mình đến Tokyo và kết bạn với một cô gái mồ côi có khả năng điều khiển thời tiết.",
+    dienvien: "Kotaro Daigo | Nana Mori | Tsubasa Honda",
+    nam: "2019",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film10",
-    img1: "https://m.media-amazon.com/images/M/MV5BNGY4MTg3NzgtMmFkZi00NTg5LWExMmEtMWI3YzI1ODdmMWQ1XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg",
-    name: "Jujutsu Kaisen",
+    img1: "https://m.media-amazon.com/images/M/MV5BODM0NmVjMzUtOTJhNi00N2ZhLWFkYmMtYmZmNjRiY2M1YWY4XkEyXkFqcGdeQXVyOTgxOTA5MDg@._V1_FMjpg_UX1000_.jpg ",
+    name: "Jujutsu Kaisen 0: The Movie",
     type: "Anime",
     rate: "best",
     nation: "Nhật Bản",
     daodien: "Gege Akutami",
-    time: "24/24 tập",
+    time: "105 phút",
     noidung:
-      "Bộ phim kể về cuộc sống của Yuji Itadori, một học sinh trung học bình thường, người vô tình bước vào một thế giới của các sát thủ ma quỷ và jujutsu - một hình thức của phép thuật Nhật Bản. Sau khi sự kiện không may xảy ra, Yuji kế thừa một phần của một ma quỷ cực mạnh và phải gia nhập một tổ chức tên là Jujutsu Kaisen để tìm kiếm và tiêu diệt ma quỷ.",
+      "Câu chuyện này kể về một học sinh trung học lấy lại quyền kiểm soát của một linh hồn ma quỷ cực mạnh và sau đó được các pháp sư jujutsu gọi là Jujutsu Sorcerers nhập học vào Trường Trung học Jujutsu Tokyo Prefectural.",
     dienvien: "Junya Enoki | Yuuma Uchida | Asami Seto | Yuichi Nakamura",
-    nam: "2020",
+    nam: "2021",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film11",
-    img1: "https://resize.cdn.otakumode.com/full/u/30e154b109b744939ce2ac9b3c31d524.jpg",
-    name: "Haikyuu: To the top",
+    img1: "https://haikyu.vn/wp-content/uploads/2023/09/249-e1695784586705.jpg",
+    name: "Haikyuu: the battle of the garbage dump",
     type: "Anime",
     rate: "best",
     nation: "Nhật Bản",
     daodien: "Taku Kishimoto",
-    time: "25/25 tập",
+    time: "85 phút",
     noidung:
-      "Miêu tả: Trong vòng loại giải bóng chuyền trung học phổ thông mùa xuân quận Miyagi, câu lạc bộ bóng chuyền trung học Karasuno đã giành chiến thắng sau một trận chiến khốc liệt, thực hiện được ước mơ tham gia trận thi đấu cấp quốc gia. Với mục tiêu là thi đấu quốc gia, các đội tuyển trung học Hyuga, Kageyama và Karasuno đón nhận một thử thách còn khó khăn hơn!",
+      "Mặc dù đối thủ rất mạnh, nhưng đội bóng chuyền của Trung học Karasuno đã tiến lên vượt qua vòng loại của giải đấu Harutaka tại tỉnh Miyagi để đạt được vòng ba.",
     dienvien: "Ayumu Murase | Kaito Ishikawa | Satoshi Hino",
-    nam: "2020",
+    nam: "2024",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    period: "sắp chiếu",
+    views: 0,
   },
   {
-    id: "film12",
-    img1: "https://upload.wikimedia.org/wikipedia/vi/7/70/Ironmanposter.JPG",
-    name: "IRON MAN (2018)",
-    type: "Hành Động",
+    id: "film112",
+    img1: "https://cinescopia.com/wp-content/uploads/2021/04/171460195_203401634592601_8933017681230270437_n.jpg",
+    name: "Kimetsu No Yaiba Movie: Chuyến tàu vô tận",
+    type: "Anime",
     rate: "best",
-    nation: "USA",
-    daodien: "Jon Favreau",
-    time: "126 phút",
+    nation: "Nhật Bản",
+    daodien: "Haruo Sotozaki",
+    time: "117 phút",
     noidung:
-      "Iron Man kể về Tony Stark, một doanh nhân thiên tài biến mình thành siêu anh hùng sau khi thoát khỏi sự bắt cóc, sử dụng công nghệ để chống lại sự lạm dụng vũ khí.",
-    dienvien:
-      "Robert Downey Jr. | Terrence Howard | Jeff Bridges | Leslie Bibb | Shaun Toub | Gwyneth Paltrow",
-    nam: "2008",
+      "Nhóm nhân vật chính Tanjiro, Nezuko, Zenitsu và Inosuke tham gia vào một nhiệm vụ trên một chiếc tàu. Tuy nhiên, họ sớm nhận ra rằng có một mối đe dọa nguy hiểm trên tàu khi các hành khách bí ẩn bắt đầu biến mất một cách bí ẩn. Điều này đặt ra một loạt thách thức mới mẻ và nguy hiểm cho họ, trong khi họ phải đối mặt với quái vật và bí ẩn đằng sau những sự biến mất.",
+    dienvien: "Natsuki Hanae | Kitõ Akari | Shimono Hiro",
+    nam: "2021",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
-    id: "film13",
-    img1: "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_.jpg",
-    name: "The Incredible Hulk (2008)",
-    type: "Hành Động",
+    id: "film113",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/thumb/c/c6/Koe_no_Katachi_Film_Poster.jpg/330px-Koe_no_Katachi_Film_Poster.jpg",
+    name: "Koe no Katachi",
+    type: "Anime",
     rate: "normal",
-    nation: "USA",
-    daodien: "Louis Leterrier",
-    time: "112 phút",
+    nation: "Nhật Bản",
+    daodien: "	Yamada Naoko",
+    time: "130 phút",
     noidung:
-      "The Incredible Hulk tập trung vào nhân vật Bruce Banner, một nhà khoa học bị biến đổi gen và biến thành người khổng lồ xanh mỗi khi cảm thấy căng thẳng hoặc tức giận. Anh ta phải chiến đấu với chính bản thân mình cũng như với một kẻ thù mới, Emil Blonsky, người cũng muốn sở hữu sức mạnh của Hulk.",
-    dienvien:
-      "	Edward Norton | Liv Tyler | Tim Roth | Tim Blake Nelson | Ty Burrell | William Hurt ",
-    nam: "2008",
+      "Koe no Katachi là câu chuyện về một học sinh trung học tên là Shoya Ishida, người cố gắng chuộc lỗi với cô bạn cùng lớp thính giác mà anh đã bắt nạt, Shoko Nishimiya. Đồng thời, câu chuyện cũng khám phá về sự học hỏi, sự tha thứ và quá trình trưởng thành của Shoya.",
+    dienvien: "Irino Miyu |  Hayami Saori | Yūkivv Aoi",
+    nam: "2016",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
+  },
+  {
+    id: "film114",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/a/a0/Howls-moving-castleposter.jpg",
+    name: " Howl's Moving Castle",
+    type: "Anime",
+    rate: "normal",
+    nation: "Nhật Bản",
+    daodien: "	Miyazaki Hayao",
+    time: "119 phút",
+    noidung:
+      "Howl's Moving Castle là câu chuyện về Sophie, một cô gái trẻ biến thành người già và cuộc phiêu lưu của cô cùng phù thủy ghen tuông và pháp sư trẻ tuổi Howl để giải thoát khỏi lời nguyền.",
+    dienvien: " Baisho Chieko | Kimura Takuya | Miwa Akihiro",
+    nam: "2004",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film14",
@@ -268,6 +298,44 @@ const films = [
     nam: "2010",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
+  },
+
+  {
+    id: "film83",
+    img1: "https://m.media-amazon.com/images/M/MV5BNzAxMjg0NjYtNjNlOS00NTdlLThkMGEtMjAwYjk3NmNkOGFhXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
+    name: "Captain America: The First Avenger (2011)",
+    type: "Hành Động",
+    rate: "normal",
+    nation: "USA",
+    daodien: "Joe Johnston",
+    time: "124 phút",
+    noidung:
+      "(Captain America: The First Avenger) là bộ phim siêu anh hùng của Marvel năm 2011, kể về câu chuyện của Steve Rogers, một người lính nhỏ bé nhưng có tinh thần đấu tranh mạnh mẽ. Anh tham gia vào chương trình siêu chiến binh và trở thành Captain America sau khi được tiêm phế phẩm Super Soldier Serum. Trong vai trò của Captain America, Steve Rogers dẫn đầu một đội quân chiến đấu chống lại tổ chức tội phạm Hydra và Adolf Hitler trong Thế chiến II.",
+    dienvien:
+      " Chris Evans | Tommy Lee Jones | Hugo Weaving | Hayley Atwell | Sebastian Stan | Dominic Cooper",
+    nam: "2011",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
+  },
+  {
+    id: "film13",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/thumb/f/f9/TheAvengers2012Poster.jpg/330px-TheAvengers2012Poster.jpg",
+    name: "The Avengers - Biệt đội siêu anh hùng (2011)",
+    type: "Hành Động",
+    rate: "normal",
+    nation: "USA",
+    daodien: "	Joss Whedon",
+    time: "142 phút",
+    noidung:
+      "Nhóm Avengers và đồng minh của họ phải sẵn sàng hy sinh tất cả để cố gắng đánh bại Thanos - kẻ mạnh mẽ, trước khi chiến dịch tàn phá và hủy diệt của hắn chấm dứt sự tồn tại của vũ trụ.",
+    dienvien:
+      "Robert Downey Jr. | Chris Hemsworth | Mark Ruffalo | Chris Evans | Scarlett Johansson |...",
+    nam: "2011",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
     id: "film81",
@@ -285,24 +353,62 @@ const films = [
     nam: "2011",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
   {
-    id: "film83",
-    img1: "https://m.media-amazon.com/images/M/MV5BNzAxMjg0NjYtNjNlOS00NTdlLThkMGEtMjAwYjk3NmNkOGFhXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
-    name: "Captain America: The First Avenger (2011)",
+    id: "film831",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/thumb/c/c7/Doctor_Strange_poster.jpg/330px-Doctor_Strange_poster.jpg",
+    name: "Doctor Strange",
+    type: "Hành Động",
+    rate: "normal",
+    nation: "USA",
+    daodien: "	Scott Derrickson",
+    time: "115 phút",
+    noidung:
+      "Doctor Strange là câu chuyện về Stephen Strange, một bác sĩ phẫu thuật tài năng nhưng kiêu ngạo, người tìm đến nghệ thuật ma thuật sau một tai nạn khiến anh mất khả năng sử dụng tay phải của mình. Tại Kamar-Taj, anh học được ma thuật và trở thành Doctor Strange, một phù thủy mạnh mẽ. Anh sử dụng sức mạnh của mình để bảo vệ thế giới khỏi các mối đe dọa siêu nhiên.",
+    dienvien: " 	Benedict Cumberbatch | Tilda Swinton | Benedict Wong ",
+    nam: "2016",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
+  },
+  {
+    id: "film123",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/thumb/2/2d/Avengers_Endgame_bia_teaser.jpg/330px-Avengers_Endgame_bia_teaser.jpg",
+    name: "Avengers: Endgame",
     type: "Hành Động",
     rate: "best",
     nation: "USA",
-    daodien: "Joe Johnston",
-    time: "124 phút",
+    daodien: "	Anthony Russo | Joe Russo",
+    time: "181 phút",
     noidung:
-      "(Captain America: The First Avenger) là bộ phim siêu anh hùng của Marvel năm 2011, kể về câu chuyện của Steve Rogers, một người lính nhỏ bé nhưng có tinh thần đấu tranh mạnh mẽ. Anh tham gia vào chương trình siêu chiến binh và trở thành Captain America sau khi được tiêm phế phẩm Super Soldier Serum. Trong vai trò của Captain America, Steve Rogers dẫn đầu một đội quân chiến đấu chống lại tổ chức tội phạm Hydra và Adolf Hitler trong Thế chiến II.",
+      "Nhóm Avengers và các đồng minh phải sẵn lòng hy sinh tất cả để cố gắng đánh bại Thanos trước khi kế hoạch hủy diệt của hắn gây ra sự kết thúc cho vũ trụ.",
     dienvien:
-      " Chris Evans | Tommy Lee Jones | Hugo Weaving | Hayley Atwell | Sebastian Stan | Dominic Cooper",
-    nam: "2011",
+      "Robert Downey Jr. | Chris Hemsworth | Mark Ruffalo | Chris Evans | Scarlett Johansson |...",
+    nam: "2019",
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
   },
+  {
+    id: "film12",
+    img1: "https://upload.wikimedia.org/wikipedia/vi/thumb/e/e8/Avengers-Infinity_War-Official-Poster.jpg/330px-Avengers-Infinity_War-Official-Poster.jpg",
+    name: "Avengers: Infinity War (2018)",
+    type: "Hành Động",
+    rate: "best",
+    nation: "USA",
+    daodien: "	Anthony Russo | Joe Russo",
+    time: "149 phút",
+    noidung:
+      "Nhóm Avenger và các đồng minh của họ phải sẵn lòng hy sinh tất cả để cố gắng đánh bại kẻ mạnh mẽ Thanos trước khi chiến dịch tàn phá và hủy hoại của hắn đưa tới sự kết thúc của vũ trụ.",
+    dienvien:
+      "Robert Downey Jr. | Chris Hemsworth | Mark Ruffalo | Chris Evans | Scarlett Johansson |...",
+    nam: "2018",
+    trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
+    video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
+    views: 0,
+  },
+
   {
     id: "film84",
     img1: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/f/z/fzone_007c_g_vie-vn_4x5_.jpg",
@@ -320,6 +426,7 @@ const films = [
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
     period: "sắp chiếu",
+    views: 0,
   },
   {
     id: "film85",
@@ -338,6 +445,7 @@ const films = [
     trailerUrl: "https://www.youtube.com/embed/HXCB75dcxAE?si=UofY3eTXPDf29xR4",
     video: " https://www.youtube.com/embed/-fOpQGLxCTE?si=WI30iEBepaa3Rw4X",
     period: "sắp chiếu",
+    views: 0,
   },
 ];
 // localStorage.setItem("listAll", JSON.stringify(films));
@@ -598,7 +706,7 @@ function searchMovies() {
   }
 }
 
-document.querySelector("form").addEventListener("submit", function (event) {
+document.querySelector("form").addEventListener("input", function (event) {
   event.preventDefault();
   searchMovies();
 });
@@ -616,7 +724,6 @@ document.getElementById("clearSearch").addEventListener("click", function () {
 function logout() {
   localStorage.removeItem("nameLogin");
   localStorage.removeItem("checkLogin");
-  localStorage.removeItem("favoriteFilms");
 }
 // Sau khi người dùng đăng nhập thành công
 localStorage.setItem("checkLogin", "true");
@@ -638,11 +745,16 @@ function favoriteMovie(btn) {
   }
 
   var filmId = btn.closest(".film").getAttribute("data-id");
+  var userId = localStorage.getItem("checkLogin");
 
   var selectedFilm = films.find((film) => film.id === filmId);
   var favoriteFilms = JSON.parse(localStorage.getItem("favoriteFilms")) || [];
-  var isFilmInFavorites = favoriteFilms.some((film) => film.id === filmId);
+  var isFilmInFavorites = favoriteFilms.some(
+    (film) => film.id === filmId && film.userId === userId
+  );
   if (!isFilmInFavorites) {
+    // Thêm ID người dùng vào đối tượng film yêu thích
+    selectedFilm.userId = userId;
     favoriteFilms.push(selectedFilm);
     localStorage.setItem("favoriteFilms", JSON.stringify(favoriteFilms));
     alert("Đã thêm phim vào danh sách yêu thích.");
@@ -650,6 +762,7 @@ function favoriteMovie(btn) {
     alert("Phim đã có trong danh sách yêu thích.");
   }
 }
+
 function viewDetails(btn) {
   const isLoggedIn = localStorage.getItem("checkLogin");
   if (!isLoggedIn) {
